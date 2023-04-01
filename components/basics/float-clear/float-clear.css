@@ -1,0 +1,12 @@
+.quote-float {
+	float: right;
+	background-color: blue;
+	color: white;
+	width: 60%;
+}
+
+.clearfix {
+	clear: both;
+	background-color: red;
+	color: white;
+}

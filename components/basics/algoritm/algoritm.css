@@ -1,0 +1,30 @@
+details {
+	font-family: Comic;
+	font-size: 1.2rem;
+	background-color: blanchedalmond;
+	cursor: default;
+}
+
+details:hover {
+	background-color: rgb(249, 197, 118);
+}
+
+summary {
+	color: blue;
+}
+
+ul {
+	color: rgb(49, 193, 44);
+	list-style-type: number;
+}
+
+a {
+	color: rgb(203, 2, 49);
+	margin-top: 0.5rem;
+	font-size: 1.2rem;
+	text-decoration: none;
+}
+
+a:visited {
+	color: rosybrown;
+}

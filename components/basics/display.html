@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+		<title>Display</title>
+	</head>
+	<body>
+		<h1>Display</h1>
+		<p>Determina como se va a comportar nuestro elemento</p>
+
+		<h2>Opciones:</h2>
+
+		<h3>Inline</h3>
+		<h4>Características</h4>
+		<ul>
+			<li>Ocupan el espacio necesario para mostrar su contenido.</li>
+			<li>No tienen dimensiones modificables (width, height)</li>
+			<li>Permiten a otros elementos a su lado</li>
+			<li>
+				Padding y margin solo empujan a elementos adyacentes en horizontal.
+				<b>nunca en vertical</b> (ni top, ni bottom)
+			</li>
+			<li>
+				El padding y margin si se aplicara a nuestro elemento, pero el siguiente
+				<b>no se moverá</b>. Por que nuestro elemento estará sobre este
+			</li>
+			<li>El margin no tiene efecto ni en top ni en bottom</li>
+		</ul>
+
+		<h3>Block</h3>
+		<h4>Características</h4>
+		<ul>
+			<li>Ocupan todo el ancho disponible, lo que genera saltos de linea.</li>
+			<li>Tienen dimensiones modificables (alto, ancho)</li>
+			<li>
+				No permiten otros elementos a su lado (aunque especifique un ancho, siguen ocupando todo el espacio disponible,
+				igualmente generando saltos de linea)
+			</li>
+		</ul>
+
+		<h3>Inline-block</h3>
+		<p>inline-block -> Se comporta como un elemento de linea pero acepta modificar sus dimensiones (height, width)</p>
+
+		<h3>None</h3>
+		<p>Nuestro elemento se ocultara aunque aun seguirá existiendo</p>
+
+		<h3>Table</h3>
+		<p>El elemento se comportara como una tabla, su contenido y elementos hijos se comportaran como si fuesen celdas</p>
+
+		<h3>List-item</h3>
+		<p>
+			Nuestro elemento hara como si estuviera entre la etiqueta &lt;li&gt;, por lo tanto se comportara en bloque y se le
+			agregara la viñeta al inicio
+		</p>
+
+		<h3>flex y grid</h3>
+		<p>
+			Para que manipulemos nuestro elemento con estos módulos, estos tienen características y funcionalidades extensas
+			por lo que hice anotaciones aparte para cada uno
+		</p>
+	</body>
+</html>

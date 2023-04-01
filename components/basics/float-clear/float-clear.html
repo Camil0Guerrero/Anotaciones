@@ -3,39 +3,48 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="float-clear.css" />
 		<title>Float & Clear</title>
 	</head>
 	<body>
-		<h2>Float & Clear</h2>
-		<blockquote>
+		<h1>Float & Clear</h1>
+
+		<h2>Float</h2>
+		<p>
 			Al hacer un elemento flotante haremos que este se salga de la disposición natural, (que vaya uno tras otro). Es
 			como si empezara a levitar.
-		</blockquote>
-		<blockquote>
+		</p>
+		<p>
 			Si no hemos especificado el ancho y alto de nuestro elemento al hacerlo flotante se desaparecerá el color de fondo
-		</blockquote>
+		</p>
 		<blockquote>
 			Usar esta propiedad <b>Ya es mala practica</b>. Hay módulos para maquetar, queda mucho mejor y no tenemos que
 			romper con la disposición de nuestros elementos
 		</blockquote>
 
-		<p>Esta propiedad tiene dos opciones, right y left las cuales definirán donde nuestro elemento se acomodara</p>
+		<p>
+			Esta propiedad tiene dos opciones, <i>right</i> y <i>left</i> las cuales definirán donde nuestro elemento se
+			acomodara
+		</p>
 		<pre>
-        <code>
-          .example {
-            float: right;
-          }
-        </code>
-      </pre>
-		<blockquote class="quote-float">Elemento flotante</blockquote>
-		<blockquote>Sin clear</blockquote>
-		<blockquote class="clearfix">con clear</blockquote>
+      <code>
+        .example {
+          float: right;
+        }
+      </code>
+    </pre>
 
-		<span>Clear</span>
+		<h2>Clear</h2>
 		<p>
 			Hará que el siguiente elemento de cuando usamos los float, se baje y siga con el flujo normal, da como un salto de
 			linea a los elementos que no usan el float
 		</p>
-		<p>Podemos usarlo para que posicione correctamente hacia <u>right</u>, <u>left</u> y <u>both</u> -> ambos</p>
+		<p>Podemos usarlo para que posicione correctamente hacia <i>right</i>, <i>left</i> y <i>both</i> (ambos)</p>
+
+		<h3>Ejemplo</h3>
+		<blockquote class="quote-float">Elemento flotante</blockquote>
+		<blockquote>Sin clear</blockquote>
+		<blockquote class="clearfix">Con clear</blockquote>
 	</body>
 </html>
