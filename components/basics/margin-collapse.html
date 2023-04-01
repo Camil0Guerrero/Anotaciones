@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Margin collapse</title>
+	</head>
+	<body>
+		<h2>Colapso de margenes verticales</h2>
+		<pre>
+        <code>
+          margin-top: 16px;
+          margin-bottom: 16px;
+        </code>
+      </pre>
+
+		<p>
+			Al dar margenes a nuestros elementos que están seguidos, lo que pensamos que pasaría normalmente es que nuestros
+			margenes verticales y los horizontales de estos se sumen. lo que nos daría 32px entre cada uno de nuestros
+			elementos. Sin embargo en nuestros margenes verticales no es asi, estos se acoplan, como si se encimaran. Por lo
+			tanto seguiríamos con 16px entre nuestros elementos
+		</p>
+		<blockquote>
+			La mejor forma que tenemos para no tener problemas con esta regla es: <u>usar una</u> de las dos propiedades. O
+			usamos top, o usamos bottom. Tratar de no combinar ambos y si lo hacemos que sea lo mas mínimo posible.
+		</blockquote>
+
+		<h4>Ejemplo</h4>
+
+		<section class="example-margin-c">Ejemplo</section>
+		<section class="example-margin-c">Ejemplo</section>
+
+		<h4>Cuando están en linea si se suman</h4>
+		<span class="example-margin-c2">Example</span>
+		<span class="example-margin-c2">Example</span>
+		<span class="example-margin-c2">Example</span>
+		<span class="example-margin-c2">Example</span>
+	</body>
+</html>

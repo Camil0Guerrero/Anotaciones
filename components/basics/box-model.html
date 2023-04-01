@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Box model</title>
+	</head>
+	<body>
+		<h2>Modelo de Caja</h2>
+		<blockquote>
+			Es la forma en que CSS ve a los elementos HTML. Como is fueran cajas con las siguientes propiedades:
+		</blockquote>
+		<ol>
+			<li>
+				Content:
+				<p>
+					El contenido del elemento HTML, tomando en cuenta sus dimensiones: width
+					<i>ancho</i> height <i>alto</i>
+				</p>
+			</li>
+			<li>
+				Border:
+				<p>Lo que delimita cada uno de los elementos HTML</p>
+			</li>
+			<li>
+				Padding:
+				<p>Son las distancias internas, la distancia del borde al contenido</p>
+			</li>
+			<li>
+				Margin:
+				<p>Las distancias externas, la distancias entre el elemento y sus hermanos o padres</p>
+			</li>
+		</ol>
+		<span>Lados dentro del modelo de caja:</span>
+		<ol>
+			<li>Top -> Arriba</li>
+			<li>Right -> Derecha</li>
+			<li>Bottom -> Abajo</li>
+			<li>left -> Izquierda</li>
+		</ol>
+		<p>Estas cuatro propiedades tienen su <u>shorthand</u> :</p>
+		<pre>
+        <code>
+          inset: 10% 20% 30% 40%;
+        </code>
+      </pre>
+		<p>El orden en que se definen es: <b>Top</b>, <b>Right</b>, <b>Bottom</b>, <b>Left</b></p>
+
+		<h3>Border</h3>
+		<span>Color</span>
+		<p>Para definir el color de nuestro borde</p>
+		<pre>
+        <code>
+          <span class="b-color">border-color: green;</span>
+        </code>
+      </pre>
+		<p>
+			Este es el shorthand para aplicar a los cuatro lados nuestro color, pero si necesitamos tan solo aplicar el color
+			a uno de las lados lo podemos hacer:
+		</p>
+		<ul>
+			<li>border-top-color</li>
+			<li>border-right-color</li>
+			<li>border-bottom-color</li>
+			<li>border-left-color</li>
+		</ul>
+
+		<h3>Ancho de la linea</h3>
+		<p>
+			Podemos usar cualquier unidad de medida, pero en la mayoría de los casos es mejor en pocos pixeles para que no
+			quede tan mal a la vista, ademas, tenemos ya predefinidos ciertos tamaños que podemos definir con
+			<u><i>border-width</i></u>
+		</p>
+
+		<span>Thin -> Delgado <b>(1px)</b></span>
+		<pre>
+        <code>
+          <span class="b-thin">border-width: thin;</span>
+        </code>
+      </pre>
+
+		<span>Medium -> Mediana <b>(3px)</b></span>
+		<pre>
+        <code>
+          <span class="b-medium">border-width: medium;</span>
+        </code>
+      </pre>
+
+		<span>Thick -> Gruesa <b>(5px)</b></span>
+		<pre>
+        <code>
+          <span class="b-thick">border-width: thick;</span>
+        </code>
+      </pre>
+
+		<p>
+			Este igualmente es un shorthand, si necesitamos un tamaño distinto en alguno de nuestros lados lo podemos definir
+			con:
+		</p>
+		<ul>
+			<li>border-top-width</li>
+			<li>border-right-width</li>
+			<li>border-bottom-width</li>
+			<li>border-left-width</li>
+		</ul>
+
+		<h3>Estilo de la linea</h3>
+		<p>Definiremos como queremos que nuestra linea muestre el borde</p>
+
+		<h4>Mas usados:</h4>
+		<pre>
+        <code>
+          <span class="b-thin">Solid</span>
+        </code>
+      </pre>
+		<blockquote>
+			La que he estado usando para presentar los ejemplos. Hará que nuestro borde se muestre con una linea recta y
+			continua
+		</blockquote>
+
+		<pre>
+        <code>
+          <span class="b-dotted">dotted -> punteada</span>
+        </code>
+      </pre>
+
+		<pre>
+        <code>
+          <span class="b-dashed">dashed -> discontinua</span>
+        </code>
+      </pre>
+		<blockquote>
+			Estas dos opciones son algo parecidas, sin embargo podemos ver un poco la diferencia en lo largo de las lineas
+			internas. Podemos usarlo según nuestros gustos
+		</blockquote>
+		<p>
+			Tenemos otras
+			<a href="https://cssreference.io/property/border-style/" target="_blank" rel="noopener">Opciones</a>
+			que podemos visitar por si las necesitamos
+		</p>
+
+		<pre>
+        <code>
+          <span class="b-s-combine">Combinado</span>
+        </code>
+      </pre>
+		<p>Podemos combinar nuestros estilos o poner uno en cada lado:</p>
+		<ul>
+			<li>border-top-style</li>
+			<li>border-right-style</li>
+			<li>border-bottom-style</li>
+			<li>border-left-style</li>
+		</ul>
+
+		<blockquote>
+			Debemos tener en cuenta que aunque todos son shorthands no siempre debemos usarlos ya que si solo vamos a definir
+			uno de los lados y lo hacemos con esta propiedad consumiremos recursos innecesariamente. Lo ideal seria que si
+			necesitamos solo uno de los lados lo hagamos con su propiedad especifica
+		</blockquote>
+
+		<span>Border</span>
+		<p>Podemos usar el shorthand para definir todos los estilos de nuestro borde</p>
+		<pre>
+        <code>
+          <span class="b-border">border: 2px dashed blue;</span>
+        </code>
+      </pre>
+		<p>
+			El orden para definir los estilos son: <u>border-width</u> - <u>border-style</u> -
+			<u>border-color</u>
+		</p>
+
+		<blockquote>Si no ponemos el estilo del color, el navegador toma el que tiene el texto en su interior</blockquote>
+
+		<h3>Margin y Padding</h3>
+		<pre>
+        <code>
+          <span>            
+            padding: 20px;
+            margin: 20px;
+          </span>
+        </code>
+      </pre>
+		<blockquote>
+			Estos también son shorthands, podemos poner padding independientemente en cada lado con:
+			<ul>
+				<li>padding-top</li>
+				<li>padding-right</li>
+				<li>padding-bottom</li>
+				<li>padding-left</li>
+			</ul>
+
+			e igualmente a margin:
+			<ul>
+				<li>margin-top</li>
+				<li>margin-right</li>
+				<li>margin-bottom</li>
+				<li>margin-left</li>
+			</ul>
+		</blockquote>
+
+		<p>
+			En los shorthands podemos poner mas de un valor, lo que define a que lados de nuestro elemento se les aplicaran el
+			estilo
+		</p>
+		<p>Los valores aplicara los estilos asi:</p>
+		<ol>
+			<li>valor -> A todos los lados</li>
+			<li>
+				valores
+				<ul>
+					<li>Primer valor -> verticales (top, bottom)</li>
+					<li>Segundo valor -> horizontales (left y right)</li>
+				</ul>
+			</li>
+			<li>
+				valores
+				<ul>
+					<li>primer valor -> top</li>
+					<li>segundo valor -> left y right</li>
+					<li>tercer valor -> bottom</li>
+				</ul>
+			</li>
+			<li>
+				valores
+				<ul>
+					<li>primer valor -> top</li>
+					<li>segundo valor -> right</li>
+					<li>tercer valor -> bottom</li>
+					<li>cuarto valor -> left</li>
+				</ul>
+			</li>
+		</ol>
+		<blockquote>Cuando el valor es 0 no es necesario especificar la medida</blockquote>
+
+		<h3>Cajas de linea VS Cajas de bloque</h3>
+		<h3>Cajas de linea</h3>
+		<ul>
+			<li>Ocupan el espacio necesario para mostrar su contenido.</li>
+			<li>No tienen dimensiones modificables (width, height)</li>
+			<li>Permiten a otros elementos a su lado</li>
+			<li>
+				Padding y margin solo empujan a elementos adyacentes en horizontal.
+				<b>nunca en vertical</b> (ni top, ni bottom)
+			</li>
+			<li>
+				El padding y margin si se aplicara a nuestro elemento, pero el siguiente
+				<b>no se moverá</b>. Por que nuestro elemento estará sobre este
+			</li>
+			<li>El margin no tiene efecto ni en top ni en bottom</li>
+		</ul>
+		<h3>Caja de bloque</h3>
+		<ul>
+			<li>Ocupan todo el ancho disponible, lo que genera saltos de linea.</li>
+			<li>Tienen dimensiones modificables (alto, ancho)</li>
+			<li>
+				No permiten otros elementos a su lado (aunque especifique un ancho, siguen ocupando todo el espacio disponible,
+				igualmente generando saltos de linea)
+			</li>
+		</ul>
+
+		<h4>Inline</h4>
+		<pre>
+        <code>
+          display: inline;
+        </code>
+      </pre>
+		<p>Asi nuestro elemento tomara las características de una caja de linea</p>
+
+		<h4>block</h4>
+		<pre>
+        <code>
+          display: block;
+        </code>
+      </pre>
+		<p>Nuestro elemento tomara las características de una caja de bloque</p>
+
+		<h3>Display</h3>
+		<p>Determina como se va a comportar nuestro elemento</p>
+		<span>Opciones:</span>
+		<ul>
+			<li>inline</li>
+			<li>block</li>
+			<li>
+				inline-block -> Se comporta como un elemento de linea pero acepta modificar sus dimensiones (height, width)
+			</li>
+			<li>none -> Nuestro elemento no se vera, pero igualmente cargara.</li>
+			<li>table</li>
+			<li>list-item</li>
+			<li>flex</li>
+			<li>grid</li>
+		</ul>
+
+		<h3>Visibility</h3>
+		<ul>
+			<li>hidden -> ocultara nuestro elemento pero conservara que estaba usando</li>
+			<li>visible -> haremos que nuestro elemento se vuelva a ver</li>
+		</ul>
+
+		<h3>Overflow</h3>
+		<p>Definimos el comportamiento que tendrá nuestro contenido cuando sobresalgo de nuestro elemento</p>
+		<ul>
+			<li>Visible -> <i>por defecto</i>, hará que nuestro contenido se vea aunque sea por fuera de nuestro elemento</li>
+			<li>Hidden -> oculta el contenido que sobresalga</li>
+			<li>
+				scroll -> Creara las dos barras de navegación, el tamaño sera automático, es decir hasta que se vea nuestro
+				contenido por completo. Si no es necesaria una de las dos se vera deshabilitada
+			</li>
+			<li>auto -> El navegador decidirá cual es la mejor opción</li>
+			<li>
+				Podemos decidir el comportamiento por ejes:
+				<ul>
+					<li>overflow-y: scroll -> vertical</li>
+					<li>overflow-x: hidden -> horizontal</li>
+				</ul>
+				de esta manera solo se vera la barra de navegación vertical
+			</li>
+		</ul>
+
+		<h4>Box-Sizing -> Tamaño de Caja</h4>
+		<p>Define como el elemento va a calcular el alto y ancho</p>
+
+		<pre>
+        <code>box-sizing: content-box;</code>
+      </pre>
+		<p>
+			Valor por defecto, tomara el tamaño de la caja a partir del <b>inicio del contenido</b>
+			<i>sin el padding ni el borde</i>
+		</p>
+
+		<pre>
+        <code>box-sizing: border-box;</code>
+      </pre>
+		<p>El tamaño de la caja tendrá en cuenta el padding y el border</p>
+
+		<blockquote>
+			lo que hemos definido en estas propiedades serán considerados dentro de nuestro width y height.
+		</blockquote>
+		<blockquote>
+			Los errores que se pueden dar usando el valor por defecto es que no se va a tomar como punto fijo el tamaño que
+			hemos definido, ira aumentando según nuestros otros estilos
+		</blockquote>
+		<blockquote>
+			Si definimos el tamaño de la caja desde el borde nos olvidaremos de hacer cálculos con el padding y borde que
+			queramos agregarle a nuestro contenedor
+		</blockquote>
+
+		<span>inicializar</span>
+		<p>
+			Desde el inicio pondremos nuestros elementos con el tamaño de la caja desde el borde. Ya que lo raro es que
+			necesitemos el de por defecto, si lo necesitamos, podemos definir esta propiedad en nuestro elemento
+		</p>
+		<p></p>
+
+		<pre>
+        <code>
+          html {
+            box-sizing: border-box;
+          }
+
+          *,
+          *::before,
+          *::after {
+            box-sizing: inherit;
+          }
+        </code>
+      </pre>
+		<p>
+			Asi le aplicamos el tamaño de caja a nuestro documento html y hacemos que todos los elementos hereden este tamaño
+		</p>
+	</body>
+</html>

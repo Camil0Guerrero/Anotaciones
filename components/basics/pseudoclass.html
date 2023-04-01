@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>PseudoClases</title>
+	</head>
+	<body>
+		<h2>
+			<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank" rel="noopener">
+        PseudoClases
+        </a>
+		</h2>
+		<blockquote>Daremos estilos dependiendo del contexto, posición o estado del elemento</blockquote>
+		<p>Las PseudoClases se caracterizan y las podemos usar añadiendo <b>:</b> luego de nuestro selector</p>
+
+		<pre>
+        <code>
+        .form *:required
+      </code>
+    </pre>
+		<blockquote>En este caso la PseudoClase esta evaluando el estado de nuestro elemento</blockquote>
+		<p>Esta PseudoClase aplicara estilos a todos nuestros elementos que tengan el atributo required</p>
+
+		<pre>
+        <code>
+          .form *:valid
+        </code>
+      </pre>
+		<p>
+			valid nos ayudara a aplicar estilos cuando la información que nos haya dado el usuario
+			<b>cumpla con las reglas</b> del input
+		</p>
+
+		<pre>
+        <code>
+          .form *:invalid
+        </code>
+      </pre>
+		<p>
+			Este es el contrario que nuestra PseudoClase anterior, aplicara los estilos cuando la información sea
+			<b>invalida</b> o no cumpla con las especificaciones que hemos puesto para nuestro input
+		</p>
+
+		<pre>
+        <code>
+          .form *:focus
+        </code>
+      </pre>
+		<p>
+			Cuando nuestro cursor <b>este sobre</b> nuestro elemento. No solo es para los inputs, podríamos usarlo en casi
+			cualquier elemento
+		</p>
+
+		<pre>
+        <code>
+          .form *:disabled
+        </code>
+      </pre>
+		<p>Para cuando nuestros elementos tengan el atributo de <b>deshabilitar</b> , que en su mayoría son los inputs</p>
+
+		<blockquote>
+			Debemos tener en cuenta cierto orden al aplicar nuestras PseudoClases ya que algunas podrían sobrescribir algunos
+			estilos aplicados anteriormente
+		</blockquote>
+		<p>
+			<span>El orden recomendado para los enlaces es:</span>
+		</p>
+		<ol>
+			<li>:link</li>
+			<li>:active</li>
+			<li>:visited</li>
+			<li>:hover</li>
+		</ol>
+
+		<pre>
+        <code>
+          .menu a:visited
+        </code>
+      </pre>
+		<p>Esta PseudoClase nos ayuda a identificar los enlaces que ya hemos <b>usado</b></p>
+		<blockquote>Si usamos esta PseudoClase luego de nuestro hover, esta la inhabilitara</blockquote>
+
+		<pre>
+        <code>
+          .menu a:hover
+        </code>
+      </pre>
+		<p>Aplicara nuestros estilos cuando estamos <b>sobre un elemento</b></p>
+		<blockquote>Al ser una PseudoClase interactiva, esta debe estar al <b>final</b> de todas.</blockquote>
+		<blockquote>Se puede aplicar el hover a cualquier elemento</blockquote>
+
+		<pre>
+        <code>
+          #temario-css:target
+        </code>
+      </pre>
+		<p>Usamos target cuando hemos accedido a los <b>enlaces internos</b></p>
+		<hr />
+
+		<h2>Por posición</h2>
+		<blockquote>Podemos hacer uso de algunas PseudoClases para acceder a elementos dando <b>referencias</b></blockquote>
+
+		<span>Primer hijo</span>
+		<pre>
+        <code>
+        .lista li:first-child
+      </code>
+    </pre>
+		<blockquote>
+			Buscara el primer hijo pero que cumpla con la etiqueta que hemos puesto, en este caso sera un elemento li, si el
+			primer hijo no es li. El estilo no se aplicara
+		</blockquote>
+
+		<span>Ultimo hijo</span>
+		<pre>
+        <code>
+        .lista li:last-child
+      </code>
+    </pre>
+
+		<span>Por posición</span>
+		<pre>
+        <code>
+        .lista li:nth-child(3)
+      </code>
+    </pre>
+		<p>Accedemos a el hijo por medio de su posición, el primer elemento es el 1</p>
+
+		<span>Repetición</span>
+		<pre>
+        <code>
+          .lista li:nth-child(4n)
+        </code>
+      </pre>
+		<p>La <b>n</b> ayudara a que se repita el estilo según el primer valor, en este caso cada 4 posiciones</p>
+
+		<span>Siguiente</span>
+		<pre>
+        <code>
+        .lista li:nth-child(3n + 1)
+      </code>
+    </pre>
+		<p>
+			En este caso estamos usando nuestro selector del siguiente hermano, por lo tanto haremos que el estilo se le
+			aplique al siguiente elemento del valor que le dimos. Por lo que quedaría igualmente cada 4 elementos, con el
+			detalle que si el 3 elemento era el ultimo el estilo se le aplicara al primero
+		</p>
+
+		<span>Pares</span>
+		<pre>
+        <code>
+        .lista li:nth-child(even)
+      </code>
+    </pre>
+		<p>Con el valor <i>even</i> haremos que a cada 2 elementos se les apliquen nuestros estilos</p>
+
+		<span>Impares</span>
+		<pre>
+        <code>
+        .lista li:nth-child(odd)
+      </code>
+    </pre>
+		<p>A nuestros elementos que estén en una posición impar se les aplicaran nuestros estilos</p>
+
+		<h2>Por posición y tipo</h2>
+		<blockquote>
+			Recordemos que con first-child podemos acceder a nuestro primer hijo, sin embargo, si este primer hijo no es el
+			elemento que buscamos nuestros estilos no se aplicaran, para este caso, podemos acceder a nuestro elemento por
+			medio de su tipo
+		</blockquote>
+
+		<span>Primero en su tipo</span>
+		<pre>
+        <code>
+          .articulo p:first-of-type
+        </code>
+      </pre>
+		<p>
+			De esta forma buscaremos el primer elemento que sea de tipo párrafo y le aplicaremos el estilo, el estilo no se
+			aplicara solo si no encuentra este elemento
+		</p>
+
+		<span>Ultimo en su tipo</span>
+		<pre>
+        <code>
+          .articulo p:last-of-type
+        </code>
+      </pre>
+		<p>Buscaremos el ultimo párrafo de nuestro articulo</p>
+
+		<span>Buscar por tipo</span>
+		<pre>
+        <code>
+          .articulo p:nth-of-type(3)
+        </code>
+      </pre>
+		<p>Le daremos estilos a nuestro tercer párrafo</p>
+
+		<blockquote>
+			También podemos hacer uso del <i>siguiente</i>, <i>impares</i>, <i>pares</i>. Como lo vimos en la parte superior,
+			aunque no es muy usado.
+		</blockquote>
+
+		<h2>Negación</h2>
+		<blockquote>
+			Excluiremos uno de los elementos de nuestros estilos. Nuestros estilos serán para todos excepto...
+		</blockquote>
+		<pre>
+        <code>
+          .articulo *:not(p)
+        </code>
+      </pre>
+		<p>
+			Dentro del not definimos cuales elementos(también podemos hacer uso de nuestros selectores) no queremos que se le
+			apliquen nuestros estilos
+		</p>
+	</body>
+</html>

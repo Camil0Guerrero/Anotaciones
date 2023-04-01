@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Algoritmo de CSS</title>
+	</head>
+	<body>
+		<h2>Algoritmo de CSS</h2>
+		<blockquote>La forma en que el navegador aplica los estilos al documento HTML.</blockquote>
+
+		<h3>La cascada</h3>
+		<p>Es el mecanismo que tiene el navegador para aplicar los estilos</p>
+		<ol>
+			<li>
+				origen del código
+				<ol>
+					<p><b>User Agent</b> Son los estilos que cada navegador aplica por defecto a nuestras etiquetas</p>
+					<li>
+						personalizaciones
+						<p>Las preferencias, temas, estilos que le hemos aplicado a nuestro navegador y computador</p>
+					</li>
+					<li>
+						Estilos del autor
+						<p>Los estilos que ha aplicado el creador de la pagina</p>
+					</li>
+				</ol>
+			</li>
+			<li>Especificidad del selector</li>
+			<li>Orden de aparición</li>
+		</ol>
+
+		<h3>La especificidad</h3>
+		<blockquote>El peso que tiene un selector</blockquote>
+		<span>La especificidad se calcula de la siguiente forma: </span>
+		<ol>
+			<li>Etiquetas y PseudoElementos -> 0, 0, 0, 1</li>
+			<li>Clases, atributos, y PseudoClases -> 0, 0, 1, 0</li>
+			<li>Identificadores -> 0, 1, 0, 0</li>
+			<li>Estilos en linea -> 1, 0, 0,0</li>
+			<li>!important</li>
+			<blockquote>
+				El <b>!important</b> rompe la especificidad, es como decirle al navegador, "Quiero que apliques este estilo si o
+				si"
+			</blockquote>
+		</ol>
+
+		<h4>Notas y ejemplos</h4>
+		<p>Si necesitamos hacer uso de varios selectores, <i>que lo mejor es evitarlo</i> debe ir ordenado asi:</p>
+		<ol>
+			<li>Etiquetas</li>
+			<li>Identificadores</li>
+			<li>Clases</li>
+			<li>los selectores por atributos <b>[]</b></li>
+		</ol>
+
+		<blockquote>
+			<pre>
+          <code>
+            blockquote#example.example
+          </code>
+        </pre>
+			Con este selector tendríamos un a especificidad de 0, 1, 1, 1 ya que estamos aplicando el estilo a nuestra
+			etiqueta blockquote que tenga la clase ejemplo y que a su vez tenga una clase ejemplo.
+			<b>Ser tan especifico en un selector es mala practica</b>
+		</blockquote>
+
+		<blockquote>
+			<b>!important</b> hará que nuestro estilo rompa la especificidad y cascada, pondrá nuestro estilo a las malas. Lo
+			que no debería pasar ya que es una mala practica
+		</blockquote>
+
+		<h3>La herencia</h3>
+		<blockquote>
+			Es la capacidad de un selector de obtener (heredar) los valores de sus ancestros mas cercanos, para aplicarla se
+			usa el valor <b><i>inherit</i></b
+			>. Si queremos evitarla le podemos asignar otro valor o inicializar nuestra propiedad con
+			<i>initial</i>
+		</blockquote>
+		<blockquote>
+			No todas las propiedades tienen la capacidad de heredar. Lista de propiedades que si pueden heredar:
+			<details>
+				<summary>Propiedades que pueden llevar el inherit</summary>
+				<ul>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/SVG/Attribute/azimuth" target="_blank" rel="noopener"
+							>azimuth</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/border-collapse" target="_blank" rel="noopener"
+							>border-collapse</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/border-spacing" target="_blank" rel="noopener"
+							>border-spacing</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/caption-side" target="_blank" rel="noopener"
+							>caption-side</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/color" target="_blank" rel="noopener">color</a>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/cursor" target="_blank" rel="noopener">cursor</a>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/direction" target="_blank" rel="noopener">direction</a>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/empty-cells" target="_blank" rel="noopener"
+							>empty-cells</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/font-family" target="_blank" rel="noopener"
+							>font-family</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/font-size" target="_blank" rel="noopener">font-size</a>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/font-style" target="_blank" rel="noopener"
+							>font-style</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/font-variant" target="_blank" rel="noopener"
+							>font-variant</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/font-weight" target="_blank" rel="noopener"
+							>font-weight</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/font" target="_blank" rel="noopener">font</a>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/letter-spacing" target="_blank" rel="noopener"
+							>letter-spacing</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/line-height" target="_blank" rel="noopener"
+							>line-height</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/list-style-image" target="_blank" rel="noopener"
+							>list-style-image</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/list-style-position" target="_blank" rel="noopener"
+							>list-style-position</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/list-style-type" target="_blank" rel="noopener"
+							>list-style-type</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/list-style" target="_blank" rel="noopener"
+							>list-style</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/orphans" target="_blank" rel="noopener">orphans</a>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/quotes" target="_blank" rel="noopener">quotes</a>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/text-align" target="_blank" rel="noopener"
+							>text-align</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/text-indent" target="_blank" rel="noopener"
+							>text-indent</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/text-transform" target="_blank" rel="noopener"
+							>text-transform</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/visibility" target="_blank" rel="noopener"
+							>visibility</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/white-space" target="_blank" rel="noopener"
+							>white-space</a
+						>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/widows" target="_blank" rel="noopener">widows</a>
+					</li>
+					<li>
+						<a href="https://developer.mozilla.org/docs/Web/CSS/word-spacing" target="_blank" rel="noopener"
+							>word-spacing</a
+						>
+					</li>
+				</ul>
+			</details>
+		</blockquote>
+		<pre>
+        <code>
+          .cita-marco cite {
+            background-color: inherit;
+          }
+        </code>
+      </pre>
+	</body>
+</html>

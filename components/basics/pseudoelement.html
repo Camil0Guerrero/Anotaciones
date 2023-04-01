@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PseudoElementos</title>
+</head>
+<body>
+  <h2>
+				<a
+					href="https://developer.mozilla.org/es/docs/Web/CSS/Pseudoelementos"
+					target="_blank"
+					rel="noopener"
+					>PseudoElementos</a
+				>
+			</h2>
+			<p>
+				Dan estilos a partes especificas de un elemento, usamos el <b>::</b> para diferenciarlos de
+				las PseudoClases
+			</p>
+			<blockquote>
+				<b><u>Content</u></b> es al propiedad que nos permite agregar el contenido. Lo que queramos
+				agregar debe ir entre comillas
+			</blockquote>
+			<blockquote>
+				Si asignamos nuestro pseudoelemento con solo <b>:</b> igualmente nuestros estilos se
+				aplicaran, sin embargo es buena practica hacerlo con <b>::</b> para que se pueda identificar
+				rápidamente y que se diferencie de las PseudoClases
+			</blockquote>
+
+			<span>::Before</span>
+			<p>Nos permite agregar estilos o contenido antes de nuestro elemento</p>
+			<pre>
+        <code>
+          .example::before {
+            content: "$";
+          }
+        </code>
+      </pre>
+
+			<span>::After</span>
+			<p>Luego de nuestros elementos</p>
+			<pre>
+        <code>
+          .example::after {
+            content: "COP";
+          }
+        </code>
+      </pre>
+			<p class="example-b">10.000</p>
+
+			<span>::first-letter</span>
+			<p>Aplicaremos los estilos a la primera letra</p>
+			<pre>
+        <code>
+          .example::first-letter {
+            font-weight: bold;
+            font-size: 32px;
+          }
+        </code>
+      </pre>
+			<p class="example-letter">Letra Capital se le llama</p>
+
+			<span>::first-line</span>
+			<p>Para la primera linea</p>
+			<pre>
+        <code>
+          .example::first-line {
+            color: coral;
+          }
+        </code>
+      </pre>
+
+			<p class="example-line">
+				Cuando decimos que todo tiempo pasado fue mejor, condenamos el futuro sin conocerlo
+			</p>
+			<blockquote><cite>Séneca</cite></blockquote>
+
+			<span>::selection</span>
+			<pre>
+        <code>
+          .example::selection {
+            color: greenyellow;
+            background-color: black;
+          }
+        </code>
+      </pre>
+			<p class="example-selection">
+				Este PseudoElemento nos ayuda a darle estilos a el texto que el usuario seleccione
+			</p>
+
+			<span>::placeholder</span>
+			<pre>
+        <code>
+          .example::placeholder {
+            color: yellow;
+            background-color: rosybrown;
+          }
+        </code>
+      </pre>
+			<p>Nos ayuda a darle estilos a el texto del placeholder</p>
+			<input type="text" placeholder="Ejemplo de placeholder" class="example-placeholder" />
+</body>
+</html>

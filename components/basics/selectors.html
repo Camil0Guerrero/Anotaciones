@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Selectores</title>
+	</head>
+	<body>
+		<h2>Selectores</h2>
+		<h3>Básicos</h3>
+		<ol>
+			<li>Etiquetas -> Elementos HTML</li>
+			<li>Identificadores -> Atributo id: <b>#</b></li>
+			<li>Clases -> Atributo class: <b>.</b></li>
+		</ol>
+		<p>Ejemplos:</p>
+
+		<pre>
+        <code>
+          p {
+            color: midnightblue;
+          }
+        </code>
+      </pre>
+		<blockquote>
+			<p>
+				Si lo hacemos con la etiqueta, el problema es que <b>TODAS</b> las etiquetas de nuestro documento tendrán el
+				estilo
+			</p>
+		</blockquote>
+
+		<pre>
+        <code>
+          #paragraph {
+            background-color: skyblue;
+          }
+        </code>
+      </pre>
+		<blockquote>
+			<p>
+				Con el id es posible, pero se considera un <b>antipatrón</b>, una <b>mala practica</b> ya que solo una etiqueta
+				debería tener el id. ¿ y si queremos aplicar el mismo estilo a otros elementos ?
+			</p>
+			<p>
+				Los ids tienen mayor peso (especificidad) que los demás selectores por lo que podríamos presentar problemas al
+				usarlos para aplicar estilos
+			</p>
+		</blockquote>
+
+		<span>CSS</span>
+		<pre>
+        <code>
+          .bg-color {
+            background-color: rgb(29, 53, 62);
+          }
+
+          .text-20 {
+            font-size: 20px;
+          }
+
+          .text-white {
+            color: white;
+          }
+        </code>
+      </pre>
+		<span>HTML</span>
+		<pre>
+        <code>  &lt;p class="bg-color text-20 text-white"&gt; Selección con clase &lt;/p&gt;</code>
+      </pre>
+
+		<span>Resultado:</span>
+		<code>
+			<p class="bg-color text-20 text-white">Selección con clase</p>
+		</code>
+		<blockquote>
+			<p>
+				Las clases son <b>La mejor opción</b> para dar estilos ya que no solo debemos ponerlas en una etiqueta lo que
+				nos permite <b><i>reutilizar</i></b> nuestro código CSS. Al igual que un etiqueta puede tener varias clases
+			</p>
+			<p>Tratar que los nombres de las clases sean alusivas a los estilos que aplicaremos con ellas</p>
+		</blockquote>
+		<hr />
+
+		<h3>Avanzados</h3>
+
+		<blockquote>A los elementos que usamos como referencia no se le aplican los estilos</blockquote>
+
+		<span>Hijos directos <b>></b></span>
+		<pre>
+        <code>
+          .hijos-directos > li 
+        </code>
+      </pre>
+		<p>
+			Los hijos directos son aquellos que se encuentran justo después de nuestro elemento padre. Si el elemento si es un
+			hijo pero no esta definido debajo de nuestro elemento padre, El estilo no se aplicara.
+		</p>
+
+		<span>Hijos descendientes </span>
+		<pre>
+        <code>
+          .hijos-descendientes b
+        </code>
+      </pre>
+		<p>
+			Los hijos descendientes son los todos los elementos que están dentro de nuestro elemento padre no importa el lugar
+			donde se encuentra el elemento
+		</p>
+
+		<span>Hermanos siguientes <b>~</b></span>
+		<pre>
+        <code>
+          .hermanos-general ~ li
+        </code>
+      </pre>
+		<p>Los hermanos son los elementos que se encuentran en el mismo nivel</p>
+
+		<span>Hermanos adyacentes <b>+</b> </span>
+		<pre>
+        <code>
+          .hermanos-adyacentes + li
+        </code>
+      </pre>
+		<p>Los estilos se le aplicaran solo al siguiente elemento con la etiqueta li</p>
+		<hr />
+
+		<h3>Por referencia</h3>
+		<blockquote>Accederemos a nuestros elementos por medio de sus atributos</blockquote>
+
+		<span>General <b>[]</b></span>
+		<pre>
+        <code>
+          .selectores-atributos a[href]
+        </code>
+      </pre>
+		<p>Accederemos a todos los elementos a que tengan el atributo <u>href</u></p>
+
+		<span>Atributo con valor</span>
+		<pre>
+        <code>
+          .selectores-atributos a[target="_blank"]
+        </code>
+      </pre>
+		<p>Podemos ser mas específicos poniendo el valor que queremos que el atributo tenga</p>
+
+		<span>Buscando una palabra <b>*=</b></span>
+		<pre>
+        <code>
+          .selectores-atributos a[href*="palabra"]
+        </code>
+      </pre>
+		<p>
+			Combinando estos símbolos podemos aplicar estilos cuando un elemento tenga en su atributo la palabra que buscamos
+		</p>
+
+		<span>Valor de inicio <b>^=</b></span>
+		<pre>
+        <code>
+          .selectores-atributos a[href^="http:"]
+        </code>
+      </pre>
+		<p>Tomamos todos los elementos que su atributo <b>inicie</b> con el valor que definimos</p>
+
+		<span>Valor final <b>$=</b></span>
+		<pre>
+        <code>
+          .selectores-atributos a[href$=".com"]
+        </code>
+      </pre>
+		<p>Los estilos se aplicaran a elementos que su atributo <b>finalicen</b> con nuestro valor(.com)</p>
+
+		<span>Buscar entre espacios <b>~=</b></span>
+		<pre>
+        <code>
+          .selectores-atributos a[class~="cursos"]
+        </code>
+      </pre>
+		<p>Aplica el estilo si contiene el texto en cuestión en una lista separada por espacios</p>
+
+		<span>Buscar entre espacios con guion <b>|=</b></span>
+		<pre>
+        <code>
+          .selectores-atributos a[class|="menu"]
+        </code>
+      </pre>
+		<p>
+			Buscara nuestro texto en una lista separada por espacios y que luego de nuestro texto venga un -; por ejemplo:
+			menu-item
+		</p>
+
+		<span>Selector universal <b>*</b></span>
+		<pre>
+        <code>
+          *
+          
+          .selector-universal * 
+        </code>
+      </pre>
+		<p>
+			La propiedad se aplicara para todos los elementos que estén dentro de nuestro punto de referencia, si no lo hay,
+			se aplicaran a todo el documento
+		</p>
+
+		<span>Agrupar selectores <b>,</b></span>
+		<pre>
+        <code>
+          .form-agrupar-selectores input[type="text"],
+          .form-agrupar-selectores input[type="email"],
+          .form-agrupar-selectores textarea{}
+        </code>
+      </pre>
+		<p>Si queremos usar los mismos estilos para varios elementos debemos separar los selectores por una ,</p>
+	</body>
+</html>

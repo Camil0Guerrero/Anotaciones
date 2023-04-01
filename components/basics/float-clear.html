@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Float & Clear</title>
+	</head>
+	<body>
+		<h2>Float & Clear</h2>
+		<blockquote>
+			Al hacer un elemento flotante haremos que este se salga de la disposición natural, (que vaya uno tras otro). Es
+			como si empezara a levitar.
+		</blockquote>
+		<blockquote>
+			Si no hemos especificado el ancho y alto de nuestro elemento al hacerlo flotante se desaparecerá el color de fondo
+		</blockquote>
+		<blockquote>
+			Usar esta propiedad <b>Ya es mala practica</b>. Hay módulos para maquetar, queda mucho mejor y no tenemos que
+			romper con la disposición de nuestros elementos
+		</blockquote>
+
+		<p>Esta propiedad tiene dos opciones, right y left las cuales definirán donde nuestro elemento se acomodara</p>
+		<pre>
+        <code>
+          .example {
+            float: right;
+          }
+        </code>
+      </pre>
+		<blockquote class="quote-float">Elemento flotante</blockquote>
+		<blockquote>Sin clear</blockquote>
+		<blockquote class="clearfix">con clear</blockquote>
+
+		<span>Clear</span>
+		<p>
+			Hará que el siguiente elemento de cuando usamos los float, se baje y siga con el flujo normal, da como un salto de
+			linea a los elementos que no usan el float
+		</p>
+		<p>Podemos usarlo para que posicione correctamente hacia <u>right</u>, <u>left</u> y <u>both</u> -> ambos</p>
+	</body>
+</html>

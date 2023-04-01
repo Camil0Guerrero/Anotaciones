@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Z-index</title>
+	</head>
+	<body>
+		<h2>Z-Index</h2>
+		<p>
+			Propiedad que permite controlar la profundidad de los elementos posicionados. Su valor por defecto es auto, acepta
+			números positivos, negativos y cero.
+		</p>
+		<p>A mayor valor el elemento esta mas al frente</p>
+		<blockquote>
+			Un elemento padre no podrá estar sobre sus elementos hijos, sin embargo, podemos darles un valor negativo a los
+			hijos para que estén detrás
+		</blockquote>
+		<section class="example-index">
+			<div class="z-index-1">Caja con z-index <b>-1</b></div>
+			<div class="z-index-2">Caja con z-index <b>0</b></div>
+			<div class="z-index-3">Caja con z-index <b>1</b></div>
+		</section>
+		<blockquote>
+			Lo ideal es que manejemos la profundidad con varios dígitos <b><u>3 dígitos</u></b> es la mejor opción por si
+			luego necesitamos que algún elemento este entre dos.
+		</blockquote>
+
+		<p>
+			Esto no nos debería de pasar, si necesitamos usar esto. es porque algo estamos haciendo mal. si quisiéramos que
+			este elemento fuera de primeras, ¿ para que lo definimos como padre?
+		</p>
+		<h3>Padre sobre hijo</h3>
+		<section class="z-index-parent">
+			<div class="z-index-child">Hijo z-index</div>
+		</section>
+		<blockquote>
+			En el extraño caso que necesitemos que el hijo este detrás del padre. Lo que podemos hacer es asignarle un numero
+			negativo
+		</blockquote>
+		<blockquote>El padre no debe tener z-index definido. Debe tener el de por defecto (auto)</blockquote>
+	</body>
+</html>
