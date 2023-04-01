@@ -1,0 +1,11 @@
+.example-margin-c {
+	border: thin solid black;
+	margin: 16px;
+	width: 90%;
+}
+.example-margin-c2 {
+	display: inline-block;
+	border: thin solid black;
+	margin: 16px;
+	width: 40%;
+}

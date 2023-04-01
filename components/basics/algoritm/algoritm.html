@@ -3,13 +3,16 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="algoritm.css" />
 		<title>Algoritmo de CSS</title>
 	</head>
 	<body>
-		<h2>Algoritmo de CSS</h2>
-		<blockquote>La forma en que el navegador aplica los estilos al documento HTML.</blockquote>
+		<h1>Algoritmo de CSS</h1>
 
-		<h3>La cascada</h3>
+		<p>La forma en que el navegador aplica los estilos al documento HTML.</p>
+
+		<h2>La cascada</h2>
 		<p>Es el mecanismo que tiene el navegador para aplicar los estilos</p>
 		<ol>
 			<li>
@@ -30,7 +33,7 @@
 			<li>Orden de aparición</li>
 		</ol>
 
-		<h3>La especificidad</h3>
+		<h2>La especificidad</h2>
 		<blockquote>El peso que tiene un selector</blockquote>
 		<span>La especificidad se calcula de la siguiente forma: </span>
 		<ol>
@@ -45,7 +48,7 @@
 			</blockquote>
 		</ol>
 
-		<h4>Notas y ejemplos</h4>
+		<h3>Notas y ejemplos</h3>
 		<p>Si necesitamos hacer uso de varios selectores, <i>que lo mejor es evitarlo</i> debe ir ordenado asi:</p>
 		<ol>
 			<li>Etiquetas</li>
@@ -70,13 +73,13 @@
 			que no debería pasar ya que es una mala practica
 		</blockquote>
 
-		<h3>La herencia</h3>
-		<blockquote>
+		<h2>La herencia</h2>
+		<p>
 			Es la capacidad de un selector de obtener (heredar) los valores de sus ancestros mas cercanos, para aplicarla se
 			usa el valor <b><i>inherit</i></b
 			>. Si queremos evitarla le podemos asignar otro valor o inicializar nuestra propiedad con
 			<i>initial</i>
-		</blockquote>
+		</p>
 		<blockquote>
 			No todas las propiedades tienen la capacidad de heredar. Lista de propiedades que si pueden heredar:
 			<details>
@@ -214,12 +217,5 @@
 				</ul>
 			</details>
 		</blockquote>
-		<pre>
-        <code>
-          .cita-marco cite {
-            background-color: inherit;
-          }
-        </code>
-      </pre>
 	</body>
 </html>

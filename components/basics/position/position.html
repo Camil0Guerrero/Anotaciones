@@ -3,52 +3,47 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="position.css" />
 		<title>Position</title>
 	</head>
 	<body>
-		<h2>Posicionamiento</h2>
+		<h1>Posicionamiento</h1>
+		<h2>Position</h2>
 		<p>Nos permite modificar la disposición natural de cualquier elemento del documento HTML</p>
 		<blockquote>
 			El navegador coloca cada elemento teniendo en cuenta el orden en el que aparece en el documento y su tipo de
 			visualización, dependiendo si es un elemento en linea o bloque
 		</blockquote>
 
-		<span>Tipos de Posicionamiento</span>
+		<p>Al definir cualquier tipo de Posicionamiento se nos activan las propiedades:</p>
 		<ul>
-			<li>Static (por defecto)</li>
-			<li>Relative</li>
-			<li>Absolute</li>
-			<li>Fixed</li>
-			<li>Sticky</li>
+			<li>
+				Top (vertical -- eje Y)
+				<p>+ baja el documento -> - lo sube</p>
+			</li>
+			<li>
+				Left (horizontal -- eje X)
+				<p>+ lo mueve hacia la derecha -> - lo mueve hacia la izquierda</p>
+			</li>
+			<li>
+				Bottom (vertical -- eje Y)
+				<p>+ mueve hacia arriba el elemento -> - lo baja</p>
+			</li>
+			<li>
+				Right (horizontal -- eje X)
+				<p>+ mueve hacia la izquierda -> - lo mueve hacia la derecha</p>
+			</li>
+			<li>Z-index (profundidad -- eje Z)</li>
 		</ul>
-		<blockquote>
-			Al definir cualquier tipo de Posicionamiento se nos activan las propiedades:
-			<ul>
-				<li>
-					Top (vertical -- eje Y)
-					<p>+ baja el documento -> - lo sube</p>
-				</li>
-				<li>
-					Left (horizontal -- eje X)
-					<p>+ lo mueve hacia la derecha -> - lo mueve hacia la izquierda</p>
-				</li>
-				<li>
-					Bottom (vertical -- eje Y)
-					<p>+ mueve hacia arriba el elemento -> - lo baja</p>
-				</li>
-				<li>
-					Right (horizontal -- eje X)
-					<p>+ mueve hacia la izquierda -> - lo mueve hacia la derecha</p>
-				</li>
-				<li>Z-index (profundidad -- eje Z)</li>
-			</ul>
 
-			<b>Estas no están disponibles es nuestro posicionamiento por defecto (static)</b>
-		</blockquote>
+		<p><b>Estas no están disponibles es nuestro posicionamiento por defecto (static)</b></p>
+
 		<blockquote>
 			Las propiedades <b><u>top</u> y </b> <b><u>left</u></b> tienen preferencia sobre bottom y right
 		</blockquote>
 
+		<h2>Tipos de Posicionamiento</h2>
 		<h3>Static</h3>
 		<p>
 			Es el valor por defecto, significa que el elemento respeta el flujo del documento, por lo que no se puede mover ni
@@ -56,16 +51,17 @@
 		</p>
 
 		<pre>
-        <code>
-          .static {
-            background-color: yellow;
-            position: static;
-            width: 200px;
-            top: 10px;
-            left: 10px;
-          }
-        </code>
-      </pre>
+      <code>
+        .static {
+          background-color: yellow;
+          position: static;
+          width: 200px;
+          top: 10px;
+          left: 10px;
+        }
+      </code>
+    </pre>
+
 		<blockquote>Como vemos, ni el top ni el left tienen efecto</blockquote>
 
 		<h3>Relative</h3>
@@ -75,18 +71,18 @@
 		</p>
 		<p>Aunque movamos nuestro elemento, en donde este estaba se quedara el vació, como si siguiera allí</p>
 		<pre>
-        <code>
-          .relative {
-            background-color: turquoise;
-            bottom: 50px;
-            left: 100px;
-            position: relative;
-            right: 50px;
-            top: 10px;
-            width: 200px;
-          }
-        </code>
-      </pre>
+      <code>
+        .relative {
+          background-color: turquoise;
+          bottom: 50px;
+          left: 100px;
+          position: relative;
+          right: 50px;
+          top: 10px;
+          width: 200px;
+        }
+      </code>
+    </pre>
 		<blockquote><u>bottom</u> y <u>right</u> no tienen efecto ya que hemos definido top y left</blockquote>
 		<blockquote>
 			Podemos ver como nuestra caja se fue 10px hacia abajo y 100px hacia la derecha de donde se encontraba
@@ -104,23 +100,23 @@
 		<blockquote>Al perder sus dimensiones se las debemos dar explícitamente</blockquote>
 		<span>Sin Ancestros relativos</span>
 		<pre>
-        <code>
-          .absolute {
-            background-color: tomato;
-            position: absolute;
-            width: 20%;
-            height: 30px;
-            /* right: 0;
-            bottom: 0; */
-          }
-        </code>
-      </pre>
+      <code>
+        .absolute {
+          background-color: tomato;
+          position: absolute;
+          width: 20%;
+          height: 30px;
+          /* right: 0;
+          bottom: 0; */
+        }
+      </code>
+    </pre>
 		<blockquote>
 			Si habilitamos nuestras 2 propiedades de posicionamiento, nuestro elemento se movera hacia la parte inferior
 			derecha pero del inicio de nuestro documento
 		</blockquote>
 
-		<span>Con ancestro relativo</span>
+		<h4>Con ancestro relativo</h4>
 		<pre>
         <code>
           .absolute-child {
@@ -142,7 +138,6 @@
 			referencia el documento HTML y queda fijo en la posición, cuando el scroll se mueve el elemento no lo hará, queda
 			<b>fijo</b>
 		</p>
-
 		<pre>
         <code>
           .fixed {

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="border.css" />
+		<title>Border</title>
+	</head>
+	<body>
+		<h1>Border</h1>
+		<p>Propiedad que nos permite dibujar una linea que limite cada uno de los elementos HTML</p>
+
+		<h2>Color</h2>
+		<p>Para definir el color de nuestro borde</p>
+		<pre>
+      <code>
+        <span class="b-color">border-color: green;</span>
+      </code>
+    </pre>
+		<p>
+			Este es el shorthand para aplicar a los cuatro lados nuestro color, pero si necesitamos tan solo aplicar el color
+			a uno de las lados lo podemos hacer:
+		</p>
+		<ul>
+			<li>border-top-color</li>
+			<li>border-right-color</li>
+			<li>border-bottom-color</li>
+			<li>border-left-color</li>
+		</ul>
+
+		<h2>Ancho de la linea</h2>
+		<p>
+			Podemos usar cualquier unidad de medida, pero en la mayoría de los casos es mejor en pocos pixeles para que no
+			quede tan mal a la vista, ademas, tenemos ya predefinidos ciertos tamaños que podemos definir con
+			<u><i>border-width</i></u>
+		</p>
+
+		<h3>Thin -> Delgado <b>(1px)</b></h3>
+		<pre>
+      <code>
+        <span class="b-thin">border-width: thin;</span>
+      </code>
+    </pre>
+
+		<h3>Medium -> Mediana <b>(3px)</b></h3>
+		<pre>
+      <code>
+        <span class="b-medium">border-width: medium;</span>
+      </code>
+    </pre>
+
+		<h3>Thick -> Gruesa <b>(5px)</b></h3>
+		<pre>
+      <code>
+        <span class="b-thick">border-width: thick;</span>
+      </code>
+    </pre>
+
+		<p>
+			Este igualmente es un shorthand, si necesitamos un tamaño distinto en alguno de nuestros lados lo podemos definir
+			con:
+		</p>
+		<ul>
+			<li>border-top-width</li>
+			<li>border-right-width</li>
+			<li>border-bottom-width</li>
+			<li>border-left-width</li>
+		</ul>
+
+		<h2>Estilo de la linea</h2>
+		<p>Definiremos como queremos que nuestra linea muestre el borde</p>
+
+		<h3>Mas usados:</h3>
+		<pre>
+      <code>
+        <span class="b-thin">Solid</span>
+      </code>
+    </pre>
+		<blockquote>
+			La que he estado usando para presentar los ejemplos. Hará que nuestro borde se muestre con una linea recta y
+			continua
+		</blockquote>
+
+		<pre>
+      <code>
+        <span class="b-dotted">dotted -> punteada</span>
+      </code>
+    </pre>
+
+		<pre>
+      <code>
+        <span class="b-dashed">dashed -> discontinua</span>
+      </code>
+    </pre>
+		<blockquote>
+			Estas dos opciones son algo parecidas, sin embargo podemos ver un poco la diferencia en lo largo de las lineas
+			internas. Podemos usarlo según nuestros gustos
+		</blockquote>
+		<p>
+			Tenemos otras
+			<a href="https://cssreference.io/property/border-style/" target="_blank" rel="noopener">Opciones</a>
+			que podemos visitar por si las necesitamos
+		</p>
+
+		<pre>
+      <code>
+        <span class="b-s-combine">Combinado</span>
+      </code>
+    </pre>
+		<p>Podemos combinar nuestros estilos o poner uno en cada lado:</p>
+		<ul>
+			<li>border-top-style</li>
+			<li>border-right-style</li>
+			<li>border-bottom-style</li>
+			<li>border-left-style</li>
+		</ul>
+
+		<blockquote>
+			Debemos tener en cuenta que aunque todos son shorthands no siempre debemos usarlos ya que si solo vamos a definir
+			uno de los lados y lo hacemos con esta propiedad consumiremos recursos innecesariamente. Lo ideal seria que si
+			necesitamos solo uno de los lados lo hagamos con su propiedad especifica
+		</blockquote>
+
+		<h2>Border</h2>
+		<p>Podemos usar el shorthand para definir todos los estilos de nuestro borde</p>
+		<pre>
+      <code>
+        <span class="b-border">border: 2px dashed blue;</span>
+      </code>
+    </pre>
+		<p>
+			El orden para definir los estilos son: <u>border-width</u> - <u>border-style</u> -
+			<u>border-color</u>
+		</p>
+
+		<blockquote>Si no ponemos el estilo del color, el navegador toma el que tiene el texto en su interior</blockquote>
+	</body>
+</html>

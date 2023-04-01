@@ -1,0 +1,32 @@
+.b-color {
+	border: thin solid green;
+}
+
+.b-thin {
+	border: thin solid black;
+}
+
+.b-medium {
+	border: medium solid black;
+}
+
+.b-thick {
+	border: thick solid black;
+}
+
+.b-dotted {
+	border: medium dotted black;
+}
+
+.b-dashed {
+	border: medium dashed black;
+}
+
+.b-s-combine {
+	border: medium dashed black;
+	border-style: solid dashed;
+}
+
+.b-border {
+	border: 2px dashed blue;
+}

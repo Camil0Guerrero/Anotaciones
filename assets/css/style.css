@@ -1,0 +1,87 @@
+html {
+	font-family: Comic, sans-serif;
+	font-size: 16px;
+	box-sizing: border-box;
+	background-color: #264de435;
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+:root {
+	--font-size-h1: clamp(2rem, calc(0.4rem + 4vw), 3rem);
+	--font-size-h2: clamp(1.7rem, calc(0.4rem + 4vw), 2.5rem);
+	--font-size-h3: clamp(1.3rem, calc(0.3rem + 3vw), 2.1rem);
+	--font-size-h4: clamp(1.2rem, calc(0.1rem + 2vw), 1.7rem);
+	--font-size-h5: clamp(1.1rem, calc(0.1rem + 2vw), 1.3rem);
+	--font-size-p: clamp(1rem, calc(0.1rem + 3vw), 1.23rem);
+}
+
+h1 {
+	color: white;
+	margin: -8px;
+	font-size: var(--font-size-h1);
+	background-color: #264de4;
+	padding: 1rem;
+	position: sticky;
+	top: 0;
+	text-align: center;
+}
+
+h2 {
+	margin: 8px;
+	font-size: var(--font-size-h2);
+	padding: 0.5rem;
+	font-style: italic;
+}
+
+h3 {
+	margin: 0;
+	font-size: var(--font-size-h3);
+}
+
+h4 {
+	margin: 0;
+	font-size: var(--font-size-h4);
+}
+
+h5 {
+	margin: 0;
+	font-size: var(--font-size-h5);
+}
+
+ul,
+ol {
+	margin-right: 8px;
+}
+
+ul,
+ol > li {
+	font-size: var(--font-size-p);
+}
+
+hr {
+	border: thin double #40cfff;
+	width: 90%;
+}
+
+p {
+	font-size: var(--font-size-p);
+	text-align: justify;
+}
+
+pre {
+	background-color: #40cfff;
+	margin: 8px;
+	white-space: pre-wrap;
+	line-height: 1.1;
+}
+
+code {
+	font-size: var(--font-size-p);
+	font-family: Comic, sans-serif;
+	color: #264de4;
+}

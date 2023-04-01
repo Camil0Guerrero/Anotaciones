@@ -1,0 +1,32 @@
+.example-b,
+.example-letter,
+.example-selection {
+	color: brown;
+}
+
+.example-b::before {
+	content: "$";
+}
+
+.example-b::after {
+	content: " COP";
+}
+
+.example-letter::first-letter {
+	font-weight: bold;
+	font-size: 32px;
+}
+
+.example-line::first-line {
+	background-color: coral;
+}
+
+.example-selection::selection {
+	color: greenyellow;
+	background-color: black;
+}
+
+.example-placeholder::placeholder {
+	color: greenyellow;
+	background-color: grey;
+}

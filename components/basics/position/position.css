@@ -1,0 +1,71 @@
+.example-positions {
+	border: thin solid black;
+	height: 100vh;
+	width: 80%;
+}
+
+.example-positions .static {
+	background-color: yellow;
+	position: static;
+	top: 10px;
+	left: 10px;
+	width: 200px;
+}
+
+.example-positions .relative {
+	background-color: turquoise;
+	bottom: 50px;
+	left: 300px;
+	position: relative;
+	right: 50px;
+	top: -10px;
+	width: 200px;
+}
+
+.example-positions .absolute {
+	background-color: tomato;
+	position: absolute;
+	width: 20%;
+	height: 30px;
+	/* right: 0;
+	bottom: 0; */
+}
+
+.relative-parent {
+	background-color: khaki;
+	position: relative;
+	width: 60%;
+	height: 100px;
+	margin: auto;
+	top: 0;
+	left: 50px;
+}
+
+.absolute-child {
+	background-color: lightcoral;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.example-positions .fixed {
+	background-color: lightgreen;
+	/* position: fixed; */
+	width: 200px;
+	height: 30px;
+	top: 30px;
+	left: 80%;
+}
+
+.sticky {
+	background-color: lightskyblue;
+	/* position: sticky; */
+	top: 20px;
+	z-index: 999;
+}
+
+.example-positions .sticky-child {
+	background-color: lightslategray;
+	position: sticky;
+	top: 0;
+}

@@ -3,17 +3,18 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
 		<title>Selectores</title>
 	</head>
 	<body>
-		<h2>Selectores</h2>
-		<h3>Básicos</h3>
+		<h1>Selectores</h1>
+		<h2>Básicos</h2>
 		<ol>
 			<li>Etiquetas -> Elementos HTML</li>
 			<li>Identificadores -> Atributo id: <b>#</b></li>
 			<li>Clases -> Atributo class: <b>.</b></li>
 		</ol>
-		<p>Ejemplos:</p>
+		<h3>Ejemplos:</h3>
 
 		<pre>
         <code>
@@ -47,7 +48,7 @@
 			</p>
 		</blockquote>
 
-		<span>CSS</span>
+		<h3>CSS</h3>
 		<pre>
         <code>
           .bg-color {
@@ -63,12 +64,14 @@
           }
         </code>
       </pre>
-		<span>HTML</span>
+		<h3>HTML</h3>
 		<pre>
-        <code>  &lt;p class="bg-color text-20 text-white"&gt; Selección con clase &lt;/p&gt;</code>
+        <code>
+          &lt;p class="bg-color text-20 text-white"&gt; Selección con clase &lt;/p&gt;
+        </code>
       </pre>
 
-		<span>Resultado:</span>
+		<h3>Resultado:</h3>
 		<code>
 			<p class="bg-color text-20 text-white">Selección con clase</p>
 		</code>
@@ -81,11 +84,11 @@
 		</blockquote>
 		<hr />
 
-		<h3>Avanzados</h3>
+		<h2>Avanzados</h2>
 
 		<blockquote>A los elementos que usamos como referencia no se le aplican los estilos</blockquote>
 
-		<span>Hijos directos <b>></b></span>
+		<h3>Hijos directos <b>></b></h3>
 		<pre>
         <code>
           .hijos-directos > li 
@@ -96,7 +99,7 @@
 			hijo pero no esta definido debajo de nuestro elemento padre, El estilo no se aplicara.
 		</p>
 
-		<span>Hijos descendientes </span>
+		<h3>Hijos descendientes</h3>
 		<pre>
         <code>
           .hijos-descendientes b
@@ -107,7 +110,7 @@
 			donde se encuentra el elemento
 		</p>
 
-		<span>Hermanos siguientes <b>~</b></span>
+		<h3>Hermanos siguientes <b>~</b></h3>
 		<pre>
         <code>
           .hermanos-general ~ li
@@ -115,7 +118,7 @@
       </pre>
 		<p>Los hermanos son los elementos que se encuentran en el mismo nivel</p>
 
-		<span>Hermanos adyacentes <b>+</b> </span>
+		<h3>Hermanos adyacentes <b>+</b></h3>
 		<pre>
         <code>
           .hermanos-adyacentes + li
@@ -124,10 +127,10 @@
 		<p>Los estilos se le aplicaran solo al siguiente elemento con la etiqueta li</p>
 		<hr />
 
-		<h3>Por referencia</h3>
+		<h2>Por referencia</h2>
 		<blockquote>Accederemos a nuestros elementos por medio de sus atributos</blockquote>
 
-		<span>General <b>[]</b></span>
+		<h3>General <b>[]</b></h3>
 		<pre>
         <code>
           .selectores-atributos a[href]
@@ -135,7 +138,7 @@
       </pre>
 		<p>Accederemos a todos los elementos a que tengan el atributo <u>href</u></p>
 
-		<span>Atributo con valor</span>
+		<h3>Atributo con valor</h3>
 		<pre>
         <code>
           .selectores-atributos a[target="_blank"]
@@ -143,7 +146,7 @@
       </pre>
 		<p>Podemos ser mas específicos poniendo el valor que queremos que el atributo tenga</p>
 
-		<span>Buscando una palabra <b>*=</b></span>
+		<h3>Buscando una palabra <b>*=</b></h3>
 		<pre>
         <code>
           .selectores-atributos a[href*="palabra"]
@@ -153,7 +156,7 @@
 			Combinando estos símbolos podemos aplicar estilos cuando un elemento tenga en su atributo la palabra que buscamos
 		</p>
 
-		<span>Valor de inicio <b>^=</b></span>
+		<h3>Valor de inicio <b>^=</b></h3>
 		<pre>
         <code>
           .selectores-atributos a[href^="http:"]
@@ -161,7 +164,7 @@
       </pre>
 		<p>Tomamos todos los elementos que su atributo <b>inicie</b> con el valor que definimos</p>
 
-		<span>Valor final <b>$=</b></span>
+		<h3>Valor final <b>$=</b></h3>
 		<pre>
         <code>
           .selectores-atributos a[href$=".com"]
@@ -169,7 +172,7 @@
       </pre>
 		<p>Los estilos se aplicaran a elementos que su atributo <b>finalicen</b> con nuestro valor(.com)</p>
 
-		<span>Buscar entre espacios <b>~=</b></span>
+		<h3>Buscar entre espacios <b>~=</b></h3>
 		<pre>
         <code>
           .selectores-atributos a[class~="cursos"]
@@ -177,7 +180,7 @@
       </pre>
 		<p>Aplica el estilo si contiene el texto en cuestión en una lista separada por espacios</p>
 
-		<span>Buscar entre espacios con guion <b>|=</b></span>
+		<h3>Buscar entre espacios con guion <b>|=</b></h3>
 		<pre>
         <code>
           .selectores-atributos a[class|="menu"]
@@ -188,7 +191,7 @@
 			menu-item
 		</p>
 
-		<span>Selector universal <b>*</b></span>
+		<h3>Selector universal <b>*</b></h3>
 		<pre>
         <code>
           *
@@ -201,14 +204,14 @@
 			se aplicaran a todo el documento
 		</p>
 
-		<span>Agrupar selectores <b>,</b></span>
+		<h3>Agrupar selectores <b>,</b></h3>
 		<pre>
-        <code>
-          .form-agrupar-selectores input[type="text"],
-          .form-agrupar-selectores input[type="email"],
-          .form-agrupar-selectores textarea{}
-        </code>
-      </pre>
-		<p>Si queremos usar los mismos estilos para varios elementos debemos separar los selectores por una ,</p>
+      <code>
+        .form-agrupar-selectores input[type="text"],
+        .form-agrupar-selectores input[type="email"],
+        .form-agrupar-selectores textarea{}
+      </code>
+    </pre>
+		<p>Si queremos usar los mismos estilos para varios elementos debemos separar los selectores con una (,)</p>
 	</body>
 </html>
