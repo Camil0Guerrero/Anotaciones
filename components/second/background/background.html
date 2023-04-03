@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="background.css" />
+		<title>Background</title>
+	</head>
+	<body>
+		<h1>Fondos en CSS</h1>
+
+		<h2>Background color</h2>
+		<p>Define el color de fondo del elemento</p>
+
+		<section class="bgc">
+			<div class="bgc-1"></div>
+			<div class="bgc-2"></div>
+			<div class="bgc-3"></div>
+		</section>
+
+		<h2>Background image</h2>
+		<p>Define la imagen de fondo del elemento</p>
+
+		<div class="bgi"></div>
+
+		<h2>Background repeat</h2>
+		<p>Define como se repite la imagen de fondo del elemento</p>
+
+		<div class="bgr">
+			<span>repeat <b style="color: red">Default</b></span>
+			<span>No Repeat</span>
+			<div class="repeat"></div>
+			<div class="no-repeat"></div>
+			<span>Repeat-Y</span>
+			<span>Repeat-X</span>
+			<div class="repeat-y"></div>
+			<div class="repeat-x"></div>
+		</div>
+
+		<h2>Background size</h2>
+		<p>Define el tamaño de la imagen de fondo, el primer valor X segundo Y</p>
+		<div class="bgs">
+			<p>Cover -> Cambia el tamaño de la imagen de fondo para asegurarse de que permanezca completamente visible</p>
+			<p>
+				Contain -> Cambia el tamaño de la imagen de fondo pra asegurarse de que el elemento este completamente cubierto
+			</p>
+			<p>Igualmente podemos definir el tamaño con cualquier unidad de medida</p>
+			<div class="cover"></div>
+			<div class="contain"></div>
+			<div class="value"></div>
+		</div>
+
+		<h2>Background position</h2>
+		<p>
+			Define la posición de la imagen de fondo. Primer valor X segundo Y, si no se especifica un segundo valor este sera
+			center, aparte de valores numéricos podemos indicar el posicionamiento con las palabras: center, top, bottom, left
+			and right
+		</p>
+
+		<div class="bgp">
+			<span>left top</span>
+			<span>top</span>
+			<span>right top</span>
+
+			<div class="bg-position-1"></div>
+			<div class="bg-position-2"></div>
+			<div class="bg-position-3"></div>
+
+			<span>left</span>
+			<span>center</span>
+			<span>right</span>
+			<div class="bg-position-4"></div>
+			<div class="bg-position-5"></div>
+			<div class="bg-position-6"></div>
+
+			<span>left bottom</span>
+			<span>bottom</span>
+			<span>right bottom</span>
+			<div class="bg-position-7"></div>
+			<div class="bg-position-8"></div>
+			<div class="bg-position-9"></div>
+		</div>
+
+		<h2>Background clip</h2>
+		<p>Define desde donde comenzara nuestro fondo</p>
+		<div class="bg-clip">
+			<span>border box -> Iniciara desde el borde, <b style="color: red">Default</b></span>
+			<span>padding-box -> Lo que definamos de borde no estará contemplado en nuestro fondo </span>
+			<span>content-box -> Ni el borde ni el padding se tendrán en cuenta para nuestro fondo </span>
+			<div class="bg-clip-1"></div>
+			<div class="bg-clip-2"></div>
+			<div class="bg-clip-3"></div>
+		</div>
+
+		<h2>Background origin</h2>
+		<p>Define el origen de la imagen de fondo</p>
+		<blockquote>
+			La gran diferencia entre clip y origin es que mientras clip trabaja mas para el fondo, origin esta enfocado para
+			la imagen de fondo
+		</blockquote>
+
+		<div class="bg-origin">
+			<span
+				>padding-box -> Valor por defecto, por ello es que notamos la diferencia entre el inicio de nuestro fondo y el
+				inicio de nuestra imagen</span
+			>
+			<span
+				>border-box -> Iniciara desde el borde, por lo tanto todo nuestro elemento tendrá nuestra imagen de fondo</span
+			>
+			<span
+				>content-box -> De esta se empezara a ver nuestra imagen en cuanto termine el padding.
+				<br />
+				<cite
+					>Si nuestra imagen es mas ancha que nuestro elemento, esta no respetara el padding de la derecha, por lo que
+					se vera mal
+				</cite></span
+			>
+			<div class="bg-origin-1"></div>
+			<div class="bg-origin-2"></div>
+			<div class="bg-origin-3"></div>
+		</div>
+
+		<h2>Background Attachment</h2>
+		<p>Nos da la posibilidad de hacer efectos a la hora de dejar ver la imagen</p>
+		<div class="bg-attachment">
+			<p>
+				scroll -> Nuestra imagen se movera con nuestra barra de navegación
+				<b style="color: red">Por defecto</b>
+			</p>
+			<p>
+				fixed -> Hara un efecto de estar siempre en el mismo lugar, como si nuestro elemento fuese una ventana y miramos
+				a traves de ella
+			</p>
+			<div class="bg-attachment-1"></div>
+			<div class="bg-attachment-2"></div>
+		</div>
+
+		<blockquote>
+			El Shorthand <u>background</u> casi no lo usaremos ya que abarca todas las anteriores propiedades y es mejor no
+			hacerlo, sin embargo su orden es: background-image, background-position, background-size, background-repeat,
+			background-origin, background-clip background-attachment, background-color
+		</blockquote>
+
+		<h3>Multiple imágenes</h3>
+		<p>
+			Podemos llamar varias imágenes, solo debemos separarlas con comas, y tener en cuenta el orden en que lo vamos
+			haciendo ya que esta sera la relevancia que tendrá. La que estará de primeras es la que nombramos luego de nuestra
+			propiedad, con ello la ultima es la que se encuentre mas cerca al <b>;</b>
+		</p>
+
+		<div class="bg-multiple"></div>
+
+		<h2>Ejemplo</h2>
+		<blockquote>Las mejores imágenes para poner de fondo son las png, por la transparencia</blockquote>
+
+		<div class="bg-art"></div>
+	</body>
+</html>

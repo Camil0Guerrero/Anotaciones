@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="custom-properties.css" />
+		<title>Custom properties</title>
+	</head>
+	<body>
+		<h1>Custom properties</h1>
+		<p>
+			Al igual que en los lenguajes de programación podemos definir variables, básicamente es un espacio reservado en
+			nuestra memoria que va a almacenar un dato
+		</p>
+		<p>
+			Estas variables también tienen un alcance, un ámbito donde existirá, este sera el selector en donde se declare y
+			todos sus elementos subsecuentes (toda la cadena de hijos en la estructura HTML que tengamos)
+		</p>
+		<cite>Ámbito -> Espacio de existencia</cite>
+		<p>
+			Todas las variables se deben declarar en un selector, Igualmente se puede hacer en el elemento HTML usando el
+			atributo style, igualmente tendrá el mismo uso
+		</p>
+
+		<blockquote>
+			Para declarar una variable debemos hacerlo con <u> -- </u> y luego de los <u>:</u> el valor que guardara
+			<cite> <b> --name-variable: value; </b></cite>
+		</blockquote>
+		<blockquote>
+			Para hacer uso de nuestra variable debemos hacer uso de la función <b><i>var</i></b
+			>, entre parentesis ponemos el nombre de la que necesitamos. <cite>Igualmente con -- </cite>
+		</blockquote>
+		<blockquote>
+			Si definimos dos veces la misma variable, entra en juego el algoritmo de CSS, la cascada y la especificad.
+		</blockquote>
+		<blockquote>
+			Podemos pasar un segundo parámetro por si nuestra variable no se puede utilizar o hay errores.
+			<cite> <b>color: var(--primary-color, orange); </b> </cite>
+		</blockquote>
+
+		<article class="custom-props-1">
+			<pre>
+        <code>
+          --primary-color: gray;
+          --font-size: 32px
+          background-color: var(--primary-color);
+        </code>
+      </pre>
+			<section class="custom-props-2" style="--border-color: red">
+				<pre>
+          <code>
+            background-color: var(--default-bg-color);
+            
+            /* Variable declarada con el atributo style */
+            border: thick solid var(--border-color);
+          </code>
+        </pre>
+				<div class="custom-props-3">
+					<pre>
+            <code>
+              --text-color: navy;
+              color: var(--text-color, orange);
+              font-size: var(--font-size);
+              border: thin solid var(--border-color);
+            </code>
+          </pre>
+				</div>
+			</section>
+		</article>
+
+		<h2>Para todo el documento</h2>
+
+		<p>
+			Para que las variables estén disponibles para todo nuestro documento, seria declararlas en el html, pero en CSS el
+			nodo principal es el <u><b>root</b></u
+			>, hace referencia al html solo que con mas peso, tiene mas especificad
+		</p>
+		<p>
+			Aunque lo podríamos hacer en nuestra etiqueta principal que es el html, esta tendrá menos especificad por ser una
+			etiqueta, en cambio nuestro root es una PseudoClase, por esto es que lo ideal es usarlo
+		</p>
+
+		<div class="root">
+			<pre>
+        <code>
+          :root {
+            --default-bg-color: lightsalmon;
+          }
+        </code>
+      </pre>
+		</div>
+	</body>
+</html>

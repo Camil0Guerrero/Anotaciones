@@ -1,0 +1,279 @@
+/* Background */
+/* Background color */
+.bgc {
+	display: grid;
+	grid-template-columns: repeat(3, 25%);
+	gap: 1rem;
+	justify-content: space-around;
+}
+
+.bgc-1,
+.bgc-2,
+.bgc-3 {
+	width: 300px;
+	height: 300px;
+}
+
+.bgc-1 {
+	background-color: yellow;
+}
+
+.bgc-2 {
+	background-color: blue;
+}
+
+.bgc-3 {
+	background-color: red;
+}
+
+.bgi {
+	background-image: url(../../../../assets/images/puesta-sol.jpg);
+	height: 300px;
+	margin: auto;
+	width: 300px;
+}
+
+/* Background repeat */
+.bgr {
+	display: grid;
+	grid-template-columns: repeat(2, 40%);
+	gap: 1rem;
+	justify-content: space-around;
+}
+
+.bgr .repeat {
+	background-color: darkblue;
+	background-image: url(../../../assets/images/favicon.png);
+	background-size: 100px;
+	font-size: 1rem;
+	height: 300px;
+	width: 300px;
+}
+
+.bgr .no-repeat {
+	background-color: darkslategrey;
+	background-image: url(../../../assets/images/favicon.png);
+	background-size: 100px;
+	background-repeat: no-repeat;
+	height: 300px;
+	width: 300px;
+}
+
+.bgr .repeat-y {
+	background-color: darkolivegreen;
+	background-image: url(../../../assets/images/favicon.png);
+	background-size: 100px;
+	background-repeat: repeat-y;
+	height: 300px;
+	width: 300px;
+}
+
+.bgr .repeat-x {
+	background-color: darkmagenta;
+	background-image: url(../../../assets/images/favicon.png);
+	background-size: 100px;
+	background-repeat: repeat-x;
+	height: 300px;
+	width: 300px;
+}
+
+/* Background size */
+.bgs {
+	display: grid;
+	grid-template-columns: repeat(3, 30%);
+	gap: 1rem;
+}
+
+.bgs .cover {
+	background-color: darkblue;
+	background-image: url(../../../assets/images/puesta-sol.jpg);
+	background-size: cover;
+	width: 300px;
+	height: 300px;
+}
+
+.bgs .contain {
+	background-color: darkslategrey;
+	background-image: url(../../../assets/images/puesta-sol.jpg);
+	background-size: contain;
+	width: 300px;
+	height: 300px;
+}
+
+.bgs .value {
+	background-color: darkturquoise;
+	background-image: url(../../../assets/images/puesta-sol.jpg);
+	background-size: 300px 250px;
+	width: 300px;
+	height: 300px;
+}
+
+/* Background position */
+.bgp {
+	display: grid;
+	justify-content: space-around;
+	text-align: center;
+	grid-template-columns: repeat(3, 30%);
+	grid-template-rows: repeat(4, 30px 300px);
+	gap: 1rem;
+}
+
+.bg-position-1,
+.bg-position-2,
+.bg-position-3,
+.bg-position-4,
+.bg-position-5,
+.bg-position-6,
+.bg-position-7,
+.bg-position-8,
+.bg-position-9 {
+	border: thick dashed darkred;
+	background-color: aqua;
+	background-image: url(../../../assets/images/puesta-sol.jpg);
+	background-size: 200px;
+	background-repeat: no-repeat;
+}
+
+.bg-position-1 {
+	background-position: left top;
+}
+
+.bg-position-2 {
+	background-position: center top;
+}
+
+.bg-position-3 {
+	background-position: right top;
+}
+
+.bg-position-4 {
+	background-position: left;
+}
+
+.bg-position-5 {
+	background-position: center;
+}
+
+.bg-position-6 {
+	background-position: right;
+}
+
+.bg-position-7 {
+	background-position: left bottom;
+}
+
+.bg-position-8 {
+	background-position: bottom;
+}
+
+.bg-position-9 {
+	background-position: right bottom;
+}
+
+/* Background Clip */
+.bg-clip {
+	display: grid;
+	justify-content: space-evenly;
+	grid-template-columns: repeat(3, 30%);
+	grid-template-rows: 50px 300px;
+	gap: 1rem;
+}
+
+.bg-clip-1,
+.bg-clip-2,
+.bg-clip-3 {
+	background-color: aqua;
+	border: thick dashed red;
+	background-image: url(../../../assets/images/puesta-sol.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 1rem;
+}
+
+.bg-clip-1 {
+	background-clip: border-box;
+}
+
+.bg-clip-2 {
+	background-clip: padding-box;
+}
+
+.bg-clip-3 {
+	background-clip: content-box;
+}
+
+/* Background origin */
+.bg-origin {
+	display: grid;
+	justify-content: space-evenly;
+	grid-template-columns: repeat(3, 30%);
+	grid-template-rows: 130px 300px;
+	gap: 1rem;
+}
+
+.bg-origin-1,
+.bg-origin-2,
+.bg-origin-3 {
+	background-color: aqua;
+	background-image: url(../../../assets/images/puesta-sol.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: thick dashed red;
+	padding: 1rem;
+}
+
+.bg-origin-1 {
+	background-origin: padding-box;
+}
+
+.bg-origin-2 {
+	background-origin: border-box;
+}
+
+.bg-origin-3 {
+	background-origin: content-box;
+}
+
+/* Background attachment */
+.bg-attachment {
+	display: grid;
+	justify-content: space-evenly;
+	grid-template-columns: 30% 60%;
+	gap: 1rem;
+}
+
+.bg-attachment-1,
+.bg-attachment-2 {
+	background-color: aqua;
+	background-image: url(../../../assets/images/puesta-sol.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: thick dashed darkred;
+	height: 400px;
+	padding: 1rem;
+}
+
+.bg-attachment-2 {
+	background-attachment: fixed;
+}
+
+/* Multiples imágenes */
+.bg-multiple {
+	background-image: url(../../../assets/images/favicon.png), url(../../../assets/images/puesta-sol.jpg);
+	background-repeat: repeat-x, no-repeat;
+	background-size: 10%, cover;
+	margin: auto;
+	height: 30vh;
+	width: 50%;
+}
+
+/* Ejemplo */
+.bg-art {
+	background: url(../../../assets/images/arbol.png) no-repeat center bottom,
+		url(../../../assets/images/aves.png) no-repeat center bottom fixed,
+		url(../../../assets/images/cielo.png) no-repeat center top;
+
+	margin: auto;
+	height: 70vh;
+	width: 90%;
+}

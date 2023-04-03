@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- Google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet" />
+
+		<!-- Material Icons -->
+		<!-- Google fonts -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+		<!-- Bootstrap 5 -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+		<!-- Font awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+			integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="font-text.css" />
+		<title>Estilo de fuente</title>
+	</head>
+	<body>
+		<h1>Estilos de Fuentes y Textos</h1>
+
+		<ul>
+			<h2>Propiedades</h2>
+			<li>font-family</li>
+			<li>font-size</li>
+			<li>font-weight</li>
+			<li>font-style</li>
+			<li>font-variant</li>
+			<li>line-height</li>
+			<li>font</li>
+		</ul>
+
+		<h2>Font-family</h2>
+		<p>
+			Son un conjunto de estilos de letras que le podemos agregar a nuestro sitio, por defecto es Times Now Roman.
+			Cuando ponemos varias fuentes separadas tomara la que este preparada, esto sera de izquierda a derecha
+		</p>
+		<pre>
+      <code>
+        <div class="font-f">
+          font-family: Georgia, "Times New Roman";
+        </div>
+        <div class="font-f-2">
+          font-family: sans-serif;
+        </div>
+      </code>
+    </pre>
+
+		<h2>Font-size</h2>
+		<p>Tamaño de fuente</p>
+		<pre>
+      <code>
+        <div class="font-sz">
+          font-size: 2rem;
+        </div>
+      </code>
+    </pre>
+
+		<h2>Font-weight</h2>
+		<p>
+			Definiremos el grosor, el peso de la tipografía, lo normal es 400 aproximadamente. Entre mas ancha mas se vera en
+			negrilla
+		</p>
+		<p>
+			Hay algunas fuentes que traen este grosor elevado, por lo que lo mejor seria que si lo queremos poner en negrilla,
+			usemos <u>bold</u> asi este valor elevado por defecto nuestro navegador lo pondrá como en la etiqueta b
+		</p>
+		<pre>
+      <code>
+        <div class="font-w">
+          font-weight: 400;
+        </div>
+        <div class="font-w-2">
+          font-weight: bold;
+        </div>
+      </code>
+    </pre>
+
+		<h2>Font-style</h2>
+		<p>Nos permite definir el aspecto de nuestra familia tipográfica</p>
+		<pre>
+      <code>
+        <div class="font-s-n">
+          font-style: normal;
+        </div>
+        <div class="font-s-i">
+          font-style: italic;
+        </div>
+        <div class="font-s-o">
+          font-style: oblique;
+        </div>
+      </code>
+    </pre>
+
+		<h3>small-caps</h3>
+		<p>Variantes de nuestra fuente, igual podemos modificar como el espacio entre los números</p>
+		<pre>
+      <code>
+        <div class="font-v-n">
+          font-variant: normal;
+        </div>
+        <div class="font-v-sm">
+          font-variant: small-caps;
+        </div>
+        <div class="font-v-p">
+          font-variant: no-common-ligatures proportional-nums;
+          3.14
+        </div>
+          <div class="font-v-t">
+            font-variant: common-ligatures tabular-nums;
+            3.14
+          </div>
+          <div class="font-v-ss">
+            font-variant: small-caps slashed-zero;
+            3.14
+          </div>
+      </code>
+    </pre>
+
+		<h3>line-height</h3>
+		<p>Interlineado, 1 por defecto, al igual que en word.</p>
+		<pre>
+      <code>
+        <div class="line-h">
+          line-height: normal;
+          line-height: normal;
+        </div>
+        <div class="line-h-2">
+          line-height: 2;
+          line-height: 2;
+        </div>
+      </code>
+    </pre>
+
+		<h3>Font</h3>
+		<p>Shorthand para todas las propiedades, no es muy usado ya que trae muchas y rara vez usamos todas</p>
+		<blockquote>Debemos poner / entre el font-size y el line-height</blockquote>
+		<p>
+			El orden de definición es: <u>font-style</u> <u>font-variant</u> <u>font-weight</u> <u>font-size</u> /
+			<u>line-height</u> <u>font-family</u>
+		</p>
+		<pre>
+      <code>
+        <div class="font">
+          font: italic small-caps bold 1rem / 1.5 Comic, monospace;
+        </div>
+      </code>
+    </pre>
+
+		<h2>Fuentes</h2>
+		<p>
+			Hay diferentes fuentes que están en todos los dispositivos, desde donde sea que nos visite el usuario, están
+			fuentes las tendremos y podemos hacer uso. A estas las conocemos como
+			<u>tipografías seguras</u>
+		</p>
+
+		<p>
+			Nuestras fuentes tienen distintos formatos, los mas importantes para nosotros son: woff o woff2 (Web Open Font
+			Format) este es el formato que haremos uso en nuestros documentos, y nuestros sitio web.
+		</p>
+
+		<blockquote>
+			El funcionamiento de estas dos propiedades se puede simplificar de la siguiente forma: Digamos que el @font-face
+			es una función con el nombre que le asignamos en el font-family y que esta función la mandamos a llamar en nuestro
+			elemento. Este nombre debe ser único por esto mismo
+		</blockquote>
+
+		<h3>Font-family</h3>
+		<pre>
+      <code>
+        @font-face {
+          font-family: "Chalet";
+        }
+      </code>
+    </pre>
+		<p>Este nombre lo asignamos nosotros, debe ser segun la fuente y una palabra si es posible, sino separada con -</p>
+
+		<h4>src</h4>
+		<pre>
+      <code>
+        @font-face {
+          font-family: "Chalet";
+          src: url("Chalet.woff") format ("woff");
+        }
+      </code>
+    </pre>
+		<p>
+			Luego debemos poner la ruta de nuestro archivo woff, podemos poner mas rutas por si hay error en esta separando
+			con ",". También es necesario poner el format, ya que asi es como nuestro navegador va a tomar el archivo
+		</p>
+
+		<h3>Font-display</h3>
+		<p>Esta propiedad nos ayudara el comportamiento de nuestro texto mientras carga la fuente</p>
+		<ul>
+			<li>Auto -> Permite que el navegador utilice el método predeterminado, suele ser block</li>
+			<li>Block -> Oculta el texto hasta que la fuente haya sido descargada por completo</li>
+			<li>
+				Swap -> Indica al navegador que utilice la fuente alternativa para mostrar el texto hasta que la fuente
+				personalizada se haya cargado por completo. Si no especificamos ninguna, cargara la de por defecto que en su
+				mayoría es "Times New Roman"
+			</li>
+			<li>Fallback -> Es una mezcla de auto y swap</li>
+			<li>
+				Optional -> ocultara el texto, luego lo cargara con la fuente alternativa y finalmente aplicara la fuente
+				personalizada. La diferencia con el anterior es que este se demora un poco mas con el ciclo
+			</li>
+
+			<cite> El recomendado de usar es Swap </cite>
+		</ul>
+
+		<h3>Ejemplo</h3>
+		<p>Definimos nuestro <u>@font-face</u></p>
+
+		<div class="example-font-e">
+			<pre>
+        <code>
+          @font-face {
+            font-family: "Chalet";
+            src: url("../../assets/Chalet.woff") format("woff");
+            font-display: swap;
+          }
+        </code>
+      </pre>
+		</div>
+
+		<blockquote>De esta forma nuestra familia de fuente ya estaría disponible para nuestro documento</blockquote>
+
+		<p>
+			Como es un archivo externo, en algunas ocasiones puede que presente retrasos, dependiendo de la conexión a
+			internet. Lo ideal es que por lo menos pongamos una familia de fuente segura
+		</p>
+
+		<div class="call-example">
+			<pre>
+        <code>
+          font-family: "Chalet", sans-serif;
+        </code>
+      </pre>
+		</div>
+
+		<h2>Fuente externa</h2>
+		<p>
+			Hay una gran variedad de fuentes por lo que hay sitios que ya han organizado estas por nosotros. Cada sitio tiene
+			su forma para que podamos acceder a estas, sin embargo, Google fonts es de las mas grandes ademas de ser open
+			source.
+		</p>
+		<blockquote>
+			Podemos acceder a sus fuentes totalmente gratis, ademas que podemos hacer uso de los iconos y demás
+		</blockquote>
+
+		<h3>Ejemplo de uso</h3>
+		<p>
+			Para Google fonts, solo debemos seleccionar la fuente que queremos, este nos dará links que debemos poner en
+			nuestro head que se cargara al entrar a nuestro documento
+		</p>
+
+		<h4>Raleway</h4>
+		<pre>
+      <code>
+        &lt;link rel="preconnect" href="https://fonts.googleapis.com" /&gt;
+        &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /&gt;
+        &lt;link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet"/&gt;
+      </code>
+    </pre>
+		<p>
+			Asi ya podríamos usar la fuente en nuestro documento, en este caso solo importamos con el grueso estandar y cuando
+			la queremos en negrilla, también podríamos importarla con todas sus Características per esto pesaría mas y
+			consumiría mas recursos. Por lo tanto es importante elegir variantes que si usemos
+		</p>
+
+		<div class="raleway">
+			<pre>
+        <code>
+          font-family: "Raleway", sans-serif;
+        </code>
+      </pre>
+		</div>
+
+		<h2>Estilos de texto</h2>
+
+		<h3>Text align</h3>
+		<blockquote>Alinear texto</blockquote>
+		<div class="ex-text-a">
+			<pre>
+        <code>
+          text-align: center;
+        </code>
+      </pre>
+		</div>
+
+		<h3>Text decoration</h3>
+		<blockquote>Controlamos el subrayado</blockquote>
+		<div class="ex-text-d">
+			<pre>
+        <code>
+          <p class="text">
+            text-decoration: underline;
+          </p>
+        </code>
+      </pre>
+		</div>
+
+		<h3>Text ident</h3>
+		<blockquote>Nos permite dar sangria a la primera linea de nuestro texto</blockquote>
+		<div class="ex-text-i">
+			<pre>
+        <code>
+          text-indent: 1;
+        </code>
+      </pre>
+		</div>
+
+		<h3>text transform</h3>
+		<blockquote>Nos permite transformar nuestro texto</blockquote>
+		<div class="ex-text-tr">
+			<pre>
+        <code>
+          <div class="capitalize">
+            Capitalize -> La primera letra de cada palabra estará en mayúsculas
+          </div>
+          <div class="uppercase">
+            uppercase -> Todas las palabras estarán en mayúsculas
+          </div>
+          <div class="lowercase">
+            lowercase -> Todas las palabras estarán en minúsculas
+          </div>
+          <div class="none">
+            none -> No haremos nada con el texto, <b>Por defecto</b>
+          </div>
+        </code>
+      </pre>
+		</div>
+
+		<h3>letter spacing</h3>
+		<blockquote>Definimos cuanto espacio habra ente cada letra</blockquote>
+
+		<div class="ex-letter-s">
+			<pre>
+        <code>
+          letter-spacing: 0.5rem;
+        </code> 
+      </pre>
+		</div>
+
+		<h3>white-space</h3>
+		<blockquote>Definimos que hacer con los espacios en blanco</blockquote>
+		<div class="ex-white-s">
+			<pre>
+        <code>
+          <div class="nowrap">
+            nowrap -> No importa si hay o no, nuestro contenido se vera en una sola linea
+          </div>
+          <div class="pre">
+            pre -> El navegador respetara todos los espacios en blanco que le hayamos dado en nuestro documento
+          </div>
+          <div class="normal">
+            normal -> El primer espacio sera tomado, ademas, sera wrap, respetara el tamaño de nuestro elemento
+          </div>
+          <div class="pre-wrap">
+            pre-wrap -> Se adaptara al espacio que le hemos definido a nuestro elemento
+          </div>
+        </code>
+      </pre>
+		</div>
+
+		<h3>Word break</h3>
+		<blockquote>
+			Nos ayudara a definir la forma en que se comportaran las palabras al momento que tengan la necesidad de romperse
+			para pasar a la siguiente linea
+		</blockquote>
+		<div class="ex-word-b">
+			<pre>
+        <code>
+          <div class="normal">
+            normal -> Las palabras que no tengan espacios no se romperán
+          </div>
+          <div class="break">
+            break-all -> Se rompe la palabra, asi quede solo una letra
+          </div>
+        </code>
+      </pre>
+		</div>
+
+		<h3>Writing mode</h3>
+		<blockquote>Controlamos el modo de lectura</blockquote>
+		<div class="ex-writing-m">
+			<pre>
+        <code>
+          <div class="horizontal-tb">
+            horizontal-tb -> Por defecto en nuestro idioma
+          </div>
+          <div class="vertical-lr">
+            vertical-lr -> 
+          </div>
+          <div class="vertical-rl">
+            vertical-rl -> 
+          </div>
+        </code>
+      </pre>
+		</div>
+
+		<h3>Text overflow</h3>
+		<blockquote>Nos permite controlar que hacer con el texto que desborda</blockquote>
+		<p>Para que esta propiedad funcione es necesario usar <u>overflow</u> y <u>white-space</u></p>
+
+		<div class="ex-text-ov">
+			<pre>
+        <code>
+            overflow: hidden;
+            white-space: nowrap;
+          <div class="clip">
+            Para que el texto que se desborde se oculte
+          </div>
+          <div class="ellipsis">
+            Pondrá puntos suspensivos en cuanto el texto se desborde
+          </div>
+        </code>
+      </pre>
+		</div>
+
+		<h2>Material Icons</h2>
+		<blockquote>
+			Al igual que las fuentes hay muchos sitios donde podremos conseguir iconos gratis y en distintos formatos, en este
+			caso usaremos el sitio de Google fonts el cual nos da la configuración y ejemplos de su uso. Aunque esto puede
+			cambiar entre los sitios
+		</blockquote>
+		<blockquote>
+			Los links que nos dan los sitios web están en nuestra cabecera, estos pueden variar por las versiones lo mejor es
+			ver su documentación e ir guiándonos con ella
+		</blockquote>
+
+		<h3>Google</h3>
+		<a
+			href="https://developers.google.com/fonts/docs/material_symbols#getting_material_symbols"
+			target="_blank"
+			rel="noopener"
+			>Documentación
+		</a>
+		<div>
+			<span class="material-icons"> verified </span>
+			<span class="material-icons"> face </span>
+			<span class="material-icons"> favorite_border </span>
+		</div>
+
+		<h3>Bootstrap Icons</h3>
+		<a href="https://icons.getbootstrap.com/#install" rel="noopener" target="_blank">Documentación</a>
+		<div>
+			<i class="bi bi-twitter"></i>
+			<i class="bi bi-youtube"></i>
+			<i class="bi bi-facebook"></i>
+			<i class="bi bi-instagram"></i>
+
+			<i class="bi bi-alarm-fill"></i>
+		</div>
+
+		<h3>Font Awesome</h3>
+		<a href="https://fontawesome.com/docs" target="_blank" rel="noopener"> Documentación </a>
+		<div>
+			<i class="fa fa-face-angry"></i>
+			<i class="fab fa-youtube"> </i>
+			<i class="fas fa-thumbs-up"></i>
+		</div>
+	</body>
+</html>

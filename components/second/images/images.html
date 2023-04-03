@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="images.css" />
+		<title>Imágenes</title>
+	</head>
+	<body>
+		<h1>Imágenes CSS</h1>
+
+		<h2>Imágenes responsivas</h2>
+		<blockquote>Las imágenes son elementos que trabajan en linea</blockquote>
+		<p>
+			Cuando solo necesitamos que nuestra imagen se adapte a nuestro elemento o que no sobresalga. Con poner un
+			<u>max-width</u> al 100% es suficiente
+		</p>
+		<img src="../../../../../assets/images/images/puesta-sol.jpg" alt="Kenai y la puesta del sol" />
+
+		<h2>Imágenes con tamaño específicos</h2>
+		<p>
+			Lo complicado puede que llegue cuando queramos tarjetas o pequeñas muestras, cuando queremos varias imágenes con
+			el mismo tamaño, lo complicado es que no todas tienen las mismas dimensiones. Por ello contamos con propiedades
+			que nos ayudaran a manejar mejor las imágenes
+		</p>
+
+		<h3>Object fit</h3>
+		<p>
+			Su funcionalidad es parecida a la de background position, nos ayudara a controlar el comportamiento de nuestra
+			imagen dentro del elemento
+		</p>
+
+		<div class="object-fit">
+			<div class="object-fit-1">
+				<img src="../../../assets/images/puesta-sol.jpg" alt="Puesta del sol" />
+				<p>fill -> Rellenar, de esta forma tratara de cumplir nuestras ordenes, aunque la imagen se deforme</p>
+				<h4>Fill</h4>
+			</div>
+			<div class="object-fit-2">
+				<img src="../../../assets/images/puesta-sol.jpg" alt="Puesta del sol" />
+				<p>
+					cover -> No deformara la imagen ya que la hara mas pequeña o grande con sus dimensiones iniciales, sin embargo
+					nuestra imagen no se vera completa, ya que no quedara exactamente
+				</p>
+				<h4>Cover</h4>
+			</div>
+			<div class="object-fit-3">
+				<img src="../../../assets/images/puesta-sol.jpg" alt="Puesta del sol" />
+				<p>contain -> Hara que toda nuestra imagen se vea dentro del contenedor, aunque esto implique dejar agujeros</p>
+				<h4>Contain</h4>
+			</div>
+			<div class="object-fit-4">
+				<img src="../../../assets/images/puesta-sol.jpg" alt="Puesta del sol" />
+				<p>
+					none -> La imagen queda con las mismas dimensiones, si esta es muy grande, las medidas de nuestro elemento es
+					lo que alcanzaremos a ver. <b style="color: red">Por defecto</b>
+				</p>
+				<h4>None</h4>
+			</div>
+			<div class="object-fit-5">
+				<img src="../../../assets/images/puesta-sol.jpg" alt="Puesta del sol" />
+				<p>
+					scale-down -> Toma el valor que sea menor de los valores contain y none. Este es menos usado ya puede variar
+					el comportamiento segun el viewport
+				</p>
+				<h4>Scale-down</h4>
+			</div>
+		</div>
+
+		<h3>Object position</h3>
+		<p>
+			Definimos la position inicial de nuestra imagen, su manejo y funcionalidad es muy parecidas al de
+			background-position
+		</p>
+		<blockquote>
+			Para el caso de los ejemplos usare <u>cover</u> para que notemos la diferencia entre las posiciones
+		</blockquote>
+
+		<div class="object-position">
+			<div class="object-position-1">
+				<img src="../../../assets/images//puesta-sol.jpg" alt="Puesta del sol" />
+				<h4>50% 50%</h4>
+				<p><b style="color: red">Por defecto</b> Hacen que nuestra imagen se posicione desde el centro</p>
+			</div>
+			<div class="object-position-2">
+				<img src="../../../assets/images//puesta-sol.jpg" alt="Puesta del sol" />
+				<h3>left top</h3>
+			</div>
+			<div class="object-position-3">
+				<img src="../../../assets/images//puesta-sol.jpg" alt="Puesta del sol" />
+				<h3>right bottom</h3>
+			</div>
+			<div class="object-position-4">
+				<img src="../../../assets/images//puesta-sol.jpg" alt="Puesta del sol" />
+				<h3>left bottom</h3>
+			</div>
+			<div class="object-position-5">
+				<img src="../../../assets/images//puesta-sol.jpg" alt="Puesta del sol" />
+				<p>
+					Ademas de los valores especiales podemos dar hacerlo con las unidades de medida, si ponemos los valores en
+					positivo estaríamos alejando la imagen de este eje
+				</p>
+				<h3>-40px center</h3>
+			</div>
+		</div>
+	</body>
+</html>

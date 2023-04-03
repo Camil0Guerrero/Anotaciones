@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="units.css" />
+		<title>Unidades en CSS</title>
+	</head>
+	<body>
+		<h1>Unidades de medida en CSS</h1>
+
+		<p>
+			En CSS podemos aplicar tamaños a todos los elementos y contenido por aparte. Para ello disponemos de distintas
+			maneras las cuales están agrupadas y enfocadas para distintas tareas. A continuación veremos medidas que nos
+			pueden ayudar a tener varias opciones para elegir la que mejor se acomode a nuestra necesidad
+		</p>
+
+		<div class="units">
+			<h2>Absolutas</h2>
+			<p>
+				Su valor no cambia, son unidades del mundo real. Estas unidades son utilizadas sobretodo cuando vamos a imprimir
+				una interfaz visual, para que salga tal cual estamos maquetando
+			</p>
+
+			<ul>
+				<li>pc</li>
+				<li>cm</li>
+				<li>mm</li>
+				<li>Q</li>
+
+				<h4>Las mas usadas y útiles para nosotros son:</h4>
+				<li>pt (1/72in) Esta medida es usado por los procesadores de texto, word, google docs, etc...</li>
+				<cite>in -> pulgada</cite>
+
+				<li>px (1/96)</li>
+			</ul>
+
+			<h2>Relativas</h2>
+			<p>Su valor es dinámico, cambia segun su contexto</p>
+
+			<h3>Al tamaño de la fuente</h3>
+			<ul>
+				<li>em -> Basada en la anchura de la "m", de la fuente del elemento</li>
+				<li>rem -> Basada en la anchura de la "", de la fuente del elemento raíz (HTML)</li>
+				<li>ex -> Basada en la altura de la "X" de la fuente del elemento</li>
+				<li>ch -> Basada en la anchura de la "O" del fuente del elemento</li>
+			</ul>
+
+			<h3>Porcentaje</h3>
+			% -> a partir del tamaño del contenedor
+
+			<h3>Viewport</h3>
+			<p>El area visible</p>
+			<ul>
+				<li>vw -> ancho del viewport. De 1 a 100</li>
+				<li>vh -> alto del viewport. De 1 a 100</li>
+				<li>vmax -> Entre vw y vh toma el que tenga mayor valor</li>
+				<li>vmin -> Entre vw y vh toma el que tenga menor valor</li>
+			</ul>
+
+			<blockquote><b>El navegador renderiza las medidas en px</b></blockquote>
+			<br />
+			<cite><u>16</u> Es el tamaño por defecto de la fuente</cite>
+		</div>
+
+		<h3>Pixeles</h3>
+		<blockquote>Es una unidad física, una pulgada son 0.96 pixeles</blockquote>
+		<p>
+			En la medida de lo posible debemos no usar las medidas absolutas. Tratar de siempre usar relativas para que
+			nuestro sitio se vea siempre bien, no solo en algunos casos
+		</p>
+
+		<div class="pixels">
+			<pre>
+        <code>
+          background-color: cadetblue;
+          width: 500px;
+          height: 400px;
+          font-size: 20px;
+          border: thick solid rebeccapurple;
+        </code>
+      </pre>
+		</div>
+
+		<h3>Ems</h3>
+		<p>Estas medidas van acorde a los pixeles que nuestro font size tiene</p>
+		<blockquote>
+			En el caso ejemplo tomara como referencia el ancho de la m pero con 24px que es el que tiene su padre definido en
+			el font-size
+		</blockquote>
+
+		<p>Al usar esta medida debemos tener en cuenta cual es el valor que tenemos como referencia</p>
+		<div class="ems">
+			<pre>
+        <code>
+          font-size: 24px;
+                    --24px   12px
+          padding: 1em 0.5em; 
+        </code>
+      </pre>
+			<div class="em-child">
+				<pre>
+          <code>
+              font-size: 2em; <small>48px</small>
+              margin: 0.5em; <small>24px</small>
+              padding: 1em; <small>48px</small>
+          </code>
+        </pre>
+			</div>
+		</div>
+
+		<h3>Rems</h3>
+		<p>
+			Root em, es parecido solo que este siempre toma como referencia el tamaño de la fuente pero de nuestro elemento
+			HTML
+		</p>
+		<p>Por lo tanto no importa si hemos definido en elementos valores distintos en el tamaño de la letra</p>
+
+		<div class="rems">
+			<pre>
+        <code>
+          font-size: 24px;
+          padding: 1rem 0.5rem; <small>16px 8px</small>
+        </code>
+      </pre>
+			<div class="rem-child">
+				<pre>
+          <code>
+            background-color: salmon;
+            border: thick solid beige;
+            font-size: 2rem; <small>32px por defecto</small>
+            margin: 0.5rem;<small>8px</small>
+            padding: 1rem; <small>16px</small>
+          </code>
+        </pre>
+			</div>
+		</div>
+
+		<h3>Exs</h3>
+		<p>
+			La X es la letra mas alta, por ello se toma como referencia, esta propiedad no es muy usada. Ya que casi siempre
+			nos preocupamos por el ancho y nuestro alto se va acomodando a partir de este. Esta propiedad tal vez nos serviría
+			cuando queramos poner nuestro sitio en horizontal
+		</p>
+		<p>Como es tan poco usada esta medida, no existe "Rex"</p>
+
+		<div class="exs">
+			<pre>
+        <code>
+          font-size: 24px;
+          padding: 1ex 0.5ex;
+        </code>
+      </pre>
+			<div class="ex-child">
+				<pre>
+          <code>
+            font-size: 2ex;
+            margin: 0.5ex;
+            padding: 1ex;
+          </code>
+        </pre>
+			</div>
+		</div>
+
+		<h3>Chs</h3>
+		<p>
+			Toma como referencia el ancho de la O. La mejor funcionalidad es cuando tenemos el conocimiento de cuantos
+			caracteres tiene nuestro elemento y queremos que el ancho quede perfectamente
+		</p>
+		<p>Toma como referencia el tamaño de la fuente del elemento como <u>em</u></p>
+		<div class="chs">1234567890</div>
+
+		<h3>Porcentajes</h3>
+		<p>Esta unidad de medida va de acuerdo al tamaño del elemento padre</p>
+		<blockquote>
+			Cuando queremos definir la altura es distinto, ya que la mayoría de las veces la altura del elemento va a estar
+			delimitado por el contenido.
+			<br />
+			Lo recomendado es no definir la altura, que se haga a partir de nuestro contenido, asi si hacemos modificaciones
+			en nuestro elemento HTML no debemos preocuparnos por los estilos
+		</blockquote>
+		<p>Dentro de un elemento que tenga definida la altura y anchura tal vez si podríamos usarlo</p>
+
+		<div class="percentages">
+			<pre>
+        <code>
+          width: 80%;
+          padding: 5%;
+          margin: 20% 10%;
+        </code>
+      </pre>
+		</div>
+
+		<h3>Viewport</h3>
+		<p>
+			Con esta unidad si podemos hacer que un elemento ocupe toda la pantalla. Este no tiene problema como los
+			porcentajes. Muy funcional para por ejemplo las hero-image
+		</p>
+		<p>Esta definido por el tamaño de la pantalla</p>
+		<p>
+			Para definir el ancho no es muy recomendado ya que este tiene en cuenta el margen del body y ademas, nuestra barra
+			de navegación, el scroll, también hace parte del viewport. Por lo que podríamos tener problemas
+		</p>
+		<p>Esta unidad permite fluir, que nuestro contenido se vaya adaptando al entorno</p>
+
+		<div class="viewport">
+			<pre>
+        <code>
+          font-size: 5vw;
+          padding: 2vh 2vw;
+        </code>
+      </pre>
+		</div>
+
+		<h3>vmax y vmin</h3>
+		<p>
+			Estas unidades casi no son usadas ya que puede ser algo complejo hacer que siempre se vea bien nuestro elemento
+		</p>
+		<div class="vmin-vmax">
+			<pre>
+        <code>
+            width: 50vmax;
+            height: 50vmin;
+        </code>
+      </pre>
+		</div>
+
+		<div class="use-units">
+			<h3>¿Cuando usar cada una de las unidades de medida?</h3>
+
+			<h4>Absolutas</h4>
+			<ul>
+				<li>
+					cm, mm, in -> cuando queremos imprimir nuestro contenido, para que las medidas sean exactas y quede igual en
+					el papel
+				</li>
+				<li>px -> - Para la impresión - Definir el font-size de nuestro HTML</li>
+			</ul>
+
+			<h4>Relativas</h4>
+			<ul>
+				<li>rem -> Todo lo relacionado con la tipografía: font-size, padding margin</li>
+				<li>
+					em -> Para cuando queremos que el elemento tenga distancias definidas, por ejemplo: pequeño, medio, largo,
+					etc...
+				</li>
+				<li>
+					ex -> Para cuando sabemos cuantas filas de caracteres vamos a recibir, aunque casi no se usa ya que la altura
+					no deberíamos de definiría a menos que sean tarjetas y queremos que sea uniforme
+				</li>
+				<li>ch -> Cuando sabemos los caracteres que va a tener nuestro elemento y queremos limitarlo</li>
+			</ul>
+
+			<h4>Porcentaje</h4>
+			<p>Diseño responsivo</p>
+
+			<h4>Viewport</h4>
+			<p>
+				Para cuando necesitamos el tamaño de la pantalla como referencia, por ejemplo para el alto de la hero-image,
+				para textos fluidos, etc...
+			</p>
+		</div>
+	</body>
+</html>

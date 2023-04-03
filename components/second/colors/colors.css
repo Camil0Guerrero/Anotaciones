@@ -1,0 +1,54 @@
+.color-by-name {
+	background-color: coral;
+	color: white;
+	border: thick solid greenyellow;
+}
+
+.color-hex {
+	background-color: #0003;
+	border: thick solid #0000ff;
+}
+
+.color-rgb {
+	background-color: rgba(0, 0, 0, 0.3);
+	border: thick solid rgb(0, 0, 255);
+}
+
+.color-hsl {
+	background-color: hsla(0, 0%, 0%, 0.3);
+	border: thick solid hsl(240, 100%, 50%);
+}
+
+/* Characteristics of */
+/* Hex */
+.hex {
+	background-color: #ff660080;
+	padding: 1rem;
+}
+
+/* HSL */
+.hsl {
+	background-color: hsla(240, 80%, 70%, 0.6);
+	padding: 1rem;
+}
+
+/* Transparent y currentColor */
+.ex-transparent-current {
+	color: greenyellow;
+	width: 100%;
+	background-color: transparent;
+}
+
+.color-transparent-current {
+	width: 50%;
+	margin: auto;
+	background-color: black;
+	border: thick solid currentColor;
+}
+
+/* Opacity */
+.opacity {
+	background-color: #0003;
+	border: thick solid #0000ff;
+	opacity: 0.3;
+}

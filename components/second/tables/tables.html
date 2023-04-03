@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="tables.css" />
+		<title>Tablas</title>
+	</head>
+	<body>
+		<h1>Tablas en CSS</h1>
+
+		<blockquote>El atributo <u>border</u> ya esta depreciado, es mejor hacerlo con CSS</blockquote>
+
+		<h2>border-collapse</h2>
+		<p>Controlamos el espacio que habrá entre nuestras celdas</p>
+
+		<div class="table-ex-bc">
+			<p>
+				separate -> hara que entre nuestras celdas hayan 2px de espacio
+				<b style="color: red">Por defecto</b>
+			</p>
+
+			<p>collapse -> Asi no tendrán nada de espacio</p>
+
+			<article>
+				<table class="table-ex-bc-1">
+					<tr>
+						<th>A</th>
+						<th>B</th>
+						<th>C</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td></td>
+						<td>9</td>
+					</tr>
+				</table>
+			</article>
+
+			<article>
+				<table class="table-ex-bc-2">
+					<tr>
+						<th>A</th>
+						<th>B</th>
+						<th>C</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td></td>
+						<td>9</td>
+					</tr>
+				</table>
+			</article>
+		</div>
+
+		<h2>Empty-cells</h2>
+		<p>Definimos como queremos que manejen las celdas que están vacías</p>
+		<div class="table-ex-ec">
+			<p>
+				<u>show</u> -> Aplicara los estilos sin importar que la celda este vacía
+				<b style="color: red">Por defecto</b>
+			</p>
+			<p>
+				<u>hide</u> -> ocultara nuestra celda y con ella todos los estilos que le hayamos definido, pero el espacio
+				queda ahi
+			</p>
+
+			<article>
+				<table class="table-ex-ec-1">
+					<tr>
+						<th>A</th>
+						<th>B</th>
+						<th>C</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td></td>
+						<td>9</td>
+					</tr>
+				</table>
+			</article>
+
+			<article>
+				<table class="table-ex-ec-2">
+					<tr>
+						<th>A</th>
+						<th>B</th>
+						<th>C</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td></td>
+						<td>9</td>
+					</tr>
+				</table>
+			</article>
+		</div>
+
+		<blockquote>
+			Cuando tenemos la propiedad <i>border-collapse</i> con el valor <i>collapse</i> no se puede apreciar bien el
+			cambio
+		</blockquote>
+
+		<h2>Border spacing</h2>
+		<p>Definimos el espacio que habrá entre nuestras celdas</p>
+		<div class="table-ex-bs">
+			<p>1rem</p>
+			<p>
+				0 -> De esta forma también se pegaran, pero en la parte de abajo quedara un pequeño margen, ademas de que el
+				ancho de los bordes se sumaran entre ellos
+			</p>
+			<article>
+				<table class="table-ex-bs-1">
+					<tr>
+						<th>A</th>
+						<th>B</th>
+						<th>C</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td></td>
+						<td>9</td>
+					</tr>
+				</table>
+			</article>
+
+			<article>
+				<table class="table-ex-bs-2">
+					<tr>
+						<th>A</th>
+						<th>B</th>
+						<th>C</th>
+					</tr>
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td></td>
+						<td>9</td>
+					</tr>
+				</table>
+			</article>
+		</div>
+	</body>
+</html>

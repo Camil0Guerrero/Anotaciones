@@ -1,0 +1,58 @@
+/* Tables */
+/* Border collapse */
+.table-ex-bc {
+	display: grid;
+	justify-content: space-evenly;
+	grid-template-columns: repeat(2, 40%);
+	grid-template-rows: 100px 400px;
+	gap: 1rem;
+}
+
+th,
+td {
+	background-color: darkblue;
+	border: thin solid gray;
+	color: white;
+	text-align: center;
+	font-size: 3rem;
+}
+
+.table-ex-bc-1 {
+	border-collapse: separate;
+}
+
+.table-ex-bc-2 {
+	border-collapse: collapse;
+}
+
+/* Empty cells */
+.table-ex-ec {
+	display: grid;
+	justify-content: space-evenly;
+	grid-template-columns: repeat(2, 40%);
+	gap: 1rem;
+}
+
+.table-ex-ec-1 {
+	empty-cells: show;
+}
+
+.table-ex-ec-2 {
+	empty-cells: hide;
+}
+
+/* Border spacing */
+.table-ex-bs {
+	display: grid;
+	justify-content: space-evenly;
+	gap: 1rem;
+	grid-template-columns: repeat(2, 40%);
+}
+
+.table-ex-bs-1 {
+	border-spacing: 1rem;
+}
+
+.table-ex-bs-2 {
+	border-spacing: 0;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="form.css" />
+		<title>Formulario</title>
+	</head>
+	<body>
+		<h1>Formularios en CSS</h1>
+		<p>Ejemplo de un Formulario con algunos estilos típicos.</p>
+
+		<form action="https://formsubmit.co/guerrerocontrerascristiancamil@gmail.com" class="contact-form" method="POST">
+			<input
+				type="text"
+				name="nombre"
+				placeholder="Escribe tu nombre"
+				pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+				title="Nombre solo acepta letras y espacios en blanco"
+				required
+			/>
+
+			<input
+				type="email"
+				name="correo"
+				pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$"
+				title="Ingresa tu correo"
+				placeholder="Escribe tu correo"
+				required
+			/>
+
+			<textarea name="comentarios" cols="30" rows="10" placeholder="Escribe tus comentarios" required></textarea>
+
+			<input type="submit" />
+		</form>
+	</body>
+</html>

@@ -1,0 +1,297 @@
+/* Etilos de fuente */
+/* Font-family */
+.font-f {
+	background-color: blue;
+	color: white;
+	font-family: Georgia, "Times New Roman";
+}
+
+.font-f-2 {
+	background-color: red;
+	color: white;
+	font-family: sans-serif;
+}
+
+/* Font-size */
+.font-sz {
+	background-color: yellow;
+	font-size: 2rem;
+}
+
+/* Font-weight */
+.font-w {
+	background-color: green;
+	color: white;
+	font-weight: 400;
+}
+
+.font-w-2 {
+	background-color: green;
+	color: white;
+	font-weight: bold;
+}
+
+/* Font-style */
+
+.font-s-n {
+	background-color: maroon;
+	color: white;
+	font-style: normal;
+}
+
+.font-s-i {
+	background-color: maroon;
+	color: white;
+	font-style: italic;
+}
+
+.font-s-o {
+	background-color: maroon;
+	color: white;
+	font-style: oblique;
+}
+
+/* Font-variant */
+.font-v-n {
+	background-color: hotpink;
+	font-variant: normal;
+}
+
+.font-v-sm {
+	background-color: hotpink;
+	font-variant: small-caps;
+}
+
+.font-v-p {
+	background-color: hotpink;
+	font-variant: no-common-ligatures proportional-nums;
+}
+
+.font-v-t {
+	background-color: hotpink;
+	font-variant: common-ligatures tabular-nums;
+}
+
+.font-v-ss {
+	background-color: hotpink;
+	font-variant: small-caps slashed-zero;
+}
+
+/* Line height */
+.line-h {
+	background-color: grey;
+	color: white;
+	line-height: 1;
+}
+
+.line-h-2 {
+	background-color: grey;
+	color: white;
+	line-height: 2;
+}
+
+/* Font */
+.font {
+	background-color: darkslateblue;
+	color: white;
+	font: italic small-caps bold 1rem / 1.5 Comic, monospace;
+}
+
+/* Ejemplo fuentes externas */
+.example-font-e {
+	background-color: crimson;
+	color: white;
+}
+
+/* Fuentes externas */
+@font-face {
+	font-family: "Chalet";
+	src: url("../../assets/Chalet.woff") format("woff");
+	font-display: swap;
+}
+
+/* Call */
+.call-example {
+	background-color: cyan;
+	font-family: "Chalet", sans-serif;
+}
+
+/* Google fonts */
+.raleway {
+	font-family: "Raleway", sans-serif;
+	font-size: 1.2rem;
+}
+
+/* Estilos de fuente */
+
+/* Text align */
+.ex-text-a {
+	background-color: cornflowerblue;
+	text-align: center;
+}
+
+/* Text decoration */
+.ex-text-d {
+	background-color: cornflowerblue;
+}
+
+.ex-text-d .text {
+	display: inline;
+	text-decoration: underline;
+}
+
+/* Text ident */
+.ex-text-i {
+	background-color: cornflowerblue;
+	text-indent: 3rem;
+}
+
+/* Text transform */
+.ex-text-tr {
+	background-color: cornflowerblue;
+}
+
+.ex-text-tr .capitalize {
+	background-color: blue;
+	color: white;
+	text-transform: capitalize;
+}
+
+.ex-text-tr .uppercase {
+	background-color: red;
+	color: white;
+	text-transform: uppercase;
+}
+
+.ex-text-tr .lowercase {
+	background-color: yellow;
+	text-transform: lowercase;
+}
+.ex-text-tr .none {
+	background-color: green;
+	color: white;
+	text-transform: none;
+}
+
+/* Letter spacing */
+.ex-letter-s {
+	background-color: cornflowerblue;
+	letter-spacing: 0.5rem;
+}
+
+/* White space */
+.ex-white-s {
+	background-color: cornflowerblue;
+}
+
+/* Nowrap */
+.ex-white-s .nowrap {
+	background-color: blue;
+	color: white;
+	/* white-space: nowrap; */
+}
+
+.ex-white-s .pre {
+	background-color: red;
+	color: white;
+	/* white-space: pre; */
+}
+
+.ex-white-s .normal {
+	background-color: yellow;
+	white-space: normal;
+}
+
+.ex-white-s .pre-wrap {
+	background-color: green;
+	color: white;
+	white-space: pre-wrap;
+}
+
+/* Word Break */
+.ex-word-b {
+	background-color: cornflowerblue;
+}
+
+.ex-word-b .normal {
+	background-color: blue;
+	color: white;
+	word-break: normal;
+}
+
+.ex-word-b .break {
+	background-color: red;
+	color: white;
+	word-break: break-all;
+}
+
+/* Writing mode */
+.ex-writing-m {
+	background-color: cornflowerblue;
+}
+
+.ex-writing-m .horizontal-tb {
+	background-color: blue;
+	color: white;
+	writing-mode: horizontal-tb;
+}
+
+.ex-writing-m .vertical-lr {
+	background-color: red;
+	color: white;
+	writing-mode: vertical-lr;
+}
+.ex-writing-m .vertical-rl {
+	background-color: yellow;
+	writing-mode: vertical-rl;
+}
+
+/* Text overflow */
+.ex-text-ov {
+	background-color: cornflowerblue;
+}
+
+.ex-text-ov .clip {
+	background-color: blue;
+	color: white;
+	overflow: hidden;
+	text-overflow: clip;
+	white-space: nowrap;
+	width: 30%;
+}
+
+.ex-text-ov .ellipsis {
+	background-color: red;
+	color: white;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 30%;
+}
+
+/* Material icons */
+.material-icons {
+	font-family: "Material Icons";
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+
+	/* Support for Safari and Chrome */
+	text-rendering: optimizeLegibility;
+
+	/* Support for Firefox */
+	-moz-osx-font-smoothing: grayscale;
+
+	/* Support for IE */
+	font-feature-settings: "liga";
+}

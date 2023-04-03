@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="list.css" />
+		<title>Listas</title>
+	</head>
+	<body>
+		<h1>Listas en CSS</h1>
+		<p>Estas propiedades se las podemos aplicar a li, ol o ul. Aunque lo ideal es que sea a las etiquetas ol y ul</p>
+
+		<h2>List style type</h2>
+		<p>Con esta propiedad definimos que estilo queremos en las viñetas de la lista</p>
+
+		<ul>
+			<li style="list-style-type: disc">disc <b style="color: red">Por defecto</b></li>
+			<li style="list-style-type: square">square -> Cuadrados</li>
+			<li style="list-style-type: circle">circle -> Círculos sin relleno</li>
+			<li style="list-style-type: none"><cite>No importa que sea una lista desordenada</cite></li>
+			<li style="list-style-type: lower-roman">lower-roman -> Romanos en minúsculas</li>
+			<li style="list-style-type: upper-roman">upper-roman -> Romanos en mayúsculas</li>
+			<li style="list-style-type: decimal">decimal -> Números</li>
+			<li style="list-style-type: decimal-leading-zero">decimal-leading-zero -> Números dejando un cero al inicio</li>
+			<li style="list-style-type: lower-greek">lower-greek -> Alfabeto griego en minúsculas</li>
+			<li style="list-style-type: none">none -> Le quitamos las viñetas</li>
+			<li style="list-style-type: none">Igualmente podemos agregar personalizadas</li>
+			<li class="ex-list">"- "</li>
+			<li class="ex-list-2">"👉 "</li>
+			<li>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type" target="_blank" rel="noopener"
+					>Mas información</a
+				>
+			</li>
+		</ul>
+
+		<h2>List style image</h2>
+		<p>Nos permite poner una imagen en lugar de viñetas</p>
+
+		<ul>
+			<li>none -> <b style="color: red">Por defecto</b></li>
+			<li class="ex-list-image">Ejemple imagen</li>
+		</ul>
+
+		<blockquote>
+			Como nuestra imagen tiene dimensiones muy grandes ocupara este espacio aunque ne se muestre ya que se supone que
+			esta en la izquierda
+		</blockquote>
+
+		<p>Como poder usar nuestra imagen aunque sus dimensiones sean mas grandes</p>
+		<ul class="list">
+			<li>Usaremos el PseudoElemento before y asi haremos que quede en el sitio de la viñeta</li>
+			<li>
+				<pre>
+          <code>
+            .list li::before {
+              content: "";
+              display: inline-block;
+              width: 1rem;
+              height: 1rem;
+              background-image: url(../../assets/favicon.png);
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          </code>
+        </pre>
+			</li>
+			<li>
+				Lo que hicimos fue por medio del PseudoElemento <u>::before</u> podemos usar las propiedades para las imágenes,
+				a partir de allí las dimensionaremos y acomodaremos a su contenedor
+			</li>
+		</ul>
+
+		<h3>List style position</h3>
+		<p>Definimos donde Iran nuestras viñetas (bullet points)</p>
+
+		<div class="list-2">
+			<p>outside -> Valor por defecto y hara que nuestras viñetas estén por fuera del contenido</p>
+			<p>
+				inside -> De esta forma nuestra viñeta estará por dentro, no es tan utilizado ya que nos puede dar
+				inconvenientes al agregar mas estilos a nuestra lista
+			</p>
+			<ul class="list-21">
+				<li>Primavera</li>
+				<li>Verano</li>
+				<li>Otoño</li>
+				<li>Invierno</li>
+			</ul>
+			<ul class="list-22">
+				<li>Primavera</li>
+				<li>Verano</li>
+				<li>Otoño</li>
+				<li>Invierno</li>
+			</ul>
+		</div>
+
+		<h2>list-style</h2>
+		<p>
+			Es nuestro <u>shorthand</u> para las anteriores propiedades, su orden de definición es: list-style-type
+			list-style-image y list-style-position
+		</p>
+
+		<blockquote>
+			Como la mayoría de los shorthand lo recomendado es usarlo cuando tenemos la necesidad de todas las propiedades, no
+			usarlo solo para algunas
+		</blockquote>
+
+		<ul class="list-3">
+			<li>Primavera</li>
+			<li>Verano</li>
+			<li>Otoño</li>
+			<li>Invierno</li>
+			<li>code: list-style: lower-latin inside;</li>
+		</ul>
+
+		<h2>Organización</h2>
+		<p>
+			Podemos poner nuestras listas en varias columnas, esto es para tener mas orden, no para maquetar. Para esto
+			debemos usar Flexbox y Grid
+		</p>
+
+		<ul>
+			<li>column-count -> Definimos cuantas columnas queremos, lo hacemos con los números naturales, 1, 2, 3...</li>
+			<li>column-gap -> Espacio de separación entre las columnas</li>
+			<li>column-rule -> Regla divisoria entre las columnas, funciona igual que border y outline</li>
+			<li>
+				column-width -> Tamaño mínimo de ancho de nuestras columnas, si no caben, se bajaran hasta que quede 1 columna.
+				Hasta parece responsive design
+			</li>
+		</ul>
+
+		<blockquote>
+			En este caso si es muy funcional que nuestras viñetas estén dentro ya que pueden entrar en conflicto con nuestra
+			regla
+		</blockquote>
+
+		<h3>Ejemplo</h3>
+		<ol class="text-column">
+			<li>Mu de Aries</li>
+			<li>Aldebaran de Tauro</li>
+			<li>Saga & Kanon de Geminis</li>
+			<li>Death Mask de Cancer</li>
+			<li>Aioria de Leo</li>
+			<li>Shaka de Virgo</li>
+			<li>Dohko de Libra</li>
+			<li>Milo de Escorpión</li>
+			<li>Aioros de Sagitario</li>
+			<li>Shura de Capricornio</li>
+			<li>Camus de Acuario</li>
+			<li>Afrodita de Piscis</li>
+		</ol>
+
+		<p>Podemos usarlo en todo tipo de textos, solo que no debemos abusar ya que no es para todo</p>
+
+		<article class="text-column-2">
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam blanditiis ea illo magni id mollitia voluptatibus
+				aut doloremque. Ad rem repellat nam qui, aperiam magnam facere illo quas nulla exercitationem.
+			</p>
+			<p>
+				Sint soluta ratione quidem, quae explicabo sed eum excepturi libero natus non officiis nihil magni impedit nisi
+				alias iusto officia quo? Provident, impedit quod laudantium sed ullam voluptates labore quisquam.
+			</p>
+			<p>
+				Esse minima sapiente expedita dolores voluptas atque incidunt, deserunt voluptates quidem voluptatibus ducimus
+				magni doloribus odit consequuntur fugiat officia nobis tenetur ut architecto inventore perspiciatis. Ratione
+				optio sint odit alias?
+			</p>
+		</article>
+	</body>
+</html>

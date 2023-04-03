@@ -1,0 +1,25 @@
+/* Calc */
+.calc {
+	--padding-size: 2ch;
+	--num-ch: 10ch;
+	background-color: var(--default-bg-color);
+	font-size: 2rem;
+	padding: var(--padding-size);
+
+	width: calc(var(--num-ch) + var(--padding-size) * 2);
+}
+
+/* min max */
+.min-max {
+	background-color: var(--default-bg-color);
+	margin-top: 1rem;
+
+	width: min(300px, 20vw, 20rem);
+
+	height: max(200px, 25vh);
+}
+
+/* Clamp */
+.clamp {
+	font-size: clamp(2rem, 1rem + 3vw, 3rem);
+}

@@ -1,0 +1,58 @@
+/* Custom properties */
+.custom-props-1 {
+	--primary-color: gray;
+	--font-size: 32px;
+
+	background-color: var(--primary-color);
+}
+
+.custom-props-3 {
+	--text-color: navy;
+
+	color: var(--text-color, orange);
+	font-size: var(--font-size);
+	border: thin solid var(--border-color);
+}
+
+:root {
+	--default-bg-color: lightsalmon;
+}
+
+.custom-props-2 {
+	background-color: var(--default-bg-color);
+	/* Variable declarada con el atributo style */
+	border: thick solid var(--border-color);
+}
+
+.root {
+	background-color: var(--default-bg-color);
+}
+/* Custom properties */
+.custom-props-1 {
+	--primary-color: gray;
+	--font-size: 32px;
+
+	background-color: var(--primary-color);
+}
+
+.custom-props-3 {
+	--text-color: navy;
+
+	color: var(--text-color, orange);
+	font-size: var(--font-size);
+	border: thin solid var(--border-color);
+}
+
+:root {
+	--default-bg-color: lightsalmon;
+}
+
+.custom-props-2 {
+	background-color: var(--default-bg-color);
+	/* Variable declarada con el atributo style */
+	border: thick solid var(--border-color);
+}
+
+.root {
+	background-color: var(--default-bg-color);
+}

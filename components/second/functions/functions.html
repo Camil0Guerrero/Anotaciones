@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="functions.css" />
+		<title>Funciones</title>
+	</head>
+	<body>
+		<h1>Funciones en CSS</h1>
+
+		<ul>
+			<li>var() -> Lo usamos para llamas nuestras custom properties</li>
+			<li>url() -> Usado para incluir archivos</li>
+			<li>calc() -> Podemos hacer operaciones matemáticas con medidas en CSS</li>
+			<li>min() % max() -> Elige el menor o mayor valor</li>
+			<li>
+				clamp() -> Pasamos 3 valores, el mínimo, el ideal y el máximo. Dentro de esta función también se pueden hacer
+				cálculos
+			</li>
+		</ul>
+
+		<h2>calc</h2>
+		<p>
+			Son importantes los espacios, si no hay espacios entre los operadores y números, no funcionara nuestra función
+			<b>calc</b>
+		</p>
+		<pre>
+      <code>
+        --padding-size: 2ch;
+        --num-ch: 10ch;
+        width: calc(var(--num-ch) + var(--padding-size) * 2);
+      </code>
+    </pre>
+		<div class="calc">1234567890</div>
+
+		<h2>Min Max</h2>
+		<div class="min-max">
+			<pre>
+        <code>
+          width: (300px, 20vw, 20rem);
+          height: max(200px, 25vh);
+        </code>
+      </pre>
+		</div>
+
+		<h2>clamp</h2>
+		<p>
+			Nuestro segundo valor al ser dinámico, nuestro texto sera fluido, hasta que llegue a los valores definidos, que en
+			este caso son estáticos
+		</p>
+		<div class="clamp">font-size: clamp(2rem, 1rem + 3vw, 3rem);</div>
+	</body>
+</html>

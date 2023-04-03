@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="colors.css" />
+		<title>Colores</title>
+	</head>
+	<body>
+		<h1>Colores en CSS</h1>
+
+		<p>Tenemos principalmente 3 formas para definir nuestros colores en CSS, por el nombre, hexadecimal, RGB</p>
+		<p>
+			Aunque hay otros sistemas de colores, los que nos competen son los que están mas enfocados en la parte de la
+			tecnología.
+			<br /><br />
+			RGB(Medios digitales) vs CMYK (medios Impresos)
+		</p>
+
+		<h2>Colores por nombre</h2>
+		<p>
+			Por medio del nombre podemos definir casi cualquier color, sin embargo la lista la lista de todos los que existen
+			los podemos encontrar en:
+			<a href="https://htmlcolorcodes.com/color-names/" target="_blank" rel="noopener"> Colores por nombres </a>
+			<i>
+				Con esta pagina también podemos ve el valor de nuestro color en los demás formatos. Ademas, podemos convertir de
+				hexagonal a rgb y viceversa
+			</i>
+		</p>
+		<p>
+			También podemos hacer uso de la paleta de
+			<a href="https://g.co/kgs/RcsgRk" target="_blank" rel="noopener">Google</a>
+			en la que podemos jugar con los espectros y gama de colores. Podemos obtener el colore en el formato que
+			necesitemos.
+		</p>
+
+		<div class="color-by-name">
+			<pre>
+        <code>
+          background-color: coral;
+          color: rebeccapurple;
+          border: thick solid greenyellow;
+        </code>
+      </pre>
+		</div>
+
+		<h2>Colores Hexadecimales</h2>
+		<p>hexadecimal -> 16 dígitos. se toman los 10 primeros números 0123456789 y los 6 dígitos faltantes son ABCDEF</p>
+
+		<div class="hex">
+			<h3>Características del formato hexagonal:</h3>
+
+			<p>Los colores en HEX son definidos en 6 dígitos separados de a 2</p>
+			<ul>
+				<li>Primeros 2 -> Representan el canal del color rojo</li>
+				<li>3 y 4 -> Representan el canal del color verde</li>
+				<li>2 últimos -> canal del color azul</li>
+				<li type="none">00 -> Es el valor mas bajo</li>
+				<li type="none">ff -> valor mas alto</li>
+			</ul>
+
+			<ul>
+				<li>
+					<p>
+						Para aplicar el color en código hexadecimal debemos iniciar con
+						<u>#</u>. "#FF6600"
+					</p>
+				</li>
+				<li>
+					<p>No distingue entre minúsculas y mayúsculas, pero el estandar es hacerlo en minúsculas asi como en HTML</p>
+				</li>
+
+				<li>
+					<p>
+						Cuando los pares de los canales son iguales, se repiten. Podemos poner solo uno de los dos.
+						<br />
+						<span style="background-color: #ff6600">#ff6600</span>
+						<span style="background-color: #f60"> #f60 </span>
+					</p>
+				</li>
+			</ul>
+		</div>
+
+		<h3>Opacidad</h3>
+		<p>
+			Podemos aplicar opacidad con el sistema hexadecimal poniendo dos dígitos al final, estos van desde 00 hasta 99, si
+			lo queremos al 100% no le ponemos los 2 dígitos finales
+		</p>
+		<p>Aplicamos la opacidad con 1 dígito cuando hemos definido con 3 nuestro color. del 0 al 9</p>
+
+		<div class="color-hex">
+			<pre>
+        <code>
+          background-color: #0003;
+          border: thick solid #0000ff;
+        </code>
+      </pre>
+		</div>
+
+		<h2>Colores RGB</h2>
+		<p>
+			Tenemos los mismos canales que en el Hexadecimal, solo que los valores van de 0 a 255. Para definir nuestro color
+			debemos hacer uso de la función <u>rgb</u>
+		</p>
+
+		<h3>¿Por qué 255?</h3>
+		El Sistema RGB Acepta 8 bits por canal
+		<br />
+		1 bit -> 0/1 2 dígitos elevados a los 8 bits que recibe
+		<br />
+		2 <sup>8</sup> = 256
+		<br />
+		de 0 hasta 255 = 256
+
+		<h3>Opacidad</h3>
+		<p>
+			Para definir la opacidad en este sistema de colores debemos sumar el canal "alpha", que precisamente es el que nos
+			permite agregar el cuarto valor, se maneja del 0 al 1. 0.5 seria el 50%
+		</p>
+		<div class="color-rgb">
+			<pre>
+        <code>
+          background-color: rgba(0, 0, 0, 0.3);
+          border: thick solid rgb(0, 0, 255);
+        </code>
+      </pre>
+		</div>
+
+		<h2>Sistema HSL</h2>
+		<p>
+			Este sistema no esta enfocado unicamente para los medios digitales, se puede utilizar para hacer contenido que sea
+			impreso.
+		</p>
+		<div class="hsl">
+			<p>HSL HueSaturationLightness</p>
+			<p>
+				Hue -> En el primer valor debemos definir nuestro color, la hacemos por medio del circulo cromático y los grados
+				del que queremos, sin embargo el numero lo ponemos solo. Los colores mas relevantes son:
+			</p>
+			<ul>
+				<li>0° -> Red</li>
+				<li>60° -> Yellow</li>
+				<li>120° -> Green</li>
+				<li>180° -> Cyan</li>
+				<li>240° -> Blue</li>
+				<li>300° -> Magenta</li>
+			</ul>
+			<p>Saturation -> Definiremos la intensidad del color. Este valor debemos definirnos con el % incluso si es 0</p>
+			<ul>
+				<li>0% -> Escala de grises</li>
+				<li>100% -> Color puro</li>
+			</ul>
+			<p>Lightness -> Luminosidad del color. Igualmente debe ir con %</p>
+			<ul>
+				<li>0% -> Negro</li>
+				<li>50% -> Color puro</li>
+				<li>100% -> Blanco</li>
+			</ul>
+
+			<h4>Opacidad</h4>
+			<p>
+				Al igual que con rgb para manejar la opacidad debemos hacer uso del canal "alpha". Se maneja con un dígito, de 0
+				a 1, con decimales podemos todas las demás opciones
+			</p>
+		</div>
+
+		<div class="color-hsl">
+			<pre>
+        <code>
+          background-color: hsla(0, 0%, 0%, 0.3);
+          border: thick solid hsl(240, 100%, 50%);
+        </code>
+      </pre>
+		</div>
+
+		<h2>¿Cual usar?</h2>
+		<p>
+			Ninguno de estos sistemas es mejor que otro, no nos debemos enfocar en saberlos todos y utilizarlos, es mejor usar
+			uno y aprenderlo bien. Nuestro navegador trabaja con rgb, pero tiene la capacidad de convertir todos nuestros
+			sistemas.
+		</p>
+		<p>
+			Lo que no es recomendado es combinar los sistemas en un mismo proyecto, lo mejor es definir con cual se va a
+			trabajar.
+		</p>
+
+		<h2>Transparent y currentColor</h2>
+		<p>El Transparent nos ayuda a quitar el color a nuestro elemento, en rgba seria aplicar la opacidad al 100%</p>
+
+		<p>
+			El valor currentColor en este caso, lo esta heredando del body, que trae por defecto el body (Color de fondo
+			blanco y el color de la letra en negro) y precisamente este es el que hereda, el color de la letra.
+		</p>
+		<p>
+			En resumen, hereda el valor por defecto o asignado a la propiedad <u>color</u> del ancestro. Busca desde el mas
+			cercano al mas alejado, si no esta definido lo toma del <u>body</u>
+		</p>
+		<p>
+			Este valor no es muy usado como color de fondo ya que al ser el mismo de la letra no se vera, lo podríamos usar en
+			el borde
+		</p>
+
+		<section class="ex-transparent-current">
+			<div class="color-transparent-current">
+				<pre>
+          <code>
+            .padre {
+              background-color: transparent;
+            }
+
+            .hijo {
+              background-color: black;
+              border: thick solid currentColor;
+            }
+          </code>
+        </pre>
+			</div>
+		</section>
+
+		<blockquote>
+			Asi solo debemos cambiar el color que definimos en el contenedor padre para se cambie el del borde
+		</blockquote>
+
+		<h2>Opacity</h2>
+		<p>Es la propiedad que maneja la opacidad de las elementos y colores</p>
+		<p>Manejamos su valor de 0 a 1</p>
+		<p>Esta propiedad hara efecto en <u>todos</u> los elementos que estén dentro de nuestra etiqueta</p>
+
+		<h3>Ejemplo:</h3>
+		<div class="opacity">
+			<pre>
+        <code>
+          background-color: #0003;
+          border: thick solid #0000ff;
+          opacity: 0.4;
+        </code>
+      </pre>
+		</div>
+	</body>
+</html>

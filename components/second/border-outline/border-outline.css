@@ -1,0 +1,124 @@
+* Border Outline */
+/* border-radius */
+.border-radius {
+	background-color: teal;
+	display: grid;
+	justify-content: space-around;
+	grid-template-columns: 40% 40%;
+	grid-template-rows: 30vh 30vh;
+	gap: 2rem;
+	padding: 1rem;
+	text-align: center;
+}
+
+.border-radius-1,
+.border-radius-2,
+.border-radius-3,
+.border-radius-4 {
+	background-color: darkgoldenrod;
+	border: thick solid greenyellow;
+	padding: 2rem 10%;
+}
+
+.border-radius-1 {
+	border-radius: 2rem;
+}
+
+.border-radius-2 {
+	border-radius: 2rem 4rem;
+}
+
+.border-radius-3 {
+	border-radius: 2rem 4rem 0;
+}
+
+.border-radius-4 {
+	border-radius: 4rem 3rem 2rem 1rem;
+}
+
+/* Bordes elípticos */
+.border-radius-el {
+	background-color: gray;
+	color: white;
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 40% 40%;
+	grid-template-rows: 30vh 30vh;
+	gap: 2rem;
+	padding: 1rem;
+	text-align: center;
+}
+
+.border-radius-el-1,
+.border-radius-el-2,
+.border-radius-el-3,
+.border-radius-el-4 {
+	background-color: blue;
+	border: thick solid yellow;
+	padding: 2rem 10%;
+}
+
+.border-radius-el-1 {
+	border-radius: 2rem / 4rem;
+}
+
+.border-radius-el-2 {
+	border-radius: 2rem 4rem / 4rem 8rem;
+}
+
+.border-radius-el-3 {
+	border-radius: 3rem 2rem 1rem / 1rem 2rem 3rem;
+}
+
+.border-radius-el-4 {
+	border-radius: 4rem 3rem 2rem 1rem / 1rem 2rem 3rem 4rem;
+}
+
+/* Ejemplo de circulo */
+.example-circle {
+	background-color: black;
+	border: thick solid red;
+	border-radius: 50%;
+	margin: auto;
+	height: 300px;
+	width: 300px;
+}
+
+.example-elipse {
+	background-color: black;
+	border: thick solid red;
+	border-radius: 50%;
+	margin: auto;
+	height: 20vh;
+	width: 60%;
+}
+
+.outline {
+	background-color: darkblue;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	outline: thick solid gold;
+	outline-offset: 3rem;
+	margin: 5rem auto;
+	height: 30vh;
+	width: 60%;
+	white-space: pre-wrap;
+}
+
+.outline-2 {
+	background-color: darkblue;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	outline: thick solid gold;
+	outline-offset: -3rem;
+	margin: auto;
+	height: 30vh;
+	width: 60%;
+	white-space: pre-wrap;
+}

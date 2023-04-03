@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="border-outline.css" />
+		<title>Border - Outline</title>
+	</head>
+	<body>
+		<h1>Border y Outline</h1>
+
+		<h2>Bordes Redondeados</h2>
+		<p>Nos ayuda para que las esquinas queden con un estilo de redondeo</p>
+		<p>Usaremos el Shorthand de 4 propiedades</p>
+		<ul>
+			<li>border-top-left-radius -> Arriba izquierda</li>
+			<li>border-top-right-radius -> Arriba derecha</li>
+			<li>border-bottom-left-radius -> Abajo izquierda</li>
+			<li>border-bottom-right-radius -> Abajo derecha</li>
+		</ul>
+
+		<div class="border-radius">
+			<div class="border-radius-1">border-radius: 2rem;</div>
+			<div class="border-radius-2">border-radius: 2rem 4rem;</div>
+			<div class="border-radius-3">border-radius: 2rem 4rem 0;</div>
+			<div class="border-radius-4">border-radius: 4rem 3rem 2rem 1rem;</div>
+		</div>
+
+		<h2>Bordes elípticos</h2>
+		<blockquote>
+			Cuando estamos dando el redondeado de forma normal, estamos tomando como referencia un circulo, por lo que solo
+			tenemos que tener en cuenta un radio. <br />
+			En cambio cuando esto lo hacemos de la forma de un eclipse debemos tener en cuenta 2 radios, la distancia de X y
+			Y, ya que no es el mismo valor que tenemos del centro a arriba que del centro a uno de sus lados
+		</blockquote>
+		<blockquote>Para dar un redondeado elíptico debemos separar los valores de los radios con un /</blockquote>
+		<p>Igualmente podemos aplicar los valores a cada un de los lados usando:</p>
+		<ul>
+			<li>border-top-left-radius -> Arriba izquierda</li>
+			<li>border-top-right-radius -> Arriba derecha</li>
+			<li>border-bottom-left-radius -> Abajo izquierda</li>
+			<li>border-bottom-right-radius -> Abajo derecha</li>
+		</ul>
+
+		<div class="border-radius-el">
+			<div class="border-radius-el-1">border-radius: 2rem / 4rem;</div>
+			<div class="border-radius-el-2">border-radius: 2rem 4rem / 4rem 8rem;</div>
+			<div class="border-radius-el-3">border-radius: 3rem 2rem 1rem / 1rem 2rem 3rem;</div>
+			<div class="border-radius-el-4">border-radius: 4rem 3rem 2rem 1rem / 1rem 2rem 3rem 4rem;</div>
+		</div>
+
+		<p>Cuando tenemos un cuadrado perfecto podemos hacer que este tome la forma de un circulo completamente</p>
+		<blockquote>Con el 50% ya tenemos el circulo, no es necesario el 100%. Aunque también es posible</blockquote>
+
+		<div class="example-circle"></div>
+
+		<p>
+			Si quisiéramos un elipse podemos no meternos con tantos estilos y mas bien hacer de nuestro elemento un rectángulo
+			y aplicar el borde como si quisiéramos un circulo
+		</p>
+
+		<div class="example-elipse"></div>
+
+		<h2>Outline</h2>
+		<p>
+			Es como un borde exterior. Funciona igual que el border aunque solo tenemos el Shorthand, es decir, no tenemos la
+			posibilidad de hacerlo independientemente en cada lado
+		</p>
+		<p>Esta propiedad no hace parte del modelo de caja, por lo tanto no ocupara ancho</p>
+		<p>Hacemos referencia a esta linea como si fuese el aura, como una protección intangible</p>
+
+		<blockquote>
+			con <u>outline-offset</u> Podemos definir la distancia en que queremos que nuestra outline se aplique <br />
+			También podemos definir el valor en negativo lo que hara que nuestro outline se vaya hacia adentro de nuestro
+			elemento
+		</blockquote>
+
+		<div class="outline">outline: thick solid gold; outline-offset: 3rem;</div>
+
+		<div class="outline-2">outline-offset: -3rem</div>
+
+		<p>Esta propiedad se usa mucho en los inputs, cuando le ponemos el foco</p>
+	</body>
+</html>
