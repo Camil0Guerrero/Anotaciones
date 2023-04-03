@@ -1,0 +1,196 @@
+/* Filtros */
+
+/* Desenfoque radial */
+.blur-1 {
+	filter: blur(1px);
+}
+
+.blur-2 {
+	filter: blur(10px);
+}
+
+/***** brillo *****/
+.br-1 {
+	filter: brightness(2);
+}
+
+.br-2 {
+	filter: brightness(1.5);
+}
+
+.br-3 {
+	filter: brightness(1);
+}
+
+.br-4 {
+	filter: brightness(0.75);
+}
+
+.br-5 {
+	filter: brightness(0.5);
+}
+
+.br-6 {
+	filter: brightness(0.25);
+}
+
+/***** Contraste *****/
+
+.ctr-1 {
+	filter: contrast(4);
+}
+
+.ctr-2 {
+	filter: contrast(2);
+}
+
+.ctr-3 {
+	filter: contrast(1);
+}
+
+.ctr-4 {
+	filter: contrast(0.75);
+}
+
+.ctr-5 {
+	filter: contrast(0.5);
+}
+
+.ctr-6 {
+	filter: contrast(0.25);
+}
+
+/***** grayscale *****/
+.gsl-1 {
+	filter: grayscale(0);
+}
+
+.gsl-2 {
+	filter: grayscale(0.5);
+}
+
+.gsl-3 {
+	filter: grayscale(1);
+}
+
+/***** Sepia *****/
+.sep-1 {
+	filter: sepia(0);
+}
+
+.sep-2 {
+	filter: sepia(0.5);
+}
+
+.sep-3 {
+	filter: sepia(1);
+}
+
+/***** hue *****/
+.hue-1 {
+	filter: hue-rotate(0deg);
+}
+
+.hue-2 {
+	filter: hue-rotate(60deg);
+}
+
+.hue-3 {
+	filter: hue-rotate(120deg);
+}
+
+.hue-4 {
+	filter: hue-rotate(180deg);
+}
+
+.hue-5 {
+	filter: hue-rotate(240deg);
+}
+
+.hue-6 {
+	filter: hue-rotate(300deg);
+}
+
+/***** invert *****/
+.inv-1 {
+	filter: invert(0);
+}
+
+.inv-2 {
+	filter: invert(1);
+}
+
+/***** Opacity *****/
+.op-1 {
+	filter: opacity(1);
+}
+
+.op-2 {
+	filter: opacity(0.75);
+}
+
+.op-3 {
+	filter: opacity(0.5);
+}
+
+.op-4 {
+	filter: opacity(0.25);
+}
+
+.op-5 {
+	filter: opacity(0);
+}
+
+/***** saturation *****/
+.sat-1 {
+	filter: saturate(4);
+}
+
+.sat-2 {
+	filter: saturate(2);
+}
+
+.sat-3 {
+	filter: saturate(1);
+}
+
+.sat-4 {
+	filter: saturate(0.75);
+}
+
+.sat-5 {
+	filter: saturate(0.5);
+}
+
+.sat-6 {
+	filter: saturate(0.25);
+}
+
+/***** Filtros multiples *****/
+.filters-multiple {
+	filter: blur(0.1rem) hue-rotate(270deg) opacity(75%) invert(1);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/***** Filtros a fondos *****/
+.backdrop-filter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.backdrop-filter h4 {
+	background-color: rgba(255, 102, 255, 0.5);
+	border-radius: 1rem;
+	color: #fff;
+	font-size: 1.5rem;
+	padding: 2rem;
+
+	backdrop-filter: blur(1rem) hue-rotate(240deg) opacity(0.75) invert(1);
+}

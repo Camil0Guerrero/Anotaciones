@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../../assets/css/style.css" />
+		<link rel="stylesheet" href="motion.css" />
+		<title>Movimiento en CSS</title>
+	</head>
+	<body>
+		<h1>Movimiento en CSS</h1>
+
+		<h2>Transition</h2>
+		<p>
+			Las transiciones nos ayudan a que en lugar de que los cambios en nuestras propiedades se hagan de forma
+			instantánea o de golpe, definir una animación o un intervalo de tiempo para que estos cambios se hagan
+		</p>
+		<p>
+			La propiedad <u>transition</u> es la que usamos para definir estos estilos, aunque es el shorthand, este si es muy
+			funcional y recomendado.
+		</p>
+		<p>
+			Los intervalos es una parte importante de entender ya que es como nuestra animación se va a comportar en el
+			tiempo, esto lo podemos definir con distintas formas:
+		</p>
+
+		<h3>Intervalos de transición</h3>
+		<ul>
+			<li>Ease -> Inicia lentamente, en el medio acelera y finaliza lento. <b style="color: red">Por defecto</b></li>
+			<li>Ease in -> Inicia lento y va acelerando gradualmente hasta el final</li>
+			<li>Ease-out -> Inicia rápidamente y desacelera gradualmente hasta el final</li>
+			<li>
+				Ease-in-out -> Inicia lentamente, acelera en el medio y finaliza lento, parecido a ease pero este es mas
+				pronunciado
+			</li>
+			<li>Linear -> Tendrá una velocidad constante</li>
+			<li>step-start -> La transition saltara instantáneamente al final</li>
+			<li>step-end -> Estará en el estado inicial hasta que al final hara un salto subito</li>
+			<li>
+				steps -> Debemos poner entre parentesis un numero natural, lo cual hara que nuestra animación se haga en los
+				pasos que le hayamos definido
+			</li>
+		</ul>
+
+		<div class="example-intervals">
+			<div class="example-preview">
+				<div class="square ease square--alpha">Ease</div>
+			</div>
+			<div class="example-preview">
+				<div class="square ease-in square--alpha">Ease-in</div>
+			</div>
+			<div class="example-preview">
+				<div class="square ease-out square--alpha">Ease-out</div>
+			</div>
+			<div class="example-preview">
+				<div class="square ease-in-out square--alpha">Ease-in-out</div>
+			</div>
+			<div class="example-preview">
+				<div class="square linear square--alpha">linear</div>
+			</div>
+			<div class="example-preview">
+				<div class="square step-start square--alpha">step-start</div>
+			</div>
+			<div class="example-preview">
+				<div class="square step-end square--alpha">step-end</div>
+			</div>
+			<div class="example-preview">
+				<div class="square steps square--alpha">steps(4)</div>
+			</div>
+		</div>
+
+		<h2>Propiedades</h2>
+		<p>
+			El shorthand es la mejor opción para definir nuestras transiciones, sin embargo, es indispensable saber que
+			estamos definiendo y saber que otras opciones tenemos.
+		</p>
+		<span>Ordenado como debemos definirías en el shorthand</span>
+		<ol>
+			<li>transition-property -> Propiedad a la que queremos aplicar la animación</li>
+			<li>
+				transition-duration -> Duración de nuestra transición. Lo podemos definir con milisegundos (ms) y segundos (s)
+			</li>
+			<li>
+				transition-timing-function -> Definimos nuestra función de intervalo de transición, las cuales son los
+				anteriores ejemplos
+			</li>
+			<li>transition-delay -> Tiempo de espera, antes de nuestra animación. se puede con ms o s</li>
+		</ol>
+
+		<h4>Notas:</h4>
+		<blockquote>
+			<ul>
+				<li>
+					El transition se aplicara apenas recarguemos o se cargue nuestra pagina, por lo que las propiedades que
+					definimos desde el inicio estarán con la transición
+				</li>
+				<li>
+					Debemos tener en cuenta lo que definimos ya que no es lo mismo usar el shorthand a usar la propiedad
+					especifica
+				</li>
+				<li><u>all</u> Nos ayuda a definir el transition para todas las propiedades</li>
+				<li>
+					A muchas personas no les gusta ya que puede haber problemas con el rendimiento, sin embargo, esto es cuando
+					tenemos muchas animaciones, cuando son varias o tenemos varias transiciones es mejor ser específicos
+				</li>
+				<li>La mala practica es aplicar varias animaciones a un mismo elemento en un mismo estado</li>
+				<li>Si quisiéramos aplicar una transición distinta a cada propiedad no podríamos usar all</li>
+				<li>
+					Al usar all, se les aplicara la animación a todas las propiedades, incluso a las que definimos al inicio.
+					Entonces es mejor tener el control de todas las propiedades animadas
+				</li>
+				<li>
+					Hay propiedades que no se pueden animar.
+					<a
+						href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties"
+						target="_blank"
+						rel="noopener"
+						>Propiedades que si se pueden animar</a
+					>
+				</li>
+				<li>
+					Si queremos definir transition a varias propiedades específicamente, podemos hacerlo separando con comas (,).
+					Por Ejemplo:
+					<code>
+						transition: opacity 1s ease-out, border-color 3s steps(3), filter 2s ease-in 1s, box-shadow 1.5s linear 2s;
+					</code>
+				</li>
+			</ul>
+		</blockquote>
+
+		<h3>Ejemplo:</h3>
+		<div class="transitions">
+			<div class="box"></div>
+			<article class="card">
+				<img src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+		</div>
+
+		<h2>Transformaciones 2D</h2>
+		<p>
+			Podemos hacer uso de funciones para hacer que nuestros elementos tengan movimientos y hagan ciertas cosas. Estas
+			funciones las debemos definir usando la propiedad "<u>transform</u>"
+		</p>
+
+		<h3>Translate</h3>
+		<p>
+			Nos ayudara a mover nuestro elemento, este tomara como referencia su tamaño, tenemos las propiedades especificas:
+			<b>translateY</b> y <b>translateX</b>, en este caso usaremos su shorthand
+			<b style="color: navy"> translate </b> en la cual debemos pasar como primer valor el movimiento en X y de segundo
+			el del eje Y. estos toman como referencia left y top por lo que al dar un valor positivo al eje X ira hacia la
+			derecha y al darle un valor positivo en Y ira hacia abajo, si les asignamos un valor negativo ira al lado inverso,
+			es decir, para el eje X, izquierda y para el eje Y, hacia arriba.
+		</p>
+
+		<article class="example-cards">
+			<div class="box flex-center">
+				<div class="example-transition example-translate-X square">X 50%</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-translate-X-2 square">X -50%</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-translate-Y square">Y 50%</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-translate-Y-2 square">Y 50%</div>
+			</div>
+
+			<div class="box flex-center">
+				<div class="example-transition example-translate square">-70%</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-translate-2 square">70% -70%</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-translate-3 square">70%</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-translate-4 square">-70% 70%</div>
+			</div>
+		</article>
+
+		<h3>Scale</h3>
+		<p>
+			El numero base es el 1, un valor menor hara que nuestra imagen sea mas pequeña y un valor mayor la agrandara.
+			Igualmente podemos asignar los valores a cada eje
+		</p>
+		<p>
+			Si definimos un valor negativo lo que hara es que nuestro elemento dará la vuelta. Es decir, lo que estaba en la
+			izquierda ira hacia la derecha, lo mismo en el eje Y, lo que estaba en el top ira a bottom
+		</p>
+
+		<article class="example-cards">
+			<div class="box flex-center">
+				<div class="example-transition example-scale-X square">X 0.5</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-scale-X-2 square">X 1.5</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-scale-Y square">Y 0.5</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-scale-Y-2 square">Y 1.5</div>
+			</div>
+
+			<div class="box flex-center">
+				<div class="example-transition example-scale square">0.7</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-scale-2 square">1.7</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-scale-3 square">X -100%</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-scale-4 square">Y -100%</div>
+			</div>
+		</article>
+
+		<h3>Rotate</h3>
+		<p>
+			Podemos definir la rotación en grados y radianes, aunque lo mas usado son los grados ya que es lo mas sencillo
+		</p>
+		<p>Igualmente tenemos la rotación para el eje X y Y, sin embargo estos se notan mejor con perspectiva</p>
+		<p>
+			El que podemos usar es el rotateZ, este efecto se aplica hacia la dirección de las manecillas del reloj, es decir,
+			de izquierda a derecha
+		</p>
+
+		<article class="example-cards">
+			<div class="box flex-center">
+				<div class="example-transition example-rotate-z square">90deg</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-rotate-z-2 square">-90deg</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-rotate-z-3 square">180deg</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-rotate-z-4 square">-180deg</div>
+			</div>
+		</article>
+
+		<h3>Skew</h3>
+		<p>
+			Esta transformación es unica del 2d, es decir, sin perspectiva. Lo que podemos hacer con ella es inclinar nuestro
+			elemento, es como si tomáramos uno de los extremos y lo empujáramos. Esta función recibe la inclinación en grados
+		</p>
+		<p>Si le asignamos un valor positivo a skewX la inclinación ira hacia la izquierda</p>
+		<p>Para skewY el valor positivo sera hacia arriba, hacia top</p>
+		<p>
+			Con el shorthand podemos definir ambos, de primeras el eje X y como segundo parámetro la inclinación del eje Y.
+		</p>
+
+		<article class="example-cards">
+			<div class="box flex-center">
+				<div class="example-transition example-skew-X square">X 20deg</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-skew-X-2 square">X -20deg</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-skew-Y square">Y 20deg</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-skew-Y-2 square">Y -20deg</div>
+			</div>
+
+			<div class="box flex-center">
+				<div class="example-transition example-skew square">20deg</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-skew-2 square">20, -20</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-skew-3 square">-20, 20</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-skew-4 square">-20</div>
+			</div>
+		</article>
+
+		<h3>Matrix</h3>
+		<p>Con matrix podemos combinar todos nuestras transformaciones</p>
+		<p>Orden: scaleX, skewY, skewX, scaleY, translateX, translateY</p>
+
+		<ol>
+			<li>matrix(1, 2, 2, 1, 20, 10)</li>
+			<li>matrix(1, 2, 3, 4, 5, 6)</li>
+			<li>matrix(6, 5, 4, 3, 2, 1)</li>
+			<li>
+				<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform#matrix()" rel="noopener" target="_blank"
+					>Mas información</a
+				>
+			</li>
+		</ol>
+
+		<article class="example-cards">
+			<div class="box flex-center">
+				<div class="example-transition example-matrix square">1</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-matrix-2 square">2</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-matrix-3 square">3</div>
+			</div>
+		</article>
+
+		<h3>Multiples</h3>
+		<p>
+			Para definir mas de una función solo debemos poner una tras otra, por ejemplo: translate() rotate(), no es
+			necesario poner símbolos entre estas
+		</p>
+		<ol>
+			<li>translate(25%, -50%) rotate(360deg)</li>
+			<li>translate(-50%, 25%) rotate(-360deg) skew(10deg, 20deg) scale(1.5)</li>
+		</ol>
+
+		<article class="example-cards">
+			<div class="box flex-center">
+				<div class="example-transition example-transform-multiple square">1</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-transform-multiple-2 square">2</div>
+			</div>
+		</article>
+
+		<h2>Transformaciones 3D</h2>
+		<p>
+			Para manejar la ilusión óptica de las 3 dimensiones debemos usar la perspectiva, esta recibe un valor numérico con
+			cualquier unidad de medida, este va a definir la profundidad que vamos a manejar
+		</p>
+		<p>
+			La distancia que definimos digamos que es la distancia entra la pantalla y nuestro elemento, por lo tanto, entre
+			menos sea, mas veremos el efecto
+		</p>
+		<p>
+			La perspectiva la podemos definir en cada una de nuestras propiedades que las necesiten o la podríamos definir en
+			el elemento padre
+		</p>
+		<p>
+			En el elemento padre la podemos definir con la propiedad <u>perspective</u> o en cada propiedad, por ejemplo:
+			transform: perspective(10rem) translateZ(-4rem);
+		</p>
+		<p>
+			Como hemos agregado la perspectiva a nuestros elementos, tenemos un nuevo eje, el eje Z, para manejar este eje
+			todas nuestras funciones tienen su propia función, y los shorthands para estas 3 funciones de cada elemento
+			tendrán el mismo nombre solo que añadido el "<u>3D</u>"
+		</p>
+		<p>
+			Estas propiedades ya las hemos manejado en el 2D, a continuación veremos algunos ejemplos de lo que podemos hacer
+			con nuestros 3 ejes
+		</p>
+		<ol>
+			<li>transform: translate3d(2rem, 50%, 5rem);</li>
+			<li>transform: scale3d(2, 2, 3);</li>
+			<p>Cuando ya tenemos perspectiva podemos ver como nuestro elemento se acuesta y va rotado sobre su eje x</p>
+			<li>transform: rotateX(60deg);</li>
+			<li>transform: rotateX(90deg);</li>
+			<p>
+				Igualmente, es como si pusiéramos un punto fijo en la parte del centro arriba y otro en el centro abajo y luego
+				empujáramos nuestro elemento.
+			</p>
+			<li>transform: rotateY(60deg);</li>
+			<li>transform: rotateY(90deg);</li>
+			<li>
+				transform: matrix3d(1, 0, 0, 0, 0, 1, 6, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);
+				<a
+					href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d"
+					target="_blank"
+					rel="noopener"
+					>Mas información</a
+				>
+			</li>
+			<li>transform: rotate3d(-1, 2.5, -2, 60deg) translate3d(2rem, 50%, -3rem) scale3d(2, 0.5, 3);</li>
+		</ol>
+
+		<article class="example-cards">
+			<div class="box flex-center">
+				<div class="example-transition example-translate-3d square">1</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-scale-3d square">2</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-rotate-3d square">3</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-rotate-3d-2 square">4</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-rotate-3d-3 square">5</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-rotate-3d-4 square">6</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-matrix-3d square">7</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-multiple-3d square">8</div>
+			</div>
+		</article>
+
+		<h2>Origin</h2>
+		<p>
+			En los ejemplos anteriores todos nuestros elementos estaban aplicando los estilos a partir del centro ya que este
+			es el valor por defecto. Esto no significa que no podemos cambiarlo, para ello tenemos la propiedad
+			"<u>transform-origin</u>"
+		</p>
+		<p>
+			Esta propiedad recibe como parámetro los valores de los ejes: X Y y Z, estos los podemos definir con cualquier
+			medida aunque se recomienda con porcentajes (Tomara como referencia la esquina de arriba a la izquierda),
+			igualmente podemos usar las palabras clave
+		</p>
+		<p>Cuando aplicamos un solo valor al otro se le aplicara por defecto center</p>
+
+		<ol>
+			<li>top left : 0 0</li>
+			<li>top right : 100% 0</li>
+			<li>bottom right: 100% 100%</li>
+			<li>bottom left : 0 100%</li>
+		</ol>
+
+		<article class="example-cards">
+			<div class="box flex-center">
+				<div class="example-transition example-origin square">1</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-origin-2 square">2</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-origin-3 square">3</div>
+			</div>
+			<div class="box flex-center">
+				<div class="example-transition example-origin-4 square">4</div>
+			</div>
+		</article>
+
+		<h3>Ejemplos de Uso</h3>
+		<p>
+			En este ejercicio es indispensable la perspectiva, ya que las <b>propiedades</b> la necesitan para funcionar
+			correctamente
+		</p>
+		<p>
+			Para este ejemplo vamos la propiedad, <u>transform-style</u>, la cual determina como los hijos se van a comportar
+			con las animaciones 3d, en este caso necesitamos que cada uno trabaje en un plano distinto, por lo que le
+			asignaremos el valor preserve-3d
+		</p>
+		<p>
+			Para los hijos necesitamos hacer uso de backface-visibility con el valor de hidden para que nuestra animación no
+			se mire mal, ya que al dar la vuelta es necesario que solo se mire una de sus caras
+		</p>
+
+		<article class="flip-card-1">
+			<div class="flip-face flip-front">
+				<img src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</div>
+			<div class="flip-face flip-back">
+				<img src="../../../assets/images/BuenosDias.jpg" alt="Buenos Dias" />
+			</div>
+		</article>
+
+		<blockquote>
+			En nuestro segundo ejercicio lo que haremos es modificar el origen de nuestra transformación a el centro de la
+			derecha ademas de agregar una segunda animación, la de translateX que hara que el efecto se vea mejor
+		</blockquote>
+		<article class="flip-card-2">
+			<div class="flip-face flip-front">
+				<img src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</div>
+			<div class="flip-face flip-back">
+				<img src="../../../assets/images/BuenosDias.jpg" alt="Buenos Dias" />
+			</div>
+		</article>
+	</body>
+</html>

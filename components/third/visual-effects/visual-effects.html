@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="visual-effects.css" />
+		<title>Efectos visuales</title>
+	</head>
+	<body>
+		<h1>Efectos visuales en CSS</h1>
+
+		<h2>Sombras</h2>
+		<p><u>Box-shadow</u> Es la propiedad que nos ayuda a definir las sombras de nuestras cajas y textos.</p>
+
+		<h3>Maneja los siguientes valores:</h3>
+		<ol>
+			<li>
+				Distancia, movimiento o desplazamiento en X, valores positivos, hacia la derecha, negativos hacia la izquierda.
+				En <u>inset</u> se invierte
+			</li>
+			<li>
+				Distancia, movimiento o desplazamiento en Y, valores positivos hacia abajo, negativos hacia arriba. En inside se
+				invierte
+			</li>
+			<li>
+				Desenfoque radial (blur-radius) de 0 a 1. <br />
+				0 -> nuestra sombra se vera igual a el elemento
+				<br />
+				1 -> La sombra estará totalmente desenfocada
+			</li>
+			<li>
+				Expansion del desenfoque (spread-blur) -> los valores positivos harán que la sombra se expanda y crezca mas, los
+				valores negativos harán que la sombra se reduzca de tamaño. Si no se especifica sera 0. La sombra sera del mismo
+				tamaño del elemento
+			</li>
+			<li>color -> Por defecto sera currentColor</li>
+			<li>
+				inset -> Nuestra sombra sera interna <br />
+				outside -> Nuestra sombra sera externa <b style="color: red">Por defecto</b>, si lo escribimos nuestra linea no
+				se aplicara
+			</li>
+		</ol>
+
+		<div class="example-boxs">
+			<div class="box shadows">
+				<h4>Outside</h4>
+				<p>1rem 1rem 1rem 0.2rem blueviolet</p>
+			</div>
+			<div class="box shadows-2">
+				<h4>Inset</h4>
+				<p>-1rem -1rem 1rem 0.2rem blueviolet inset</p>
+			</div>
+			<div class="box shadows-3 center">Ejemplo</div>
+		</div>
+
+		<h2>Multiples Sombras</h2>
+		<p>Para definir varias sombras debemos separar los valores de cada uno con comas (,)</p>
+
+		<div class="box shadows-4">
+			<h4>Multiples Sombras</h4>
+			<p>1rem 1rem 1rem 1rem #0005, 0.2rem 0.4rem 1rem 0.2rem #f00 inset</p>
+		</div>
+
+		<h2>Sombras en textos</h2>
+		<p>
+			Para aplicar sombras a los textos haremos uso de <u>text-shadow</u>, esta hace uso de los mismo valores que
+			box-shadow a excepción de spread-blur y outside / inside. Por lo que quedaría:
+		</p>
+		<p>text-shadow: mov-x mov-y blur-radius color</p>
+
+		<div class="box text-shadows center">Sombras</div>
+
+		<h2>Drop-shadow</h2>
+		<p>
+			Este filtro aplica sombras, sin embargo esta mas enfocado a las imágenes, es recomendado usarlo sobretodo cuando
+			tengan el formato png y tengan transparencia
+		</p>
+		<p>Valores a aplicar: mov-x mov-y blur-radius color</p>
+		<p>Esta propiedad debe ir para el contenedor de la imagen y <b>NO</b> podemos aplicar mas de una sombra</p>
+		<div class="box drop-shadow">
+			<img src="../../../assets/images/arbol.png" alt="árbol y Niño" />
+		</div>
+	</body>
+</html>

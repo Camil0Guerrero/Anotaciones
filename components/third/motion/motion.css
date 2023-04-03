@@ -1,0 +1,375 @@
+/***** Movimiento *****/
+.example-intervals {
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(auto-fit, min(400px));
+	justify-content: space-evenly;
+}
+
+.example-preview {
+	border: medium solid navy;
+	width: 400px;
+	height: 100px;
+	position: relative;
+	padding: 0.8rem 1rem;
+}
+
+.square {
+	background-color: navy;
+	color: #fff;
+	height: 75px;
+	width: 75px;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	padding: 0;
+	align-items: center;
+	line-height: 1.2;
+}
+
+.square--alpha {
+	transform: translateX(0);
+	transition: transform 2s;
+}
+
+.square--alpha:hover {
+	transform: translateX(300%);
+}
+
+.ease:hover {
+	transition-timing-function: ease;
+}
+
+.ease-in:hover {
+	transition-timing-function: ease-in;
+}
+
+.ease-in-out {
+	width: 30%;
+}
+
+.ease-out:hover {
+	transition-timing-function: ease-out;
+}
+
+.ease-in-out:hover {
+	transition-timing-function: ease-in-out;
+}
+
+.linear:hover {
+	transition-timing-function: linear;
+}
+
+.step-start:hover {
+	transition-timing-function: step-start;
+}
+
+.step-end:hover {
+	transition-timing-function: step-end;
+}
+
+.steps:hover {
+	transition-timing-function: steps(4);
+}
+
+/* Transiciones */
+.transitions .box {
+	background-color: magenta;
+	border-color: green;
+	transition: background-color 2s ease-in-out 250ms, border-color 2s ease-in-out 250ms,
+		border-radius 2s ease-in-out 250ms, border-style 2s ease-in-out 250ms;
+}
+
+.transitions .box:hover {
+	background-color: cyan;
+	border-color: red;
+	border-radius: 2rem;
+	border-style: dashed;
+}
+
+.transitions .card {
+	margin: auto;
+	border-color: blue;
+	transition: opacity 1s ease-out, border-color 3s steps(3), transform 3s ease-in, box-shadow 1.5s linear 2s;
+}
+
+.transitions .card:hover {
+	opacity: 75%;
+	border-color: orchid;
+	transform: scale(1.1);
+	box-shadow: 1rem 1rem 2rem 0.5rem #000;
+}
+
+.transitions .card img {
+	transition: object-position 2s ease-in-out 3s;
+}
+
+.transitions .card img:hover {
+	object-position: 100% 50%;
+}
+
+/***** Transformaciones *****/
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.example-transition {
+	color: white;
+	line-height: 100px;
+	transition: transform 3s ease-in-out;
+}
+
+/* translate */
+
+.example-translate-X:hover {
+	transform: translateX(50%);
+}
+
+.example-translate-X-2:hover {
+	transform: translateX(-50%);
+}
+
+.example-translate-Y:hover {
+	transform: translateY(50%);
+}
+
+.example-translate-Y-2:hover {
+	transform: translateY(-50%);
+}
+
+.example-translate:hover {
+	transform: translate(-70%, -70%);
+}
+
+.example-translate-2:hover {
+	transform: translate(70%, -70%);
+}
+
+.example-translate-3:hover {
+	transform: translate(70%, 70%);
+}
+
+.example-translate-4:hover {
+	transform: translate(-70%, 70%);
+}
+
+/* scale */
+.example-scale-X:hover {
+	transform: scaleX(0.5);
+}
+
+.example-scale-X-2:hover {
+	transform: scaleX(1.5);
+}
+
+.example-scale-Y:hover {
+	transform: scaleY(0.5);
+}
+
+.example-scale-Y-2:hover {
+	transform: scaleY(1.5);
+}
+
+.example-scale:hover {
+	transform: scale(0.7, 0.7);
+}
+
+.example-scale-2:hover {
+	transform: scale(1.7, 1.7);
+}
+
+.example-scale-3:hover {
+	transform: scaleX(-100%);
+}
+
+.example-scale-4:hover {
+	transform: scaleY(-100%);
+}
+
+/* rotate */
+.example-rotate-z:hover {
+	transform: rotateZ(90deg);
+}
+
+.example-rotate-z-2:hover {
+	transform: rotateZ(-90deg);
+}
+
+.example-rotate-z-3:hover {
+	transform: rotateZ(180deg);
+}
+
+.example-rotate-z-4:hover {
+	transform: rotateZ(-180deg);
+}
+
+/* skew */
+.example-skew-X:hover {
+	transform: skewX(20deg);
+}
+
+.example-skew-X-2:hover {
+	transform: skewX(-20deg);
+}
+
+.example-skew-Y:hover {
+	transform: skewY(20deg);
+}
+
+.example-skew-Y-2:hover {
+	transform: skewY(-20deg);
+}
+
+/* skew */
+.example-skew:hover {
+	transform: skew(20deg, 20deg) scale(1.5);
+}
+
+.example-skew-2:hover {
+	transform: skew(20deg, -20deg) scale(1.5);
+}
+
+.example-skew-3:hover {
+	transform: skew(-20deg, 20deg) scale(1.5);
+}
+
+.example-skew-4:hover {
+	transform: skew(-20deg, -20deg) scale(1.5);
+}
+
+/* matrix */
+.example-matrix:hover {
+	transform: matrix(1, 2, 2, 1, 20, 10);
+}
+
+.example-matrix-2:hover {
+	transform: matrix(1, 2, 3, 4, 5, 6);
+}
+
+.example-matrix-3:hover {
+	transform: matrix(6, 5, 4, 3, 2, 1);
+}
+
+/* multiple */
+.example-transform-multiple:hover {
+	transform: translate(25%, -50%) rotate(360deg);
+}
+
+.example-transform-multiple-2:hover {
+	transform: translate(-50%, 25%) rotate(-360deg) skew(10deg, 20deg) scale(1.5);
+}
+
+/***** 3D *****/
+#motion .example-cards {
+	perspective: 10rem;
+}
+
+.example-translate-3d:hover {
+	transform: translate3d(2rem, 50%, 5rem);
+}
+
+.example-scale-3d:hover {
+	transform: scale3d(2, 2, 3);
+}
+
+.example-rotate-3d:hover {
+	transform: rotateX(60deg);
+}
+
+.example-rotate-3d-2:hover {
+	transform: rotateX(90deg);
+}
+
+.example-rotate-3d-3:hover {
+	transform: rotateY(60deg);
+}
+
+.example-rotate-3d-4:hover {
+	transform: rotateY(90deg);
+}
+
+.example-matrix-3d:hover {
+	transform: matrix3d(1, 0, 0, 0, 0, 1, 6, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);
+}
+
+.example-multiple-3d:hover {
+	transform: rotate3d(-1, 2.5, -2, 60deg) translate3d(2rem, 50%, -3rem) scale3d(2, 0.5, 3);
+}
+
+.example-origin:hover {
+	transform-origin: top left;
+	transform: rotate(360deg);
+}
+
+.example-origin-2:hover {
+	transform-origin: top right;
+	transform-origin: 100% 0;
+	transform: rotate(360deg);
+}
+
+.example-origin-3:hover {
+	transform-origin: bottom right;
+	transform-origin: 100% 100%;
+	transform: rotate(360deg);
+}
+
+.example-origin-4:hover {
+	transform-origin: 0 100%;
+	transform: rotate(360deg);
+}
+
+/***** Ejemplos *****/
+/* Flip-card */
+.flip-card-1,
+.flip-card-2 {
+	border: thick solid #000;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5rem;
+	width: 600px;
+	height: 400px;
+	position: relative;
+	cursor: pointer;
+	transition: transform 1s ease-in-out;
+	perspective: 10rem;
+	transform-style: preserve-3d;
+}
+
+.flip-card-1 img,
+.flip-card-2 img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 0 50%;
+}
+
+.flip-card-1:hover {
+	transform: rotateY(180deg);
+}
+
+.flip-card-2 {
+	transform-origin: center right;
+}
+
+.flip-card-2:hover {
+	transform: translateX(-100%) rotateY(-180deg);
+}
+
+.flip-face {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+
+.flip-front {
+	transform: rotateY(0deg);
+}
+
+.flip-back {
+	transform: rotateY(180deg);
+}

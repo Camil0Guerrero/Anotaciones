@@ -1,0 +1,36 @@
+/***** Header *****/
+
+.header h1,
+.header h2 {
+	margin: 0;
+}
+
+[id] {
+	scroll-margin-top: 7.8ex;
+}
+
+.header {
+	background-color: rgb(2, 1, 62);
+	position: sticky;
+	top: 0;
+	padding: 0.25rem;
+	text-align: center;
+	margin: -8px;
+	color: #fff;
+	z-index: 999;
+}
+
+.header nav {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+.header a {
+	margin: 0.4rem 1rem;
+	text-decoration: none;
+	color: #00c4d6;
+}
+
+.header a:hover {
+	color: #e94bb4;
+}

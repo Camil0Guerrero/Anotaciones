@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="animation.css" />
+		<title>Animaciones</title>
+	</head>
+	<body>
+		<h1>Animaciones</h1>
+
+		<h3>Notas</h3>
+		<ul>
+			<li>Para usar nuestra animación la definimos en la regla CSS @keyframes</li>
+			<li>Identifier -> Es el nombre que le hemos definido a nuestra animación con animation-name</li>
+			<li>
+				En @keyframes vamos a definir los fotogramas de nuestra animación. Los mas básicos son from -> desde, que define
+				el estado inicial y to -> hasta, que define como va a finalizar la animación
+			</li>
+			<li>Necesitamos por lo menos un punto de entrada y 1 punto de salida para la animación</li>
+			<li>
+				Un fotograma son digamos que las etapas que van a pasar a traves del tiempo que hemos definido, si solo ponemos
+				un punto inicial y uno final CSS lo hara por nosotros, dividirá el tiempo y la distancia que debe recorrer para
+				que se vea bien y proporcionado
+			</li>
+		</ul>
+
+		<h2>Propiedades</h2>
+		<p>En las animaciones tenemos mas propiedades que en el transition, hasta delay, tenemos las mismas</p>
+		<p>Estructura: name duration timing-function delay iteration-count direction fill-mode</p>
+		<p><u>name</u> y <u>duration</u> son necesarias para que podamos aplicar una animación, las demás son opcionales</p>
+		<ol>
+			<li>
+				animation-name -> Declaramos un nombre a nuestra animación, lo recomendado es que haga alusión a lo que hace
+			</li>
+			<li>
+				animation-duration -> Duración de nuestra animación, la podemos definir en segundos (s) y milisegundos (ms)
+			</li>
+			<li>
+				animation-timing-function -> Podemos definir cualquier efecto de aceleración que tenemos en el transition,
+				ademas de estas tenemos una mas enfocada para las animaciones, <u>cubic-bezier</u> la cual veremos a
+				continuación
+			</li>
+			<li>
+				animation-delay -> El retraso que tendrá nuestra animación, es decir, el tiempo que esperara para iniciar.
+				Podemos definir con segundos y milisegundos
+				<cite>Si no queremos delay simplemente ponemos 0 o no lo definimos</cite>
+			</li>
+			<li>
+				animation-iteration-count -> Definimos el numero de veces que nuestra animación se aplicara. En adición tenemos
+				el valor <u>infinite</u> el cual hara que nuestra animación se repita una y otra vez
+			</li>
+			<li>
+				animation-direction -> Especificamos como queremos que nuestra animación se reproduzca
+				<ul>
+					<li>normal -> Ira de inicio a final <b style="color: red">Por defecto</b></li>
+					<li>reverse -> Nuestra animación se hara al revés, iniciando desde el final</li>
+					<li>alternate -> Alternara de inicio a final y de final a inicio</li>
+					<li>alternate-reverse -> La primera animación sera de final a inicio y luego alternara</li>
+				</ul>
+			</li>
+			<li>
+				animation-fill-mode -> Definimos lo que nuestro elemento hara antes y después de la animación
+				<ul>
+					<li>none -> No se aplicaran estilos ni antes ni después <b style="color: red">Por defecto</b></li>
+					<li>forwards -> al finalizar nuestra animación nuestro elemento conservara los estilos finales</li>
+					<li>backwards -> Antes de iniciar la animación nuestro elemento tomara los estilos del fotograma inicial</li>
+					<li>both -> Aplicara ambos valores, forwards y backwards</li>
+				</ul>
+			</li>
+			<li>
+				animation-play-state -> Definimos el estado de reproducción
+				<ul>
+					<li>Running -> Nuestra animación se reproducirá</li>
+					<li>Paused -> Pausaremos la animación</li>
+				</ul>
+			</li>
+			Con CSS no tiene mucho sentido aplicarlo, lo mejor seria hacerlo con JavaScript
+		</ol>
+
+		<h3>cubic-bezier</h3>
+		<p>
+			Esta función es un efecto de aceleración, en las transiciones no es tan usado, esta mas enfocado para las
+			animaciones
+		</p>
+		<p>
+			Podemos definir todas las velocidades que queramos, el valor base es 1 de Y, en los X es de 0 a 1 y los valores
+			mínimos son 4: x1, y1, x2, y2
+		</p>
+		<p>
+			Estos valores los haremos teniendo como referencia una parabola, la cual entre mayor sea el valor de y, mas rápido
+			sera, y viceversa.
+		</p>
+		<p>
+			Igualmente podemos usar una herramienta online,
+			<a href="https://cubic-bezier.com/" target="_blank" rel="noopener">cubic-bezier</a> en la cual podemos obtener
+			estos valores de forma gráfica
+		</p>
+
+		<div class="example-preview">
+			<div class="square cubic-bezier square--alpha">Ease</div>
+		</div>
+
+		<h3>Fotogramas</h3>
+		<p>
+			Ademas de definir el fotograma inicial con from y el final con to podemos agregar mas fotogramas, 101 para ser
+			exactos. Para hacer esto manejaremos la linea de tiempo en porcentajes, es decir, ira de 0% hasta 100%, estos
+			igualmente se pueden usar en lugar de las palabras clave
+		</p>
+
+		<pre>
+      <code>
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {  
+          opacity: 1;
+        }
+      </code>
+    </pre>
+
+		<p>
+			Si tenemos la necesidad de definir los mismos estilos en distintos fotogramas lo podemos hacer separando el
+			porcentaje con comas (,)
+		</p>
+
+		<pre>
+      <code>
+        10%,
+        90% {
+        	transform: translate(-1px, 0);
+        }
+
+        20%,
+        80% {
+        	transform: translate(2px, 0);
+        }
+
+        30%,
+        50%,
+        70% {
+        	transform: translate(-4px, 0);
+        }
+
+        40%,
+        60% {
+        	transform: translate(4px, 0);
+        }
+      </code>
+    </pre>
+
+		<p>
+			Si tenemos la necesidad de agregar varias animaciones a un elemento podemos hacerlo definiendo sus propiedades y
+			separando con comas(,)
+		</p>
+		<pre>
+      <code>
+        animation: multipleAnimation1 2s infinite, multipleAnimation2 1s 3 ease-in-out;
+      </code>
+    </pre>
+
+		<section class="motion-examples">
+			<h3>Ejemplos de efectos de Movimiento en CSS</h3>
+			<span>FadeIn / FadeOut</span>
+			<div class="fade-in">😎</div>
+			<div class="fade-out">😎</div>
+
+			<h4>Sacudir</h4>
+			<div class="shake">☕</div>
+
+			<h4>Pulsaciones</h4>
+			<div class="pulse">❤️</div>
+
+			<h4>Corazón creado con CSS</h4>
+			<p>
+				mediante las PseudoClases after y before crearemos dos rectángulos, luego aplicaremos estilos para que estos nos
+				den el efecto de ser un corazón
+			</p>
+			<div class="heart"></div>
+
+			<h4>Spinner / loader</h4>
+			<div class="spinner"></div>
+
+			<h4>Botones Animados</h4>
+			<p>Estos estilos también podríamos aplicarlos a los inputs</p>
+			<button class="btn anim-bottom to-left">Animación Izquierda</button>
+			<button class="btn anim-bottom to-center">Animación Centro</button>
+			<button class="btn anim-bottom to-right">Animación Derecha</button>
+			<button class="btn anim-bg-gradient">Fondo con Gradiente</button>
+
+			<h4>Menu de Pestañas</h4>
+			<nav class="tabs-menu">
+				<input type="radio" name="tabs" id="tab-1" />
+				<label for="tab-1">Sección 1</label>
+				<input type="radio" name="tabs" id="tab-2" />
+				<label for="tab-2">Sección 2</label>
+				<input type="radio" name="tabs" id="tab-3" />
+				<label for="tab-3">Sección 3</label>
+				<input type="radio" name="tabs" id="tab-4" />
+				<label for="tab-4">Sección 4</label>
+				<div class="tab-bg-hover"></div>
+			</nav>
+
+			<h4>Menu off Canvas</h4>
+			<input type="checkbox" class="off-canvas-btn" />
+			<label class="off-canvas-burger"></label>
+			<nav class="off-canvas-menu">
+				<div class="off-canvas-menu-container">
+					<a href="#" class="off-canvas-link">Sección 1</a>
+					<a href="#" class="off-canvas-link">Sección 2</a>
+					<a href="#" class="off-canvas-link">Sección 3</a>
+					<a href="#" class="off-canvas-link">Sección 4</a>
+					<a href="#" class="off-canvas-link">Sección 5</a>
+				</div>
+			</nav>
+
+			<h4>Modal</h4>
+			<a href="#modal-1">Abrir Modal</a>
+			<article class="modal" id="modal-1">
+				<div class="modal-container">
+					<a href="#cerrar" class="modal-close"> X </a>
+					<h2>Esto es una ventana Modal</h2>
+
+					<p>
+						Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero tempora maiores totam delectus magnam aperiam
+						quo vel nulla explicabo velit, nemo dicta! Accusantium eum ea dolore maxime, inventore consectetur a!
+					</p>
+					<ul>
+						<li><a href="#">Enlace 1</a></li>
+						<li><a href="#">Enlace 2</a></li>
+						<li><a href="#">Enlace 3</a></li>
+						<li><a href="#">Enlace 4</a></li>
+						<li><a href="#">Enlace 5</a></li>
+						<li><a href="#">Enlace 6</a></li>
+					</ul>
+				</div>
+			</article>
+
+			<h4>Star Wars Intro</h4>
+			<article class="star-wars">
+				<div class="star-wars-container">
+					<h2>Episode III</h2>
+					<h3>Revenge OF THE SITH</h3>
+
+					<p>
+						War! The Republic is crumbling under attacks by the ruthless Sith Lord, Count Dooku. There are heroes on
+						both sides. Evil is everywhere.
+					</p>
+
+					<p>
+						In a stunning move, the fiendish droid leader, General Grievous, has swept into the Republic capital and
+						kidnapped Chancellor Palpatine, leader of the Galactic Senate.
+					</p>
+
+					<p>
+						As the Separatist Droid Army attempts to flee the besieged capital with their valuable hostage, two Jedi
+						Knights lead a desperate mission to
+					</p>
+				</div>
+			</article>
+		</section>
+	</body>
+</html>

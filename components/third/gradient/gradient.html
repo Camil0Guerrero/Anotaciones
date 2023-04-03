@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="gradient.css" />
+		<title>Degradados</title>
+	</head>
+	<body>
+		<h1>Degradados</h1>
+		<p>
+			Podemos hacer los efectos de distintos formas con nuestro CSS, aunque igualmente podemos hacerlo con herramientas
+			en linea que nos dan el código fuente
+		</p>
+		<blockquote>
+			Estas herramientas podemos usarlas cuando necesitamos nuestro color rápidamente, pero lo mejor es que aprendamos
+			como es que se maneja la lógica detrás de todo esto y hacerlo nosotros mismos
+		</blockquote>
+		<p>
+			Nuestros gradiente trabaja en la propiedad <u>background-image</u>, aunque en herramientas ocasionalmente nos dan
+			el código con: background, lo mejor es hacerlo específicamente
+		</p>
+
+		<h2>Lineal</h2>
+		<p>
+			<u>linear-gradient</u> como su nombre lo indica podemos hacer degradados con varios colores de manera lineal, es
+			decir, uno detrás de otro. Le podemos definir nuestro color con cualquier sistema
+		</p>
+		<p>
+			Tenemos como primer valor uno opcional "<u>angle</u>", el cual nos ayuda a definir el grado de inclinación, esto
+			lo haremos con la palabra
+			<b><i>deg</i></b
+			>, de degree. grados en ingles
+		</p>
+		<p>
+			Por defecto es 0, que seria lo equivalente a to top, es decir, de abajo hacia arriba y nuestros colores se
+			organizaran en el orden que lo definimos, el primero sera el que este mas cerca de la propiedad y el ultimo el que
+			este mas cerca del ;
+		</p>
+		<div class="example-boxs">
+			<div class="box linear-1 center">Sin angle</div>
+			<div class="box linear-2 center">Angle 45deg</div>
+		</div>
+
+		<p>
+			Podemos definir el <u>angle</u> con las palabras clave agregando al inicio la palabra
+			<b>to</b>
+		</p>
+		<p>
+			Podemos hacer combinaciones, solo que nuestra segunda palabra ya no necesitaría iniciar con
+			<b>to</b>
+		</p>
+		<div class="example-boxs">
+			<div class="box linear-3 center">to right</div>
+			<div class="box linear-4 center">to right top</div>
+		</div>
+
+		<p>
+			Si nos fijamos las proporciones son iguales, ya que este es su comportamiento por defecto, dividir el espacio por
+			los colores que hayan
+		</p>
+		<p>
+			Si queremos cambiar el tamaño de alguno de nuestros colores podemos hacerlo poniendo su porcentaje luego de
+			haberlo definido
+		</p>
+		<p>
+			Los valores de porcentajes nos ayudan a definir el final y el inicio de nuestros colores, de esta forma no se
+			aplicara el degradado
+		</p>
+		<blockquote>
+			A el primer color no es necesario agregarle el valor inicial ya que se entiende que sera el 0. Para el ultimo pasa
+			lo mismo, no debemos definir el valor final ya que tomara el 100% por defecto
+		</blockquote>
+
+		<h3>Ejemplo Bandera</h3>
+		<div class="box linear-flag"></div>
+
+		<blockquote>Para quitar el degradado debemos definir el color justamente cuando el otro termina</blockquote>
+
+		<h2>Radial</h2>
+		<p>
+			Podemos tener el degradado radial con círculos y elipses, el de por defecto es el circle, pero ademas podemos
+			definir el radio que este tendrá como primer valor
+		</p>
+		<p>
+			Si definimos el radio el degradado solo estará en el radio que definimos, el resto del espacio se pintara de
+			nuestro ultimo color
+		</p>
+		<div class="example-boxs">
+			<div class="box radial-1 center">por defecto</div>
+			<div class="box radial-2 center">Radio definido</div>
+		</div>
+
+		<p>
+			Al igual que nuestro degradado anterior podemos definir donde sera el inicio, debemos agregar <b>at</b> antes de
+			definir el punto, este se define luego del radio
+		</p>
+
+		<div class="example-boxs">
+			<div class="box radial-3 center">at left</div>
+			<div class="box radial-4 center">at center <b style="color: red">Por defecto</b></div>
+			<div class="box radial-5 center">at right</div>
+		</div>
+		<cite>Las combinaciones también son posibles</cite>
+
+		<h3>Ellipse</h3>
+		<p>
+			Si quisiéramos un radio elíptico lo podemos definir con la palabra ellipse, pero al ser un elipse recordemos que
+			debemos definir 2 radios, el X u horizontal y el Y, el vertical
+		</p>
+
+		<div class="example-boxs">
+			<div class="box radial-6 center">100px x 50px</div>
+			<div class="box radial-7 center">50px x 100px</div>
+			<div class="box radial-8 center">at right</div>
+		</div>
+
+		<h2>Cónico</h2>
+		<p>Este es un poco mas nuevo, no da la posibilidad de difuminar los colores tomando como referencia un cono</p>
+		<p>
+			Al definir los porcentajes de nuestros colores podemos usar como referencia las manecillas del reloj: las 12-> 0%
+			y 0deg
+		</p>
+		<p>
+			Para cambiar el punto de referencia de nuestro cono debemos usar "<u>from</u>" seguido de nuestro grado de
+			inclinación o una palabra clave
+		</p>
+		<p>
+			<u>conic-gradient</u> Es la función que nos permite definir nuestro gradiente cónico, sin embargo vscode no lo
+			recomienda ya que es el mas reciente
+		</p>
+
+		<div class="example-boxs">
+			<div class="box conic-1">conic-gradient(red 50%, green 60%, blue 80%)</div>
+			<div class="box conic-2">conic-gradient(red 90deg, green 120deg 240deg, blue 270deg)</div>
+			<div class="box conic-3">conic-gradient(from 90deg, red 90deg, green 120deg 240deg, blue 270deg)</div>
+		</div>
+		<h3>Ejemplo bandera</h3>
+		<div class="box conic-flag center"></div>
+
+		<h2>Patrones</h2>
+		<p>
+			Aunque podemos trabajar con cualquier unidad de medida, en los patrones es recomendado utilizar pequeñas, por lo
+			que los pixeles son muy buena opción
+		</p>
+		<p>
+			Para que nuestro gradiente sea repetitivo solo debemos agregar "<u>repeating</u>" antes de la función, por lo que
+			quedaría:
+		</p>
+		<u>
+			<li>repeating-linear-gradient</li>
+			<li>repeating-radial-gradient</li>
+			<li>repeating-conic-gradient</li>
+		</u>
+		<p>
+			Lo podemos usar en todos nuestros degradados, lo que haremos es que en cuanto se termine el efecto, si hay mas
+			espacio, se aplicara de nuevo hasta que todo el elemento este completo
+		</p>
+
+		<h3>Repetir Degradados</h3>
+		<pre>
+      <code>
+        * repeating-linear-gradient(90deg, red 0 10px, green 10px 20px, blue 20px 30px)
+
+        * repeating-radial-gradient( circle 4rem, cyan 0 10px, magenta 10px 20px, yellow 20px 30px )
+
+        * repeating-conic-gradient(red 0 8%, yellow 8% 16%, black 16% 24%)
+      </code>
+    </pre>
+		<div class="example-boxs">
+			<div class="box repeat-gradient-linear"></div>
+			<div class="box repeat-gradient-radial"></div>
+			<div class="box repeat-gradient-conic"></div>
+		</div>
+
+		<h3>Gráfica con Degradados</h3>
+		<p>
+			Si quisiéramos poner la misma gráfica en algún otro proyecto tan solo debemos modificar los porcentajes <br />
+			conic-gradient(cyan 0 50%, magenta 50% 80%, yellow 80%);
+		</p>
+
+		<p>
+			También podemos poner degradados multiples y es lo que haremos para nuestra segunda gráfica. Poniendo un gradiente
+			radial en el centro haremos el efecto de dejar el espacio en blanco. Con el transparent le dejamos el espacio al
+			siguiente gradient para que se muestre sin problema <br />
+		</p>
+		<p>
+			Los gradientes los debemos separar por comas, y luego definimos nuestra siguiente función, el orden en que estos
+			se mostraran sera como los hemos definido, el que esta mas cerca de la propiedad es el que estará encima del todo,
+			y el que esta mas cerca del punto y coma (;) sera el que esta mas al fondo
+		</p>
+		<p>
+			radial-gradient(white 40%, black 41%, transparent 43%), conic-gradient(cyan 0% 50%, magenta 50% 80%, yellow 80%)
+		</p>
+
+		<div class="example-boxs">
+			<div class="box chart-gradient"></div>
+			<div class="box donut-gradient"></div>
+		</div>
+	</body>
+</html>

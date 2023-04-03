@@ -1,0 +1,74 @@
+/***** Clip-path *****/
+.card .a {
+	left: 5%;
+	text-align: center;
+}
+
+/* circle */
+.clip-path-circle-1 {
+	clip-path: circle(100px at left);
+}
+
+.clip-path-circle-2 {
+	clip-path: circle(6rem);
+}
+
+.clip-path-circle-3 {
+	clip-path: circle(3rem at 18% 56%);
+}
+
+.clip-path-circle-4 {
+	clip-path: circle(4rem at bottom right);
+}
+
+/* elipse */
+.ellipse {
+	clip-path: ellipse(100px 50px at 37% 54%);
+}
+
+/* inset */
+.clip-path-inset-1 {
+	clip-path: inset(4rem);
+}
+
+.clip-path-inset-2 {
+	clip-path: inset(4rem 1rem);
+}
+
+.clip-path-inset-3 {
+	clip-path: inset(1rem 4rem 1rem);
+}
+
+.clip-path-inset-4 {
+	clip-path: inset(4rem 3rem 2rem 1rem);
+}
+
+.clip-path-inset-5 {
+	clip-path: inset(1rem round 2rem);
+}
+
+/* polygon */
+.clip-path-polygon {
+	clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.clip-path-polygon-star {
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.clip-path-polygon-cross {
+	clip-path: polygon(
+		10% 25%,
+		35% 25%,
+		35% 0%,
+		65% 0%,
+		65% 25%,
+		90% 25%,
+		90% 50%,
+		65% 50%,
+		65% 100%,
+		35% 100%,
+		35% 50%,
+		10% 50%
+	);
+}

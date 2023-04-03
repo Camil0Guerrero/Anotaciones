@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="clip-path.css" />
+		<title>Enmascaramiento</title>
+	</head>
+	<body>
+		<h1>Enmascaramiento</h1>
+		<p>
+			Nos permite definir una forma para que se muestre nuestro contenido, pero esto solo es una mascara, nuestro
+			contenido seguirá igual, es como poner una ventana para que veamos a traves de ella
+		</p>
+		<p>Tenemos algunas funciones que nos ayudaran a definir la forma que tomara nuestra mascara:</p>
+
+		<h2>Circle</h2>
+		<p>
+			Tomara la forma de un circulo, dentro de sus parentesis podemos definir el radio. Por defecto el radio lo
+			calculara por si mismo.
+		</p>
+		<p>
+			Igualmente la parte que mostrara si no le definimos sera la del centro, aunque esta se la podemos cambiar siempre
+			y cuando le hayamos definido un centro, solo debemos agregar la palabra at y luego los valores de X y Y, también
+			podemos hacer uso de las palabras clave
+		</p>
+		<p>El tamaño de nuestro elemento no se vera afectado a pesar de que no se mostrara todo</p>
+
+		<h4>Ejemplos:</h4>
+		<ul>
+			<li>clip-path: circle(100px at left);</li>
+			<li>clip-path: circle(6rem);</li>
+			<li>clip-path: circle(3rem at 18% 56%);</li>
+			<li>clip-path: circle(4rem at bottom right);</li>
+		</ul>
+		<div class="example-cards">
+			<article class="card clip-path-circle-1">
+				<img src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card clip-path-circle-2">
+				<img src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card clip-path-circle-3">
+				<img src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card clip-path-circle-4">
+				<img src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+		</div>
+
+		<h2>Ellipse</h2>
+		<p>Al igual que en los temas anteriores debemos definir los dos radios</p>
+		<p>Las demás características son iguales a nuestra función anterior</p>
+
+		<article class="card ellipse">
+			<img src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+		</article>
+
+		<h2>Inset</h2>
+		<p>El valor que le asignamos va a tomarlo como un padding, va a quitar esa parte de nuestra imagen</p>
+		<p>Si no le definimos valores no aplicara el efecto</p>
+
+		<div class="example-cards">
+			<article class="card r">
+				<p class="a">4rem -> para todos los bordes</p>
+				<img class="clip-path-inset-1" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">4rem 1rem -> X Y</p>
+				<img class="clip-path-inset-2" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">1rem 4rem 1rem -> top X bottom</p>
+				<img class="clip-path-inset-3" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">4rem 3rem 2rem 1rem -> top right bottom left</p>
+				<img class="clip-path-inset-4" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+		</div>
+
+		<p>
+			Con "<u>round</u>" podemos redondear las esquinas de la mascara<, los valores se van aplicando al igual que
+			border-radius
+		</p>
+
+		<article class="card r">
+			<p class="a">clip-path: inset(1rem round 2rem);</p>
+			<img class="clip-path-inset-5" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+		</article>
+
+		<h2>polygon</h2>
+		<p>Esta función nos ayuda a crear cualquier figura geométrica</p>
+		<p>Esta función igualmente necesita parámetros</p>
+		<p>
+			Debemos definir los puntos de nuestra imagen donde queremos que vaya la figura. Con , separamos los puntos. Primer
+			valor X segundo Y escala de 0 a 100%
+		</p>
+
+		<article class="card r">
+			<p class="a">clip-path: polygon(0 0, 100% 0, 50% 100%);</p>
+			<img class="clip-path-polygon" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+		</article>
+
+		<p>Hay sitios en linea que nos ayudan a poner y crear los estilos de las figuras geométricas</p>
+		<a href="https://bennettfeely.com/clippy/" rel="noopener" target="_blank">Clip Path</a>
+
+		<article class="card r">
+			<p class="a">
+				clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+			</p>
+			<img class="clip-path-polygon-star" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+		</article>
+		<article class="card r">
+			<p class="a">
+				clip-path: polygon(10% 25%,35% 25%,35% 0%,65% 0%,65% 25%,90% 25%,90% 50%,65% 50%,65% 100%,35% 100%,35% 50%,10%
+				50%);
+			</p>
+			<img class="clip-path-polygon-cross" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+		</article>
+	</body>
+</html>

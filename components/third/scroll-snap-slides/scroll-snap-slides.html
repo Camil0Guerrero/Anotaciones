@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="scroll-snap-slides.css" />
+		<title>Slides</title>
+	</head>
+	<body>
+		<h1>Ajuste del scroll (<small>Slides</small>)</h1>
+		<p>
+			Lo que haremos en este ejercicio sera controlar ciertos elementos simulando una presentación, definiremos que
+			nuestros elementos se queden en la mitad y podamos pasar de uno a otro con tan solo deslizar un poco la rueda del
+			ratón o el espacio
+		</p>
+		<p>Para que este ejercicio funcione sin problemas debemos tener varios puntos en cuenta:</p>
+		<ol>
+			<li>Tener un contenedor, aunque podría ser el body, es mejor hacer uno específicamente</li>
+			<li>
+				Necesitamos dos contenedores, en el primero vamos a definir la altura y anchura, ademas que definimos el
+				overflow en hidden ya que solo queremos que se vea uno
+			</li>
+			<li>Debemos tener altura y anchura definida por lo menos en nuestro segundo contenedor</li>
+			<li>
+				En el eje que queremos controlar el efecto debe ser <u>scroll</u> esto lo definiremos en el segundo contenedor
+			</li>
+		</ol>
+
+		<h2>Propiedades</h2>
+
+		<h3>Segundo contenedor</h3>
+		<p>
+			<u>scroll-snap-type</u> Es la propiedad que nos permite controlar el comportamiento de nuestra barra de
+			navegación.
+			<br />
+			esta propiedad recibe dos valores
+			<br />
+		</p>
+
+		<p>none -> No hacer el efecto. <b style="color: red">Por defecto</b></p>
+		<span>Primer valor</span>
+
+		<ul>
+			<li>X o inline - Definimos que queremos controlar el desplazamiento del eje horizontal</li>
+			<li>Y o block -> Para controlar el scroll vertical</li>
+			<li>both -> Para controlar ambos</li>
+		</ul>
+
+		<span>En el segundo valor definimos que efecto queremos, recibe uno de los siguientes valores</span>
+		<ul>
+			<li>mandatory -> Con desplazar un poco el scroll pasara o se devolverá el slide</li>
+			<li>
+				proximity -> De esta manera nuestro movimiento debe ser mayor para que el desplazamiento ocurra, debe estar mas
+				cerca
+			</li>
+		</ul>
+
+		<h2>Slides</h2>
+		<p>A nuestro elemento hijo debemos definir la alineación que este tendrá cuando se haga el efecto</p>
+		<p><u>scroll-snap-align</u> es la propiedad que nos lo permite, esta recibe las palabras clave:</p>
+		<ul>
+			<li>none <b style="color: red">Por defecto</b></li>
+			<li>end -> Se alineara al final</li>
+			<li>start -> Al inicio</li>
+			<li>center -> nuestro elemento estará en el centro</li>
+		</ul>
+
+		<h3>Primer ejemplo:</h3>
+		<div class="example-slides-y">
+			<article class="slides">
+				<section class="slide">
+					<article class="slide-container">
+						<h2>Ejemplo Vertical</h2>
+						<h3>Slide 1</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni harum saepe aliquid perferendis
+							commodi est quae porro ut obcaecati sed labore adipisci ad, quam eum sequi repellendus fugit placeat.
+						</p>
+					</article>
+				</section>
+				<section class="slide">
+					<article class="slide-container">
+						<h3>Slide 2</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat voluptatibus vero ipsa obcaecati facere
+							facilis dolore, ab magni quidem suscipit, iure architecto neque. Repellat vero earum alias, distinctio
+							ducimus ex.
+						</p>
+					</article>
+				</section>
+				<section class="slide">
+					<article class="slide-container">
+						<h3 class="gradient-text">Slide 3</h3>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda architecto voluptatem suscipit
+							consequuntur blanditiis. Similique ipsam, ullam nemo, praesentium, voluptate fuga perferendis commodi
+							dolor accusantium voluptates ipsum fugiat quasi nisi.
+						</p>
+					</article>
+				</section>
+				<section class="slide">
+					<article class="slide-container">
+						<h3>Slide 4</h3>
+						<p>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam odit molestias, porro aliquam placeat
+							ratione sapiente earum perspiciatis tempore dolores temporibus quas, consequuntur expedita, suscipit sed
+							fugit animi corporis mollitia?
+						</p>
+					</article>
+				</section>
+				<section class="slide">
+					<article class="slide-container">
+						<h3>Slide 5</h3>
+						<p>
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, sunt neque. Nemo dolor, dolore doloribus
+							in doloremque repellendus unde praesentium totam natus deleniti quo reiciendis aperiam illo? Aliquid,
+							earum aut?
+						</p>
+					</article>
+				</section>
+			</article>
+		</div>
+
+		<h3>Segundo ejemplo</h3>
+		<p>En este ejemplo haremos el efecto en nuestro segundo eje, en el Y</p>
+		<p>Recapitulemos los "<u>pasos</u>" para que este efecto funcione</p>
+		<ol>
+			<li>
+				Definir el ancho o alto de nuestro elemento dependiendo el eje que queremos aplicarlo, lo recomendado es hacerlo
+				a ambos
+			</li>
+			<li>Que la propiedad overflow en el eje que queremos controlar tenga el valor scroll</li>
+			<li>Definir la propiedad <u>scroll-snap-type</u> en nuestro contenedor</li>
+			<li>Definir la alineación con la propiedad <u>scroll-snap-align</u> en nuestro elemento hijo</li>
+		</ol>
+
+		<article class="carousel">
+			<section class="carousel-container">
+				<article class="carousel-slide">
+					<div class="carousel-slide-content">
+						<h3>Slide 1</h3>
+					</div>
+				</article>
+				<article class="carousel-slide">
+					<div class="carousel-slide-content">
+						<h3 class="gradient-text">Slide 2</h3>
+					</div>
+				</article>
+				<article class="carousel-slide">
+					<div class="carousel-slide-content">
+						<h3>Slide 3</h3>
+					</div>
+				</article>
+				<article class="carousel-slide">
+					<div class="carousel-slide-content">
+						<h3>Slide 4</h3>
+					</div>
+				</article>
+				<article class="carousel-slide">
+					<div class="carousel-slide-content">
+						<h3>Slide 5</h3>
+					</div>
+				</article>
+			</section>
+		</article>
+
+		<h2>Texto con gradiente</h2>
+		<p>
+			Asi es, a nuestros textos también podemos aplicar un color con las funciones de gradiente, sin embargo esta aun
+			experimental, por lo que si la vamos a usar debemos poner el soporte para los navegadores
+		</p>
+		<p>
+			Para aplicar este efecto a nuestros textos lo que debemos hacer es definir el gradiente normalmente, en la
+			propiedad <u>background-image</u> y definimos el gradiente que queremos, luego, usando
+			<u>background -clip </u> pondremos el valor de <b style="color: navy">text</b> que debemos definir con los
+			soportes. Por ultimo haremos que nuestro texto ignore la propiedad color, esto lo hacemos con
+			<u>text-fill-color</u> y su valor en transparent, que igualmente debemos definir con soportes
+		</p>
+
+		<div class="card center">
+			<h3 class="gradient-text">Texto con gradiente</h3>
+		</div>
+	</body>
+</html>

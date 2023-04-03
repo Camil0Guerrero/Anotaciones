@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="filters.css" />
+		<title>Filtros</title>
+	</head>
+	<body>
+		<h1>Filtros</h1>
+		<p>
+			Al igual que en las aplicaciones de diseño podemos agregar filtros, cada uno de estos filtros son funciones, las
+			cuales tienen distintas características y usos
+		</p>
+		<p>
+			Podemos aplicar los filtros a cualquier elemento, sin embargo, los filtros se aprecian mejor cuando los aplicamos
+			a una imagen
+		</p>
+
+		<h2>Filtros</h2>
+		<h3>Blur</h3>
+		<p>Nos ayuda a manejar el desenfoque, lo recomendado es usar rem's o pixeles</p>
+
+		<div class="example-cards">
+			<article class="card r">
+				<p class="a">1px</p>
+				<img class="blur-1" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">10px</p>
+				<img class="blur-2" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+		</div>
+
+		<h3>Brightness</h3>
+		<p>Definimos el brillo, se manejo en una escala de 1 a 0</p>
+		<p>
+			Aunque podemos poner mas brillo a la imagen lo recomendado es no hacerlo ya que la estaríamos exigiendo lo que la
+			hara ver mal. Si lo hacemos que sea lo menor posible
+		</p>
+
+		<div class="example-cards">
+			<article class="card r">
+				<p class="a">2</p>
+				<img class="br-1" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">1.5</p>
+				<img class="br-2" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">1</p>
+				<img class="br-3" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">0.75</p>
+				<img class="br-4" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">0.5</p>
+				<img class="br-5" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">0.25</p>
+				<img class="br-6" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+		</div>
+
+		<h3>Contrast</h3>
+		<p>Con esta función manipulamos el contraste de la imagen. Su escala es de 1 a 0</p>
+		<p>Igualmente podemos exigirla aunque lo mejor es no hacerlo</p>
+
+		<div class="example-cards">
+			<article class="card r">
+				<p class="a">4</p>
+				<img class="ctr-1" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">2</p>
+				<img class="ctr-2" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">1</p>
+				<img class="ctr-3" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">0.75</p>
+				<img class="ctr-4" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">0.5</p>
+				<img class="ctr-5" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">0.25</p>
+				<img class="ctr-6" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+		</div>
+
+		<h3>grayscale</h3>
+		<p>Definiremos la escala de grises de nuestra elemento o imagen. Su escala es de 0 a 1</p>
+		<p>Si ponemos mas de 1 da igual, se aplicara el mismo 1 ya que es el máximo</p>
+		<p><b>NO</b> se pueden definir valores negativos</p>
+
+		<div class="example-cards">
+			<article class="card r">
+				<p class="a">0</p>
+				<img class="gsl-1" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">0.5</p>
+				<img class="gsl-2" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">1</p>
+				<img class="gsl-3" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+		</div>
+
+		<h3>sepia</h3>
+		<p>Es parecido a la escala de grises pero este trabaja con el color amarillo. Su escala es de 0 a 1</p>
+
+		<div class="example-cards">
+			<article class="card r">
+				<p class="a">0</p>
+				<img class="sep-1" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">0.5</p>
+				<img class="sep-2" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">1</p>
+				<img class="sep-3" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+		</div>
+
+		<h3>hue-rotate</h3>
+		<p>Aplica colores a nuestro elemento o imagen. El color lo elegimos con los grados segun el circulo cromático</p>
+		<span>Ejemplo: </span>
+		<ul>
+			<li>0° -> red</li>
+			<li>60° -> yellow</li>
+			<li>120° -> green</li>
+			<li>180° -> cyan</li>
+			<li>240° -> blue</li>
+			<li>300° -> magenta</li>
+		</ul>
+
+		<div class="example-cards">
+			<article class="card r">
+				<p class="a">Rojo</p>
+				<img class="hue-1" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">Amarillo</p>
+				<img class="hue-2" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">Verde</p>
+				<img class="hue-3" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">cyan</p>
+				<img class="hue-4" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">Azul</p>
+				<img class="hue-5" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">magenta</p>
+				<img class="hue-6" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+		</div>
+
+		<h3>invert</h3>
+		<p>
+			Invierte el color. Su escala es de 0 a 1, sin embargo los valores booleanos casi no se notan. Por lo que lo mejor
+			es usarlo o no
+		</p>
+		<p>
+			Los colores que aplica son los opuestos teniendo en cuenta el circulo cromático. Como en este caso, la imagen
+			tenia colores cálidos como el amarillo, con el filtro tendrá colores mas oscuros como el azul /p>
+		</p>
+
+		<div class="example-cards">
+			<article class="card r">
+				<p class="a">Sin</p>
+				<img class="inv-1" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a" style="color: yellowgreen">Con</p>
+				<img class="inv-2" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+		</div>
+
+		<h3>Opacity</h3>
+		<p>Define la opacidad de nuestro elemento, entre mas elevado sea el numero menos se vera. Escala de 1 a 0</p>
+		<p>Cualquier valor mayor a uno no se aplicara ya que es el máximo</p>
+
+		<div class="example-cards">
+			<article class="card r">
+				<p class="a">1</p>
+				<img class="op-1" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">0.75</p>
+				<img class="op-2" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">0.5</p>
+				<img class="op-3" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">0.25</p>
+				<img class="op-4" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">0</p>
+				<img class="op-5" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+		</div>
+
+		<h3>Saturate</h3>
+		<p>
+			Definimos la saturación, la saturación hace que los colores se vean vivos, por lo tanto, mas saturación hara que
+			los colores se vean exagerados y entre menos haya mas a blanco y negro se vera. Escala de 1 a 0
+		</p>
+
+		<div class="example-cards">
+			<article class="card r">
+				<p class="a">4</p>
+				<img class="sat-1" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">2</p>
+				<img class="sat-2" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">1</p>
+				<img class="sat-3" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">0.75</p>
+				<img class="sat-4" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">0.5</p>
+				<img class="sat-5" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+			<article class="card r">
+				<p class="a">0.25</p>
+				<img class="sat-6" src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			</article>
+		</div>
+
+		<h2>Filtros multiples</h2>
+		<p>Para aplicar varios filtros solo debemos definir uno tras otro</p>
+		<p>Por Ejemplo: filter: blur(0.1rem) hue-rotate(270deg) opacity(75%) invert(1);</p>
+
+		<article class="card filters-multiple">
+			<img src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+		</article>
+
+		<h2>Filtros a fondos</h2>
+		<p>Con <u>backdrop-filter</u> podemos definir filtros a nuestro elemento ancestro, en este caso sera el div</p>
+		<p>Igualmente podemos agregar cuantos filtros necesitemos y podemos definir todos los anteriormente vistos</p>
+		<article class="card r">
+			<img src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+			<div class="backdrop-filter">
+				<h4>Puesta de Sol</h4>
+			</div>
+		</article>
+	</body>
+</html>

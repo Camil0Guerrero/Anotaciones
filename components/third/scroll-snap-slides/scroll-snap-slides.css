@@ -1,0 +1,88 @@
+/***** Ejemplo slides en presentación *****/
+/* vertical */
+.example-slides-y {
+	width: 50%;
+	height: 50vh;
+	margin: auto;
+	overflow: hidden;
+}
+
+.slides {
+	width: 100%;
+	height: inherit;
+	overflow: hidden scroll;
+	scroll-snap-type: block mandatory;
+}
+
+.slide {
+	background-color: #1e2345;
+	scroll-snap-align: center;
+}
+
+.slide:nth-child(even) {
+	background-color: #108eb4;
+}
+
+.slide-container {
+	width: 100%;
+	height: 50vh;
+	margin: 0 0.5rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.5rem;
+	color: #d9e8f0;
+}
+
+/* horizontal */
+.carousel {
+	border: thick solid #d938f0;
+	width: 50%;
+	height: 50vh;
+	margin: auto;
+	display: flex;
+	overflow-x: hidden;
+}
+
+.carousel-container {
+	color: #d9e8f0;
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(5, 100%);
+	overflow: scroll hidden;
+	scroll-snap-type: both proximity;
+	scroll-snap-type: both mandatory;
+}
+
+.carousel-slide {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #108eb4;
+	scroll-snap-align: center;
+}
+
+.carousel-slide:nth-child(even) {
+	background-color: #1e2345;
+}
+
+/***** Texto con gradiente *****/
+#scroll-snap-slides .card {
+	margin: auto;
+}
+
+.gradient-text {
+	background-image: linear-gradient(45deg, magenta, yellow);
+	-ms-background-clip: text;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-ms-text-fill-color: transparent;
+	-moz-text-fill-color: transparent;
+	-webkit-text-fill-color: transparent;
+
+	font-size: 3rem;
+	line-height: 50px;
+}

@@ -1,0 +1,75 @@
+/***** Modos de mezcla *****/
+.blend-modes img[class="a"] {
+	left: 0;
+	z-index: 90;
+}
+
+.blend-modes p[class="a"] {
+	color: #fff;
+	top: 80%;
+	left: 50%;
+}
+
+.mb-normal img {
+	mix-blend-mode: normal;
+}
+
+.mb-color img {
+	mix-blend-mode: color;
+}
+
+.mb-color-dodge img {
+	mix-blend-mode: color-dodge;
+}
+
+.mb-color-burn img {
+	mix-blend-mode: color-burn;
+}
+
+.mb-screen img {
+	mix-blend-mode: screen;
+}
+
+.mb-multiply img {
+	mix-blend-mode: multiply;
+}
+
+.mb-saturation img {
+	mix-blend-mode: saturation;
+}
+
+.mb-luminosity img {
+	mix-blend-mode: luminosity;
+}
+
+.mb-hue img {
+	mix-blend-mode: hue;
+}
+
+.mb-exclusion img {
+	mix-blend-mode: exclusion;
+}
+
+.mb-difference img {
+	mix-blend-mode: difference;
+}
+
+.mb-hard-light img {
+	mix-blend-mode: hard-light;
+}
+
+.mb-soft-light img {
+	mix-blend-mode: soft-light;
+}
+
+.mb-lighten img {
+	mix-blend-mode: lighten;
+}
+
+.mb-overlay img {
+	mix-blend-mode: overlay;
+}
+
+.mb-darken img {
+	mix-blend-mode: darken;
+}
