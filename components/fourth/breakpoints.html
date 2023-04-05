@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+		<title>Breakpoints</title>
+	</head>
+	<body>
+		<h1><i>Breakpoints</i></h1>
+
+		<h2>¿Qué es?</h2>
+		<p>Es el punto de interrupción, es decir, es ese punto de medida en la cual decido aplicar estilos a mi interfaz</p>
+		<p>
+			<i>Ethan Marcotte</i> en su libro <i>Responsive Design</i> páginas 113-114 nos propone la siguiente lista de
+			puntos de interrupción según la resolución del dispositivo:
+		</p>
+		<img src="../../assets/images/Breakpoints.webp" type="image/webp" alt="Breakpoints" />
+		<table>
+			<tr>
+				<td>
+					<b><i>320px</i></b>
+				</td>
+				<td>
+					<p>Para dispositivos con pantallas pequeñas, como los teléfonos en modo vertical.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b><i>480px</i></b>
+				</td>
+				<td>
+					<p>Para dispositivos con pantallas pequeñas, como los teléfonos, en modo horizontal.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b><i>600px</i></b>
+				</td>
+				<td>
+					<p>
+						Tabletas pequeñas, como el <i>Amazon Kindle</i> (600×800) y <i>Barnes & Noble Nook</i> (600×1024), en modo
+						vertical.
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b><i>768px</i></b>
+				</td>
+				<td>
+					<p>Tabletas de diez pulgadas como el <i>iPad</i> (768×1024), en modo vertical.</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b><i>1024px</i></b>
+				</td>
+				<td>
+					<p>
+						Tabletas como el <i>iPad</i> (1024×768), en modo horizontal, así como algunas pantallas de ordenador
+						portátil, <i>netbook</i>, y de escritorio.
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<b><i>1200px</i></b>
+				</td>
+				<td>
+					<p>Para pantallas panorámicas, principalmente portátiles y de escritorio.</p>
+				</td>
+			</tr>
+		</table>
+		<p>
+			Con la tabla que <i>Ethan Marcotte</i> nos propone prácticamente están cubiertos teléfonos inteligentes, tabletas,
+			phablets, laptops, netbooks, computadoras de escritorio y pantallas, tanto en modo vertical como horizontal, por
+			lo que con estos 6 puntos de interrupción sólo tendríamos que validar un solo atributo en las
+			<i>media queries</i>: el <b>ancho</b>.
+		</p>
+		<p>
+			De cualquier forma en el sitio <a href="http://screensiz.es" target="_blank" rel="noopener"><i>screensiz.es</i></a
+			>, se puede estar revisando constantemente las características físicas con las que se fabrican los dispositivos.
+		</p>
+		<h2>¡Importante! Convierte tus <i>Breakpoints</i> a <i>EMs</i></h2>
+		<h3>¿Por qué?</h3>
+		<p>
+			Aunque los pixeles se consideran una unidad de medida absoluta, en realidad son unidades relativas a la resolución
+			de pantalla del dispositivo que lo visualiza, si dicho dispositivo tiene una densidad mayor a la normal, entonces
+			la proporción de los pixeles cambiará, por ello es importante que los <i>breakpoints</i> de las
+			<i>media queries</i> se conviertan a <i>ems</i>
+			que si son unidades relativas y proporcionales.
+		</p>
+		<h3>Más información</h3>
+		<ul>
+			<li>
+				<a href="http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/" target="_blank"
+					><i>The EMs have it: Proportional Media Queries</i></a
+				>.
+			</li>
+			<li>
+				<a href="https://css-tricks.com/why-ems/" target="_blank"><i>Why Ems?</i></a
+				>.
+			</li>
+			<li>
+				<a href="http://inamidst.com/stuff/notes/csspx" target="_blank"><i>CSS px is an Angular Measurement</i>.</a>
+			</li>
+		</ul>
+		<h3>Entonces</h3>
+		<p>Objetivo en pixeles / Contexto en pixeles = Resultado en <i>Ems</i></p>
+		<p>320px / 16px = 20em</p>
+		<p>480px / 16px = 30em</p>
+		<p>600px / 16px = 37.5em</p>
+		<p>768px / 16px = 48em</p>
+		<p>1024px / 16px = 64em</p>
+		<p>1200px / 16px = 75em</p>
+	</body>
+</html>

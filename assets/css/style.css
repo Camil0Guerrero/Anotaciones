@@ -46,12 +46,12 @@ h3 {
 }
 
 h4 {
-	margin: 5px 0;
+	margin: 8px 0;
 	font-size: var(--font-size-h4);
 }
 
 h5 {
-	margin: 0;
+	margin: 8px 0;
 	font-size: var(--font-size-h5);
 }
 
@@ -88,7 +88,21 @@ code {
 	color: #264de4;
 }
 
+img,
+video,
+iframe,
+picture {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16/9;
+}
+
 /* Clases utilitarias */
+[class^="box"] {
+	margin: 3rem auto;
+	background-color: orangered;
+}
+
 .box {
 	border: thick solid black;
 	margin: 3rem auto 5rem;
@@ -128,6 +142,12 @@ code {
 	justify-content: space-evenly;
 	gap: 1rem;
 	text-align: center;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .r {

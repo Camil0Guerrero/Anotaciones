@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+		<title>Escritorio - Movil</title>
+	</head>
+	<body>
+		<h1><i>Desktop First VS Mobile First</i></h1>
+		<p>
+			Son las 2 estrategias que tiene el <i>Responsive Design</i> para adaptar el contenido al tamaño de la pantalla,
+			centrándose en los dispositivos con pantalla más pequeña (<i>Mobile First</i>) o a la inversa, centrándose en los
+			dispositivos con pantalla más grande (<i>Desktop First</i>).
+		</p>
+		<img src="../../assets/images/desktop-mobile.jpg" alt="Desktop or mobile first?" />
+
+		<h2><i>Desktop First</i></h2>
+		<h3>(<i>Graceful Degradation</i>)</h3>
+		<p>Las <i>media queries</i> se deben definir de la <b>mayor a la menor</b>.</p>
+		<p>
+			Se utiliza la propiedad <b><i>max-width</i></b> para definir las <i>media queries</i>.
+		</p>
+
+		<h2><i>Mobile First</i></h2>
+		<h3>(<i>Progressive Enhancement</i>)</h3>
+		<p>Las <i>media queries</i> se deben definir de la <b>menor a la mayor</b>.</p>
+		<p>
+			Se utiliza la propiedad <b><i>min-width</i></b> para definir las <i>media queries</i>.
+		</p>
+
+		<h3>Notas:</h3>
+		<p>
+			Es muy importante no combinar ambas propiedades al momento de definir nuestros ancho para el que se aplicara
+			nuestros estilos
+		</p>
+		<p>
+			Tan solo con 2 media queries ya podemos tener confusion ya que luego de que nuestra pantalla supera los 1024px se
+			aplicara el de nuestra media queries anterior, min-width: 480px
+		</p>
+		<p>
+			Entonces si ya empezamos a hacerlo con Mobile First nuestro proyecto debemos asegurarnos de trabajar siempre con
+			min width Y si iniciamos nuestro proyecto con Desktop First hacerlo siempre con max-width
+		</p>
+	</body>
+</html>

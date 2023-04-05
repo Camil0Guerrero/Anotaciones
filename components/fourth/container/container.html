@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="container.css" />
+		<title>Contenedores flexibles</title>
+	</head>
+	<body>
+		<h1>Grids Flexibles</h1>
+		<p>Todos los contenedores de nuestra interfaz tienen que ser flexibles y responsivos</p>
+		<p>
+			Para este propósito debemos tener en cuenta ciertas propiedades que nos ayudaran a hacer que nuestro contenido
+			siempre se vea bien
+		</p>
+		<div class="box flex-center">
+			<pre>
+        <code> 
+      width: 300px;
+      height: 300px;
+        </code>
+      </pre>
+		</div>
+		<div class="box-flexible flex-center">
+			<code> width: 50%; height: 20vh; </code>
+		</div>
+		<h4>min y max</h4>
+		<p>
+			Al determinar el mínimo o máximo del ancho o alto, podemos hacer uso de las unidades absolutas ya que no estamos
+			determinando la altura base, sino el punto máximo o mínimo que la caja va a crecer o encogerse
+		</p>
+		<p>
+			Aunque definamos ni ancho ni alto, nuestro elemento se adaptara al padre en el rango mínimo y máximo, por defecto
+			tomara el 100%
+		</p>
+		<p>
+			Recordemos que la altura esta determinada por su contenido. Por lo tanto al poner contenido notaremos como nuestro
+			elemento se agrandara respetando los rangos que hemos definido
+		</p>
+		<div class="box-flexible-2 flex-center">
+			<code> max-width: 960px; min-width: 280px; max-height: 480px; min-height: 280px; </code>
+		</div>
+		<p>
+			Es importante que usemos una u otra forma para hacer nuestros sitios flexibles ya que si definimos todas las
+			propiedades, tendrán mas jerarquía width y height, por lo tanto las otras propiedades no se aplicaran
+		</p>
+		<div class="box-flexible-3 flex-center">
+			<pre>
+        <code>
+          max-width: 960px;
+          min-width: 280px;
+          max-height: 480px;
+          min-height: 280px;
+          width: 300px;
+          height: 300px;
+        </code>
+      </pre>
+		</div>
+		<p>
+			Si los definimos en una unidad relativa, si podríamos usar todas las propiedades, mientras nuestro width y height
+			estén en la escala del min y max, estos se aplicaran. Nuestras otras propiedades se van a aplicar en cuanto
+			lleguemos a el tamaño definido
+		</p>
+		<div class="box-flexible-4 flex-center">
+			<pre>
+        <code>
+          max-width: 960px;
+          min-width: 280px;
+          max-height: 480px;
+          min-height: 280px;
+          width: 50%;
+          height: 20vh;
+        </code>
+      </pre>
+		</div>
+	</body>
+</html>

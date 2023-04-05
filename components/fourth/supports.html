@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+		<title></title>
+	</head>
+	<body>
+		<h1>@Supports</h1>
+		<p>
+			Feature Queries, son reglas CSS que le preguntan al navegador si soportan o no una determinada propiedad o valor
+		</p>
+		<p>
+			Por ejemplo una propiedad para los hijos cuando aplicamos <i>grid</i> que no esta soportada es
+			<u><i>subgrid</i></u
+			>, en este caso si nuestro navegador soporta esta propiedad aplicara los estilos que hemos definido
+		</p>
+		<pre>
+      <code>
+        @supports (grid-template-columns: subgrid) {
+          // Código CSS
+        }
+      </code>
+    </pre>
+
+		<p>
+			También podemos hacerlo para el caso contrario, cuando el navegador no soporte esta propiedad o característica
+		</p>
+		<pre>
+      <code>
+        @supports not (grid-template-columns: subgrid) {
+          // Código CSS
+        }
+      </code>
+    </pre>
+
+		<p>
+			Si queremos evaluar varias propiedades podemos hacer uso de los operadores <u><i>and</i></u> y <u><i>or</i></u>
+		</p>
+
+		<pre>
+      <code>
+        @supports (display: grid) and (grid-template-columns: subgrid) {
+          // Cuando acepte ambas propiedades
+        }
+
+        @supports (display: grid) or (grid-template-columns: subgrid) {
+          // Debe aceptar una de las dos propiedades
+        }
+      </code>
+    </pre>
+	</body>
+</html>

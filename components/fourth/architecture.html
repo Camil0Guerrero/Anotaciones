@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../assets/css/style.css" />
+		<title>Arquitectura CSS</title>
+	</head>
+	<body>
+		<h1>Arquitectura CSS</h1>
+		<p>Técnicas que nos ayudan a organizar y mantener nuestro código ordenado, optimo y escalable</p>
+
+		<p>Una buena arquitectura CSS debe ser:</p>
+		<ol>
+			<li>
+				Predecible -> Que el nombre de nuestra clase sea alusiva a los estilos que aplicara, ademas que haga solo lo que
+				dice que hace, no que tenga estilos que no tienen nada que ver con el nombre
+			</li>
+			<li>
+				Reutilizable -> Que podamos aplicarlo en distintos contextos y contenedores de manera rápida sin que afecte
+				otros estilos
+			</li>
+			<li>Estable -> Debemos poder modificar o actualizar con facilidad, sin afectar otras reglas</li>
+			<li>
+				4. Escalable -> Cuando una aplicación crece decimos que se vuelve escalable, en este sentido nuestro código debe
+				ser sencillo de mantener, sin aumentar mas de lo necesario el grado de complejidad. Lo recomendado es hacer
+				clases utilitarias, es decir que cada una de ellas se dedique a aplicar algunos estilos específicamente, ademas
+				podemos tomar como referencia un diccionario a la hora de definir nuestras clases, que podemos consultarlo cada
+				que necesitemos aplicar estilos
+			</li>
+		</ol>
+
+		<h2>Debemos diseñar SISTEMAS, no PAGINAS</h2>
+		<p>
+			Con esta frase nos referimos a que cada que creamos un proyecto no tenemos que iniciar de 0 siempre, Divide y
+			vencerás<i> D.R.Y -> Don't repeat yourself</i>
+		</p>
+
+		<p>Los componentes deben tener las siguientes características:</p>
+		<ol>
+			<li>
+				Cumplen una sola función. -> Es mejor que cada cosa cumpla una funcionalidad, si le asignamos muchas, podemos
+				enredarnos a la hora de querer usarlo de nuevo en otro proyecto. Es mejor que especifiquemos y se especialicen
+				en una sola función y luego podemos unir varios para crear un proyecto mas complejo
+			</li>
+			<li>
+				Son independientes. -> Si lo quitamos no debo porque nuestra interfaz verse afecta, al igual que al agregar
+				nuevos
+			</li>
+			<li>
+				Son autocontenidos. -> No permiten que componentes externos afecten su contenido e igualmente no afectan el
+				contenido de otros ademas hacer lo posible que nuestro contenido por pequeño que sea, se pueda comprender y usar
+				asi se encuentre solo
+			</li>
+			<li>
+				Son reutilizables. -> Poder usarlo una y otra ves, aunque en cada proyecto tenga sus particularidades, que tenga
+				una estructura genérica y luego fijarnos en los detalles o partes especificas
+			</li>
+		</ol>
+
+		<h3>Herramientas</h3>
+		<p>Estas herramientas css para crear sistemas nos permiten organizar y nombrar el código de una mejor manera</p>
+		<p>
+			No tenemos que si o si ocupar las metodologías para todos los proyectos, sin embargo si es bueno saberlas usar y
+			practicar con ellas en uno que otro, lo mejor seria usar una y acostumbrarnos a usarla siempre, aunque también
+			podríamos usar sus practicas pero a nuestro modo
+		</p>
+		<p>
+			También podríamos tomar cosas de cada metodología, no tenemos que hacer todo a cabalidad y tal cual nos sugieren
+		</p>
+		<p>
+			Tomar lo mejor de cada una y crear su propia metodología, al fin y al cabo estas son tan solo propuestas de otros
+			desarrolladores
+		</p>
+		<p>
+			Todas estas metodologías tratan de llegar al mismo punto: tener nuestro código CSS mas legible, mas organizado y
+			entendible. Al igual que para cuando nuestro proyecto escale que nuestro código CSS este listo para escalar sin
+			ningún problema
+		</p>
+
+		<h4>BEM</h4>
+		<cite>mas popular</cite>
+
+		<blockquote>Bloque Elemento Modificador</blockquote>
+
+		<ol>
+			<li>Bloque -> Es un componente con todas las características que este conlleva</li>
+			<li>
+				Elemento -> Es una pequeña parte de ese bloque principal, como por ejemplo un logo en una cabecera. Para nombrar
+				estos elementos se hace uso de __
+			</li>
+			<li>
+				Modificador -> Las funciones que nuestro elemento tendrá, por ejemplo, el hover. Igualmente debemos separarlo
+				con __
+			</li>
+		</ol>
+		<a href="https://getbem.com/introduction/" target="_blank" rel="noopener">Sitio Web</a>
+
+		<h4>SMACSS</h4>
+		<blockquote>Scalable and Modular Architecture For CSS</blockquote>
+		<p>
+			La mayor diferencia con bem es que vamos a separar en capas los estilos CSS, vamos a tener categorías de reglas,
+			Por ejemplo:
+		</p>
+		<ul>
+			<li>Core -> los estilos base</li>
+			<li>layout -> Composición de las areas del contenido</li>
+			<li>Module -> Las reglas que tengan que ver con módulos, lo podemos ver como componentes</li>
+			<li>state -> Aquellas que tienen que ver con los estados, active, hover, target, etc...</li>
+			<li>theme -> Los temas de nuestro sitio web, por ejemplo, el modo dark y light</li>
+			<li>changing -> Reglas que generan cambios, como un menu de hamburguesa, que en mobile y desktop cambia</li>
+			<li></li>
+		</ul>
+		<p>
+			A esta metodología también se le conoce como 7 en 1. Por sus capas y los estilos personales, los particulares para
+			cada proyecto
+		</p>
+		<a href="http://smacss.com/" target="_blank" rel="noopener">Sitio Web</a>
+
+		<h4>OOCSS</h4>
+		<blockquote>Object-Oriented CSS</blockquote>
+		<p>
+			En este caso igualmente se trabajaran los componentes como objectos, ademas trabajar dentro de estos objetos
+			consigo mismos, como por ejemplo el header seria otro objecto y dentro de este el logo seria otro
+		</p>
+		<a href="http://oocss.org/" target="_blank" rel="noopener">Sitio Web</a>
+
+		<h4>ITCSS</h4>
+		<blockquote>Intuit CSS</blockquote>
+		<p>Partimos de lo general y nos vamos a lo especifico</p>
+		<p>En este caso debemos leer mas para saber como el diferencia cada concepto</p>
+		<p>Generic Elements Objects Components Utilities</p>
+		<p>Tratando de que entre mas bajamos de nivel menos lineas de código habrán</p>
+		<a href="https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture" target="_blank" rel="noopener"
+			>Mas información</a
+		>
+
+		<h4>AMCSS</h4>
+		<cite>La mas reciente</cite>
+		<blockquote>Attribute Modules for CSS</blockquote>
+		<p>Este en lugar de usar las clases utiliza data-attributes para dar los estilos</p>
+		<a href="https://amcss.github.io/" target="_blank" rel="noopener">Sitio Web</a>
+
+		<h4>SUIT CSS</h4>
+		<blockquote>Style tools for UI components</blockquote>
+
+		<p>
+			Similar a bem, en lugar de llamarlo bloque y elemento aquí lo llamaremos componente, las separaciones se
+			trabajaran segun su funcionamiento con . o -- o -
+		</p>
+		<p>Integra las clases utilitarias, se pueden identificar ya que inician con u- y luego su nombre</p>
+		<p>Al nombrar los componentes es con UpperCamelCase</p>
+		<a href="https://suitcss.github.io/" target="_blank" rel="noopener">Sitio Web</a>
+
+		<h4>Atomic Design</h4>
+		<p>
+			Tiene como filosofía el dividir nuestros componentes tanto como podamos, y luego al unirlos podemos formas
+			componentes mas complejos
+		</p>
+
+		<p>por ejemplo:</p>
+		<ul>
+			<li>Un átomo -> Es un input</li>
+			<li>Una molécula -> Un formulario, donde ya debemos agregar otros átomos</li>
+			<li>un organismo -> La cabecera, donde hay varias moléculas</li>
+		</ul>
+		<a href="https://bradfrost.com/blog/post/atomic-web-design/" target="_blank" rel="noopener">Sitio Web</a>
+	</body>
+</html>

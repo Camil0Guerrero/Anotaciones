@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="responsive-grid.css" />
+		<title>Grid Responsiva</title>
+	</head>
+	<body>
+		<h1><i>Responsive Grid</i></h1>
+
+		<p>
+			Esta grid esta hecha para practicar el concepto del <i>Responsive Design</i>, ademas estamos aplicando una lógica
+			parecida a la que nos brindan <i>frameworks</i> muy conocidos
+		</p>
+
+		<p>
+			Se usan 12 o 16 columnas ya que estos números son múltiplos muy divisibles por lo tanto se facilitaba el trabajar
+			con estas columnas
+		</p>
+		<blockquote>
+			De a poco se dejo de usar las 16 columnas y ya casi todas las libreras usan las 12 columnas casi como estandar
+		</blockquote>
+
+		<p>
+			la sumatoria de nuestros elementos que queremos acomodar con esta manera debe sumar 12 ya que si es mas este
+			elemento pasara a la fila de abajo
+		</p>
+
+		<p>
+			Para asignar el valor de cuanto va a ocupar nuestro elemento en las columnas lo vamos a definir en porcentajes,
+			esto lo calcularemos con una regla de tres
+		</p>
+		<pre>
+      <code>
+        12 --> 100%
+        ?col --> ???%
+      </code>
+    </pre>
+		<blockquote>
+			Cuando el numero no sea exacto lo recomendado es poner todos los decimales que nuestra calculadora nos brinde
+		</blockquote>
+
+		<p>
+			Una cosa que es importante entender es que al crear clases dentro de las media queries, estas se aplicaran cuando
+			la condición se cumpla. Por lo que haciendo uso de ellas podemos hacer que nuestro elemento se vea responsivo
+		</p>
+
+		<section class="row">
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 1</article>
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 2</article>
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 3</article>
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 4</article>
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 5</article>
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 6</article>
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 7</article>
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 8</article>
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 9</article>
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 10</article>
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 11</article>
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 12</article>
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 13</article>
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 14</article>
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 15</article>
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 16</article>
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 17</article>
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 18</article>
+			<article class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2">Elemento 19</article>
+		</section>
+	</body>
+</html>

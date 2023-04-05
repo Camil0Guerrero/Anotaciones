@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../../../assets/css/style.css" />
+		<link rel="stylesheet" href="multimedia.css" />
+		<title>Multimedia flexible</title>
+	</head>
+	<body>
+		<h1>Multimedia</h1>
+
+		<blockquote>Entendemos por multimedia todo aquello que no es texto</blockquote>
+
+		<h3>Algunas etiquetas son:</h3>
+
+		<ul>
+			<li>
+				<b><i>img</i></b>
+			</li>
+			<li>
+				<b><i>audio</i></b>
+			</li>
+			<li>
+				<b><i>video</i></b>
+			</li>
+			<li>
+				<b><i>iframe</i></b>
+			</li>
+			<li>
+				<b><i>canvas</i></b>
+			</li>
+			<li>
+				<b><i>svg</i></b>
+			</li>
+			<li>
+				<b><i>picture</i></b>
+			</li>
+			<li>
+				<b><i>object</i></b>
+			</li>
+			<li>
+				<b><i>embed</i></b>
+			</li>
+			<li>
+				<b><i>map</i></b>
+			</li>
+			<li>
+				<b><i>area</i></b>
+			</li>
+		</ul>
+
+		<p>
+			Para estas etiquetas ademas del width en 100% lo mejor es dejar la altura en auto, para que no se deformen
+			nuestros elementos
+		</p>
+		<p>
+			En el <i>Responsive Design</i> la multimedia debe ser flexible y adaptarse al tamaño de su contenedor, lo podemos
+			lograr con las siguiente regla <i>CSS</i>:
+		</p>
+
+		<pre>
+      <code>
+        img, audio, video, iframe, canvas, svg, picture{
+          max-width:100%;
+          height: auto;
+        }
+      </code>
+    </pre>
+
+		<p>
+			Para hacer responsivo estos elementos y que tengan siempre la misma resolución tenemos dos opciones, la segunda es
+			mas sencilla e idónea para nuestro tiempo
+		</p>
+
+		<h3>Imágenes Responsivas</h3>
+		<p>Simplemente adaptamos la imagen al tamaño de su contenedor.</p>
+		<img src="../../../assets/images/puesta-sol.jpg" alt="Puesta del Sol" />
+
+		<h4>Atributo <i>srcset</i> y <i>sizes</i></h4>
+		<p>
+			El propósito de estos atributos, es mejorar el rendimiento de carga, al colocar la misma imagen pero en diferentes
+			tamaños y pesos, dependiendo del tamaño o la resolución de la pantalla.
+		</p>
+
+		<p>
+			No todos los navegadores, sobretodo los antiguos soportan estos atributos. Por lo tanto es recomendado definir en
+			el src la imagen mas pequeña por si hay un error
+		</p>
+
+		<p>
+			Este atributo lo podemos manejar con la resolución, hay dispositivos que manejan distintas resoluciones y nuestro
+			navegador lo tomara asi, para definir distintos tamaños y la resolución de cuando se van a manejar es necesario
+			definir la ruta de nuestra imagen y luego declarar la resolución de cuando queremos que cargue. En cuanto hayamos
+			definido estos 2 valores separamos con una coma (,) y podemos declarar el siguiente
+		</p>
+
+		<p>
+			Podemos mirar este comportamiento usando las devtools y simular un Iphone o aumentar el zoom de nuestro navegador,
+			el 150% seria el 1.5x por ejemplo.
+		</p>
+
+		<pre>
+      <code>
+        &lt;img
+        src="img/html5-3d-600.png"
+        srcset="img/html5-3d-600.png 1x, img/html5-3d-900.png 1.5x, img/html5-3d-1200.png 2x"
+            alt="Logo de Html en 3D"/ 
+        &gt;
+      </code>
+    </pre>
+
+		<img
+			src="../../../assets/images/html5-3d-600.png"
+			srcset="
+				../../../assets/images/html5-3d-600.png  1x,
+				../../../assets/images/html5-3d-900.png  1.5x,
+				../../../assets/images/html5-3d-1200.png 2x
+			"
+			alt="Logo de Html en 3D"
+		/>
+		<br />
+
+		<p>
+			La otra manera de manejar cuando se va a cargar una imagen u otra es por definiendo en pixeles el máximo de cada
+			una. En lugar de px ponemos w refiriéndonos al width, ancho
+		</p>
+		<p>
+			En este caso estamos definiendo la primera imagen para cuando haya menos de 600px, nuestra segunda resolución se
+			hara cuando estemos entre los 600 y 900px,la ultima resolución se aplicara cuando estemos a mas de 1200px
+		</p>
+		<pre>
+      <code>
+      &lt;img
+      src="img/html5-3d-600.png"
+      srcset="img/html5-3d-600.png 600w, img/html5-3d-900.png 900w, img/html5-3d-1200.png 1200w"
+      alt="Logo de Html en 3D"
+      /&gt;
+    </code>
+  </pre>
+		<img
+			src="../../../assets/images/html5-3d-600.png"
+			srcset="
+				../../../assets/images/html5-3d-600.png   600w,
+				../../../assets/images/html5-3d-900.png   900w,
+				../../../assets/images/html5-3d-1200.png 1200w
+			"
+			alt="Logo de Html en 3D"
+		/>
+
+		<br />
+
+		<p>
+			Adicionalmente tenemos el atributo sizes, en el cual podemos manejar como si fuesen media queries, podemos definir
+			propiedades y luego lo que queremos que haga mientras estas se cumplen
+		</p>
+		<p>
+			Si queremos ver ejemplos podemos ver las paginas hechas en WordPress, ya que estos usan mucho estos atributos.
+			Cuando subimos una imagen a su servidor WordPress se encarga de crear varias imágenes con distintas resoluciones
+			para precisamente luego poder hacer que nuestras imágenes siempre se vean lo mejor posible
+		</p>
+		<img
+			src="../../../assets/images/html5-3d-600.png"
+			srcset="
+				../../../assets/images/html5-3d-600.png   600w,
+				../../../assets/images/html5-3d-900.png   900w,
+				../../../assets/images/html5-3d-1200.png 1200w
+			"
+			sizes="(max-width: 480px) 300px, (max-width: 600px) 480px, (max-width: 768px) 600px, (max-width: 1024px) 900px, (min-width: 1200px) 1200px"
+			alt="Logo de Html en 3D"
+		/>
+
+		<h4>Etiqueta <i>picture</i></h4>
+		<p>
+			El objetivo de esta etiqueta, no es sólo mostrar diferentes tamaños de la misma imagen, sino también mostrar
+			imágenes diferentes. Por ejemplo, recortar una imagen de forma diferente según el tamaño de la pantalla y las
+			diferencias en el diseño. Esto se conoce como "dirección de arte".
+		</p>
+
+		<picture>
+			<blockquote>El orden recomendado es de mayor a menor</blockquote>
+			<source srcset="../../../assets/images/kitten-large.png" media="(min-width: 1024px)" />
+			<source srcset="../../../assets/images/kitten-medium.png" media="(min-width: 600px)" />
+
+			<p>
+				A diferencia de nuestras imágenes normales donde poníamos el src para navegadores antiguos. En picture definimos
+				una imagen con la mas pequeña. Esta imagen se aplicara cuando nuestra pantalla sea menor que 600px
+			</p>
+
+			<img src="../../../assets/images/kitten-small.png" alt="Kitten" />
+		</picture>
+		<br />
+		<cite>
+			webp -> Es un tipo de formato propuesto por Google, este trata de ser una mejor solución de imagen que los jpg y
+			los gif animados con un mayor peso
+		</cite>
+		<br />
+
+		<picture>
+			<blockquote>
+				Con picture no solo podemos evaluar y definir las media queries, también podemos definir un formato de imagen
+				poco usado y aplicarlo solo si nuestro navegador lo soporta
+			</blockquote>
+
+			<source srcset="../../../assets/images/butterfly.webp" type="image/webp" />
+			<img src="../../../assets/images/butterfly.jpg" alt="Mariposa " />
+		</picture>
+
+		<h3>Videos Responsivos</h3>
+		<p>
+			Para los videos tenemos dos formas de hacerlos responsivos y que no pierdan su resolución a medida que hay menos
+			espacios, estas formas son:
+		</p>
+		<h4>Técnica vieja</h4>
+		<pre>
+      <code>
+      .responsive-media {
+        position: relative;
+        max-width: 100;
+        height: 0;
+        padding-bottom: 56.25%;
+      }  
+      </code>
+    </pre>
+
+		<p>
+			Con el padding haremos el efecto de tener una altura, como si empujáramos nuestro video hacia la parte de arriba
+		</p>
+		<p>El valor del padding se debe al formato widescreen 16/9, que es el recomendado usar en los videos e imágenes.</p>
+		<p>Este valor lo obtenemos con una regla de 3</p>
+		<pre>
+      <code>
+        16  -> ancho 100%
+        9 -> 56.25%
+      </code>
+    </pre>
+
+		<h4>Nueva forma</h4>
+		<p>
+			Con la propiedad <u><i>aspect-ratio</i></u> definimos las proporciones que queremos manejar, como primer valor
+			definimos el alto y de segundas el ancho.
+		</p>
+
+		<pre>
+      <code>
+      .aspect-ratio-16-9 {
+        background-color: rebeccapurple;aspect-ratio: 16 / 9;
+      }
+      </code>
+    </pre>
+
+		<video src="../../../assets/video/kenai.mp4" controls></video>
+		<div class="responsive-media">
+			<video src="../../../assets/video/kenai.mp4" controls></video>
+		</div>
+		<video class="aspect-ratio-16-9" src="../../../assets/video/kenai.mp4" controls></video>
+		<div class="aspect-ratio-16-9"></div>
+
+		<h3>Iframes Responsivos</h3>
+		<p>
+			El problema de aplicar a los iframe estilos generales para hacerlo responsivo, es decir width: 100% y height:
+			auto; vamos a tener un problema y es que nuestro navegador va a tomar 150px por defecto para nuestra altura, por
+			lo que no se vera muy bien
+		</p>
+		<iframe
+			width="560"
+			height="315"
+			src="https://www.youtube.com/embed/F55LNTW3GE0"
+			title="YouTube video player"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			allowfullscreen
+		></iframe>
+
+		<p>Con nuestra vieja técnica es una muy buena manera de hacer que se vea bien siempre</p>
+		<div class="responsive-media">
+			<iframe
+				width="560"
+				height="315"
+				src="https://www.youtube.com/embed/F55LNTW3GE0"
+				title="YouTube video player"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				allowfullscreen
+			></iframe>
+		</div>
+
+		<p>
+			Con la nueva técnica tendremos el mismo efecto tan solo que esta forma si respetara el tamaño que le hemos
+			definido a nuestro elemento
+		</p>
+		<iframe
+			class="aspect-ratio-16-9"
+			width="560"
+			height="315"
+			src="https://www.youtube.com/embed/F55LNTW3GE0"
+			title="YouTube video player"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+			allowfullscreen
+		></iframe>
+
+		<iframe
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1881.3307860565544!2d-99.16869369200225!3d19.42702312622336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sEl%20%C3%81ngel%20de%20la%20Independencia!5e0!3m2!1ses!2sco!4v1679349673584!5m2!1ses!2sco"
+			width="400"
+			height="300"
+			style="border: 0"
+			allowfullscreen=""
+			loading="lazy"
+			referrerpolicy="no-referrer-when-downgrade"
+		></iframe>
+
+		<p>
+			Para los iframe también podemos definir como queremos manejar la resolución, esto nos ayuda a que al hacer a
+			nuestro elemento responsive no se nos deforme
+		</p>
+
+		<pre>
+      <code>
+        aspect-ratio: 1/1;  
+      </code>
+    </pre>
+		<iframe
+			class="aspect-ratio-1-1"
+			src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1881.3307860565544!2d-99.16869369200225!3d19.42702312622336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ff35f5bd1563%3A0x6c366f0e2de02ff7!2sEl%20%C3%81ngel%20de%20la%20Independencia!5e0!3m2!1ses!2sco!4v1679349673584!5m2!1ses!2sco"
+			width="400"
+			height="300"
+			style="border: 0"
+			allowfullscreen=""
+			loading="lazy"
+			referrerpolicy="no-referrer-when-downgrade"
+		></iframe>
+	</body>
+</html>
