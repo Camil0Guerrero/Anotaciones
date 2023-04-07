@@ -12,6 +12,11 @@ html {
 	box-sizing: inherit;
 }
 
+body > :not(h1) {
+	max-width: 1240px;
+	margin: auto;
+}
+
 :root {
 	--font-size-h1: clamp(2rem, calc(0.4rem + 4vw), 3rem);
 	--font-size-h2: clamp(1.7rem, calc(0.4rem + 4vw), 2.5rem);

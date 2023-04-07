@@ -1,0 +1,53 @@
+/* Custom Properties -> Declaración de variables */
+.card-presentation {
+	--color-primary: gray;
+	--color-secondary: #40cfff;
+	--width-flexible: clamp(18.75rem, 5rem + 25vw, 21.875rem);
+}
+
+/* Reset -> Normalizar y definir valores iniciales a etiquetas */
+legend {
+	font-size: var(--font-size-h2);
+	text-align: center;
+}
+
+/* Components -> Elementos que se pueden usar en otro proyecto */
+.container-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, min(350px));
+	justify-content: space-evenly;
+}
+
+.card-presentation {
+	border: medium double var(--color-secondary);
+	border-radius: 1rem;
+	color: blue;
+	width: var(--width-flexible);
+	box-shadow: inset 0.3rem 0.5rem 5rem 1rem goldenrod;
+	transition: border-color 3s ease-in-out, border-radius 3s ease-in-out, border-style 3s ease-in-out 250ms,
+		transform 2s ease;
+}
+
+.card-presentation p {
+	color: black;
+}
+
+.card-presentation:nth-child(even) {
+	border-color: goldenrod;
+	box-shadow: inset 0.3rem 0.5rem 5rem 1rem var(--color-secondary);
+}
+
+.card-presentation > img {
+	object-fit: contain;
+	transform: scale(1.05);
+}
+
+.card-presentation:hover {
+	border-color: #e94bb4;
+	border-radius: 2rem;
+	border-style: dotted;
+	transform: scale(1.05);
+}
+
+/* Utilities -> Clases declarativas enfocadas solo a una función */
+/* Site Styles -> Estilos particulares de cada proyecto */
