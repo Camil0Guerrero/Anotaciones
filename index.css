@@ -15,6 +15,7 @@ legend {
 .container-cards {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, min(350px));
+	gap: 1rem;
 	justify-content: space-evenly;
 }
 

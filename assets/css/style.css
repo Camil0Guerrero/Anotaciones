@@ -15,6 +15,7 @@ html {
 body > :not(h1) {
 	max-width: 1240px;
 	margin: auto;
+	cursor: default;
 }
 
 :root {
