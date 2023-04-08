@@ -12,9 +12,9 @@ html {
 	box-sizing: inherit;
 }
 
-body > :not(h1) {
+body > :not(h1, header) {
 	max-width: 1240px;
-	margin: auto;
+	margin: 1rem auto;
 	cursor: default;
 }
 
@@ -104,10 +104,6 @@ picture {
 }
 
 /* Clases utilitarias */
-[class^="box"] {
-	margin: 3rem auto;
-	background-color: orangered;
-}
 
 .box {
 	border: thick solid black;
