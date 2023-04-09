@@ -28,19 +28,20 @@
 		<p>Define como se repite la imagen de fondo del elemento</p>
 
 		<div class="bgr">
-			<span>repeat <b style="color: red">Default</b></span>
-			<span>No Repeat</span>
-			<div class="repeat"></div>
-			<div class="no-repeat"></div>
-			<span>Repeat-Y</span>
-			<span>Repeat-X</span>
-			<div class="repeat-y"></div>
-			<div class="repeat-x"></div>
+			<p class="item">repeat <b style="color: red">Default</b></p>
+			<div class="repeat item"></div>
+			<p class="item">No Repeat</p>
+			<div class="no-repeat item"></div>
+			<p class="item">Repeat-Y</p>
+			<div class="repeat-y item"></div>
+			<p class="item">Repeat-X</p>
+			<div class="repeat-x item"></div>
 		</div>
 
 		<h2>Background size</h2>
 		<p>Define el tamaño de la imagen de fondo, el primer valor X segundo Y</p>
-		<div class="bgs">
+
+		<div class="">
 			<p>Cover -> Cambia el tamaño de la imagen de fondo para asegurarse de que permanezca completamente visible</p>
 			<p>
 				Contain -> Cambia el tamaño de la imagen de fondo pra asegurarse de que el elemento este completamente cubierto
@@ -58,39 +59,46 @@
 			and right
 		</p>
 
-		<div class="bgp">
-			<span>left top</span>
-			<span>top</span>
-			<span>right top</span>
-
+		<section class="bgp">
+			<p>left top</p>
 			<div class="bg-position-1"></div>
+
+			<p>top</p>
 			<div class="bg-position-2"></div>
+
+			<p>right top</p>
 			<div class="bg-position-3"></div>
 
-			<span>left</span>
-			<span>center</span>
-			<span>right</span>
+			<p>left</p>
 			<div class="bg-position-4"></div>
+
+			<p>center</p>
 			<div class="bg-position-5"></div>
+
+			<p>right</p>
 			<div class="bg-position-6"></div>
 
-			<span>left bottom</span>
-			<span>bottom</span>
-			<span>right bottom</span>
+			<p>left bottom</p>
 			<div class="bg-position-7"></div>
+
+			<p>bottom</p>
 			<div class="bg-position-8"></div>
+
+			<p>right bottom</p>
 			<div class="bg-position-9"></div>
-		</div>
+		</section>
 
 		<h2>Background clip</h2>
 		<p>Define desde donde comenzara nuestro fondo</p>
-		<div class="bg-clip">
-			<span>border box -> Iniciara desde el borde, <b style="color: red">Default</b></span>
-			<span>padding-box -> Lo que definamos de borde no estará contemplado en nuestro fondo </span>
-			<span>content-box -> Ni el borde ni el padding se tendrán en cuenta para nuestro fondo </span>
-			<div class="bg-clip-1"></div>
-			<div class="bg-clip-2"></div>
-			<div class="bg-clip-3"></div>
+		<div class="bgr">
+			<p class="item">border box -> Iniciara desde el borde, <b style="color: red">Default</b></p>
+			<div class="bg-clip-1 item"></div>
+
+			<p class="item">padding-box -> Lo que definamos de borde no estará contemplado en nuestro fondo</p>
+			<div class="bg-clip-2 item"></div>
+
+			<p class="item">content-box -> Ni el borde ni el padding se tendrán en cuenta para nuestro fondo</p>
+			<div class="bg-clip-3 item"></div>
 		</div>
 
 		<h2>Background origin</h2>
@@ -100,40 +108,40 @@
 			la imagen de fondo
 		</blockquote>
 
-		<div class="bg-origin">
-			<span
-				>padding-box -> Valor por defecto, por ello es que notamos la diferencia entre el inicio de nuestro fondo y el
-				inicio de nuestra imagen</span
-			>
-			<span
-				>border-box -> Iniciara desde el borde, por lo tanto todo nuestro elemento tendrá nuestra imagen de fondo</span
-			>
-			<span
-				>content-box -> De esta se empezara a ver nuestra imagen en cuanto termine el padding.
+		<div class="bgr">
+			<p class="item">
+				padding-box -> Valor por defecto, por ello es que notamos la diferencia entre el inicio de nuestro fondo y el
+				inicio de nuestra imagen
+			</p>
+			<div class="bg-origin-1 item"></div>
+
+			<p class="item">
+				border-box -> Iniciara desde el borde, por lo tanto todo nuestro elemento tendrá nuestra imagen de fondo
+			</p>
+			<div class="bg-origin-2 item"></div>
+
+			<p class="item">
+				content-box -> De esta se empezara a ver nuestra imagen en cuanto termine el padding.
 				<br />
 				<cite
 					>Si nuestra imagen es mas ancha que nuestro elemento, esta no respetara el padding de la derecha, por lo que
 					se vera mal
-				</cite></span
-			>
-			<div class="bg-origin-1"></div>
-			<div class="bg-origin-2"></div>
-			<div class="bg-origin-3"></div>
+				</cite>
+			</p>
+			<div class="bg-origin-3 item"></div>
 		</div>
 
 		<h2>Background Attachment</h2>
 		<p>Nos da la posibilidad de hacer efectos a la hora de dejar ver la imagen</p>
-		<div class="bg-attachment">
-			<p>
-				scroll -> Nuestra imagen se movera con nuestra barra de navegación
+		<div class="bgr">
+			<p class="item">
+				Scroll -> Nuestra imagen se movera con nuestra barra de navegación
 				<b style="color: red">Por defecto</b>
 			</p>
-			<p>
-				fixed -> Hara un efecto de estar siempre en el mismo lugar, como si nuestro elemento fuese una ventana y miramos
-				a traves de ella
-			</p>
-			<div class="bg-attachment-1"></div>
-			<div class="bg-attachment-2"></div>
+			<div class="bg-attachment-1 item"></div>
+
+			<p class="item">Fixed -> Como si nuestro elemento fuese una ventana y miramos a traves de ella</p>
+			<div class="bg-attachment-2 item"></div>
 		</div>
 
 		<blockquote>

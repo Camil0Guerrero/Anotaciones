@@ -2,7 +2,7 @@
 /* Background color */
 .bgc {
 	display: grid;
-	grid-template-columns: repeat(3, 25%);
+	grid-template-columns: repeat(auto-fit, min(300px));
 	gap: 1rem;
 	justify-content: space-around;
 }
@@ -36,7 +36,8 @@
 /* Background repeat */
 .bgr {
 	display: grid;
-	grid-template-columns: repeat(2, 40%);
+	grid-template-columns: repeat(auto-fit, min(300px));
+	grid-template-rows: 100px 300px;
 	gap: 1rem;
 	justify-content: space-around;
 }
@@ -77,6 +78,76 @@
 	width: 300px;
 }
 
+@media screen and (min-width: 35.7em) {
+	.bgr .item:nth-child(1) {
+		order: 1;
+	}
+
+	.bgr .item:nth-child(3) {
+		order: 2;
+	}
+
+	.bgr .item:nth-child(2) {
+		order: 3;
+	}
+
+	.bgr .item:nth-child(4) {
+		order: 4;
+	}
+
+	.bgr .item:nth-child(5) {
+		order: 5;
+	}
+
+	.bgr .item:nth-child(7) {
+		order: 6;
+	}
+
+	.bgr .item:nth-child(6) {
+		order: 7;
+	}
+
+	.bgr .item:nth-child(8) {
+		order: 8;
+	}
+}
+
+@media screen and (min-width: 53.46em) {
+	.bgr .item:nth-child(1) {
+		order: 1;
+	}
+
+	.bgr .item:nth-child(3) {
+		order: 2;
+	}
+
+	.bgr .item:nth-child(5) {
+		order: 3;
+	}
+
+	.bgr .item:nth-child(2) {
+		order: 4;
+	}
+
+	.bgr .item:nth-child(4) {
+		order: 5;
+	}
+
+	.bgr .item:nth-child(6) {
+		order: 6;
+	}
+
+	.bgr .item:nth-child(7) {
+		order: 7;
+		grid-column: span 3;
+	}
+
+	.bgr .item:nth-child(8) {
+		order: 8;
+		grid-column: span 3;
+	}
+}
+
 /* Background size */
 .bgs {
 	display: grid;
@@ -112,9 +183,7 @@
 .bgp {
 	display: grid;
 	justify-content: space-around;
-	text-align: center;
-	grid-template-columns: repeat(3, 30%);
-	grid-template-rows: repeat(4, 30px 300px);
+	grid-template-columns: repeat(auto-fit, 300px);
 	gap: 1rem;
 }
 
@@ -132,6 +201,8 @@
 	background-image: url(../../../assets/images/puesta-sol.jpg);
 	background-size: 200px;
 	background-repeat: no-repeat;
+	width: 300px;
+	height: 300px;
 }
 
 .bg-position-1 {
@@ -170,14 +241,159 @@
 	background-position: right bottom;
 }
 
-/* Background Clip */
-.bg-clip {
-	display: grid;
-	justify-content: space-evenly;
-	grid-template-columns: repeat(3, 30%);
-	grid-template-rows: 50px 300px;
-	gap: 1rem;
+@media screen and (min-width: 35.7em) {
+	.bgp p:nth-child(1) {
+		order: 1;
+	}
+
+	.bgp p:nth-child(3) {
+		order: 2;
+	}
+
+	.bgp .bg-position-1 {
+		order: 3;
+	}
+
+	.bgp .bg-position-2 {
+		order: 4;
+	}
+
+	.bgp p:nth-child(5) {
+		order: 5;
+	}
+
+	.bgp p:nth-child(7) {
+		order: 6;
+	}
+
+	.bgp .bg-position-3 {
+		order: 7;
+	}
+
+	.bgp .bg-position-4 {
+		order: 8;
+	}
+
+	.bgp p:nth-child(9) {
+		order: 9;
+	}
+
+	.bgp p:nth-child(11) {
+		order: 10;
+	}
+
+	.bgp .bg-position-5 {
+		order: 11;
+	}
+
+	.bgp .bg-position-6 {
+		order: 12;
+	}
+
+	.bgp p:nth-child(13) {
+		order: 13;
+	}
+
+	.bgp p:nth-child(15) {
+		order: 14;
+	}
+
+	.bgp .bg-position-7 {
+		order: 15;
+	}
+
+	.bgp .bg-position-8 {
+		order: 16;
+	}
+
+	.bgp p:nth-child(17) {
+		order: 17;
+		grid-column: span 2;
+	}
+
+	.bgp .bg-position-9 {
+		order: 18;
+		grid-column: span 2;
+	}
 }
+
+@media screen and (min-width: 53.46em) {
+	.bgp p:nth-child(1) {
+		order: 1;
+	}
+
+	.bgp p:nth-child(3) {
+		order: 2;
+	}
+
+	.bgp p:nth-child(5) {
+		order: 3;
+	}
+
+	.bgp .bg-position-1 {
+		order: 4;
+	}
+
+	.bgp .bg-position-2 {
+		order: 5;
+	}
+
+	.bgp .bg-position-3 {
+		order: 6;
+	}
+
+	.bgp p:nth-child(7) {
+		order: 7;
+	}
+
+	.bgp p:nth-child(9) {
+		order: 8;
+	}
+
+	.bgp p:nth-child(11) {
+		order: 9;
+	}
+
+	.bgp .bg-position-4 {
+		order: 10;
+	}
+
+	.bgp .bg-position-5 {
+		order: 11;
+	}
+
+	.bgp .bg-position-6 {
+		order: 12;
+	}
+
+	.bgp p:nth-child(13) {
+		order: 13;
+	}
+
+	.bgp p:nth-child(15) {
+		order: 14;
+	}
+
+	.bgp p:nth-child(17) {
+		order: 15;
+		grid-column: span 1;
+	}
+
+	.bgp .bg-position-7 {
+		order: 16;
+	}
+
+	.bgp .bg-position-8 {
+		order: 17;
+	}
+
+	.bgp .bg-position-9 {
+		order: 18;
+		grid-column: span 1;
+	}
+}
+
+/* Background Clip */
 
 .bg-clip-1,
 .bg-clip-2,
@@ -188,6 +404,8 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	padding: 1rem;
+	width: 300px;
+	height: 300px;
 }
 
 .bg-clip-1 {
@@ -202,14 +420,19 @@
 	background-clip: content-box;
 }
 
-/* Background origin */
-.bg-origin {
-	display: grid;
-	justify-content: space-evenly;
-	grid-template-columns: repeat(3, 30%);
-	grid-template-rows: 130px 300px;
-	gap: 1rem;
+@media screen and (min-width: 35.7em) {
+	.bg-clip-3 {
+		grid-column: span 2;
+	}
 }
+
+@media screen and (min-width: 53.46em) {
+	.bg-clip-3 {
+		grid-column: span 1;
+	}
+}
+
+/* Background origin */
 
 .bg-origin-1,
 .bg-origin-2,
@@ -220,6 +443,8 @@
 	background-repeat: no-repeat;
 	border: thick dashed red;
 	padding: 1rem;
+	width: 300px;
+	height: 300px;
 }
 
 .bg-origin-1 {
@@ -234,13 +459,19 @@
 	background-origin: content-box;
 }
 
-/* Background attachment */
-.bg-attachment {
-	display: grid;
-	justify-content: space-evenly;
-	grid-template-columns: 30% 60%;
-	gap: 1rem;
+@media screen and (min-width: 35.7em) {
+	.bg-origin-3 {
+		grid-column: span 2;
+	}
 }
+
+@media screen and (min-width: 53.46em) {
+	.bg-origin-3 {
+		grid-column: span 1;
+	}
+}
+
+/* Background attachment */
 
 .bg-attachment-1,
 .bg-attachment-2 {
@@ -249,12 +480,37 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	border: thick dashed darkred;
-	height: 400px;
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 300px;
 	padding: 1rem;
 }
 
 .bg-attachment-2 {
 	background-attachment: fixed;
+	background-position: -20% -10%;
+}
+
+@media screen and (min-width: 35.7em) {
+	.bg-attachment-1 ~ p {
+		margin-bottom: 20px;
+	}
+
+	.bg-attachment-2 {
+		background-position: 330px 0;
+	}
+}
+
+@media screen and (min-width: 53.46em) {
+	.bg-attachment-1 ~ p {
+		grid-column: span 2;
+	}
+
+	.bg-attachment-2 {
+		grid-column: span 2;
+		width: 600px;
+	}
 }
 
 /* Multiples imágenes */
@@ -263,7 +519,7 @@
 	background-repeat: repeat-x, no-repeat;
 	background-size: 10%, cover;
 	margin: auto;
-	height: 30vh;
+	height: 400px;
 	width: 50%;
 }
 
@@ -274,6 +530,6 @@
 		url(../../../assets/images/cielo.png) no-repeat center top;
 
 	margin: auto;
-	height: 70vh;
+	height: 75vh;
 	width: 90%;
 }
